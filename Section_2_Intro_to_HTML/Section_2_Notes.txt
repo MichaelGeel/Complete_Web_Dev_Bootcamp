@@ -1,0 +1,118 @@
+## 10. A Note about 2023 Course Updates:
+
+This course was originally producted in 2018 and over time technology has changed so the course had to change along with it.
+But sometimes more extensive updates are required, and in 2023 over 80% of the course was redone as new.
+This includes new sections that never existed before.
+The course also moved away from MongoDB to PostgreSQL because research on tech recruitment showed that companies looking for more SQL-based DB competence and mmoving away from Mongo and NoSQL.
+
+## 11. What is HTML?
+
+No matter what browser you like to use, be it Chrome, Safari or Brave even, all of these applications do the same thing.
+They take different files such as HTML, CSS and JavaScript and render them into a website.
+Even though modern websites are created using these three different file types combines together, you can't create a website with just CSS or JavaScript files alone.
+However, you can do this with only an HTML file, and that's exactly what the first websites were created with, HTML.
+HTML defines the content and structure of the website.
+HTML stands for HyperText Markup Language.
+HyperText refers to the pieces of text which can link to other documents in the webiste, there pieces of text are HyperText or HyperLinks, and they are the foundation of how an HTML website works.
+These hyperlinks also take you to other pages on the internet.
+A Markup Language means that the text in the documents are marked up with HTML Tags. (E.g. <h1></h1>)
+
+## 13. HTML Heading Elements:
+
+An example of what a heading element looks like is this:        <h1>Hello World</h1>
+It starts off with an opening tag (<h1>) and it ends with what's called a closing tag (</h1>)
+Note that the presence of the "/" is what signifies a closing tag.
+Whatever text is found in-between these 2 tags is what's called the content of that particular HTML element. (Hello World)
+Often when talking about HTML, there's reference to Tags and Elements.
+A Tag is anything encased in a pair of angle brackets (<>, e.g. <h1>, <h2>)
+An Element is a set of opening and closing tags as well as the content between them (<h1>Hello World</h1>)
+The idea of Heading elements comes from bookbinding, in the table of contents, there are hierarchies to the heading in the table of contents based on heading relation (For example, some level 3 headings would indicate they belong under a particular level 2 heading.)
+These levels are what we define using our HTML heading elements.
+The code for all the levels of heading elements is as follows:
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+Note that there is no heading 7, there are only the above 6 levels of HTML Heading elements.
+Anything lower in importance than an H6 heading you'd use a different tag type.
+You'll also get errors if your opening and closing tags for a heading aren't at the same level.
+If we were to run an HTML file containing the above 6 heading lines, we'd see that each subsequent heading is styled differently (the text size is smaller for each level of heading element)
+H1 being the biggest, and H6 the smallest.
+We'll now download the files for this lesson (See the L13_files folder)
+    In the zip, is the index.html which we'll write our code to.
+        The solution.html contains the answer to the exercise.
+        The goal.png contains the output result we want in our browser
+Note that we'll want to make use of the Live Preview extension for VS Code to preview what the webpage will look like so that we can check our output.
+Now what we want to do is format the index.html file so that the output looks like the goal.png image.
+There are a few do's and don'ts when it comes to heading elements.
+An important rule is that there should be only a single h1 element in a given html file, it's just good practice.
+    You can have as many of the other heading levels as you want.
+Also, don't skip a level when creating heading elements, don't go straight from h1 to h3, it's once again just good practice.
+Note neither of these are going to break your code, it's just good practice and a universally accepted convention.
+To read up about varioius HTML elements, see the documentation link for HTML elements: 
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
+
+## 14. HTML Paragraph Elements:
+
+The paragraph element is also related to formatting and putting text on our websites.
+An example of a paragraph element is:        <p>This is a paragraph</p>
+Note the opening and closing tags as well as the content inbetween.
+The reason why we need a paragraph element is because if you just had plain text in your HTML document, it would appear unformatted in the browser an wouldn't appear as paragraphs.
+It's also important for screenreaders to improve the accessibility of the website for users (such as those who are blind).
+We'll be trying an exercise using the paragraph element, so in the course resources are the same 3 files again.
+    Here, the index.html file needs to be amended to match the layout of the goal.png file again.
+The solution is simply just encasing all 3 paragraphs in a set of paragraph tags.
+With this we were able to see a good demonstration of the foratting we get through simply using the paragraph elements.
+The text that was used in the 3 paragraphs are bits of placeholder text, and it's what we would refer to as "Lorem Ipsum"
+    It's something that you'll come across quite a lot, especially in web design.
+    It's used to simulate content in a paragraph and prevent something like a paragraph being represented by repetitions of "This is a paragraph" over and over.
+    It's also because lorem ipsum can simulate a natural block of text with true varying text lengths.
+    Lorem Ipsum comes from Latin classical literature by a famour author called Cicero.
+To get hold of some, you can go to "www.lipsum.com" and there you'll find Lorem Ipsum even in different languages.
+    You can use the tool to generate as many paragraphs/words/byts etc as you would require.
+
+## 15. Self Closing Tags:
+
+We'll now take a look at the HTML Void Elements such as the Horizontal Rule and Break elements.
+So we've so far seen what non-void elements are, such as the paragraph and heading elements.
+    These elements are not void because they have content between their opening and closing tags.
+A Void Element is an element where you're forbidden from putting any content inside the tag.
+    And the tag itself looks different as well.
+A Horizontal Rule element looks like this:      <hr />
+    Notice the forward slash before the ending ">"
+It's even different from a closing tag because the / in a closing tag is at the start of the tag.
+By convention there's also a space between the tag name and the forward slash in void elements.
+Also note that the slash is a forward slash "/", not a back slash "\"
+For an examle of implementation:
+    We can add a Horizontal Rule element between paragraphs from the previous lesson's examples to help us divide the content to show that the content is not related.
+Running the code to view it in the browser, the Horizontal Rule appears as a straight horizontal line on the page wherever you placed it.
+Another common Void Element is the Break Element:       <br />
+Notice it's structured similarly to the Horizontal Rule element.
+The break element comes in handy when you need to separate things onto separate lines in order to have meaning.
+For example, ensuring a poem is correctly structured and that the paragraph isn't just one long straight line, so we can add break elements to structure the paragraph in the browser correctly.
+Now we'll be using the activity in the course resources, which once again consists of editing the index.html file to produce the output shown in the goal.png.
+If you want to compare your code to the answer, you can copy both files over into a website called www.diffchecker.com and it'll compare the 2 docs 
+and tell you if there are any differences that you missed.
+In terms of Void tag dos and don'ts:
+    Don't use a break element to separate paragraphs, use 2 sets of paragraph elements instead.
+        This is not good for accessibility and makes it harder for screenreader users to understand the web page.
+Sometimes, when looking at the Horizontal Rule and Break Elements, you may see them used with the forward slash beyond the closing angle bracket, like this:
+        <hr>    or  <br>
+    This is valid html and this can be done as well as opposed to using the forward slash.
+    As of HTML5, it's starting to ignore the / in these void tags.
+It's still recommended to use these tags for your own readability of your own files to avoid confusion.
+
+## 16. [Project] Movie Ranking:
+
+Having gotten an intro to HTML, it's now time to put everything covered so far together in creating a new project.
+This is called the Favourite Movie project.
+It's a website to keep track of all your favourite movies that you've watched.
+There's a requirement to have at least 3 movies listed in the website.
+Note the goal.png file as a guideline on what the website should look like.
+The files can be downloaded from the course resources.
+
+## 17. How to Ace this Course:
+
+Create goals.

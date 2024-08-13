@@ -1,0 +1,109 @@
+# Intermediate HTML
+
+## 18. The List Element:
+
+We're now going to be looking at list elements, both ordered and unordered lists.
+Looking at the Unordered Lists.
+To create an unordered list, you simply need:       <ul></ul>
+The opening and closing tags.
+Normally, we've had one line lements such as this where we get to add some content between the tags.
+But in this case, it's somewhat different, here the opening and closing tags are generally shown on different lines, because inbetween them, we need an extra type of tag to complete the unordered list.
+These are called list items, denoted by:        <li></li>
+To give a full example:
+    <ul>
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Flour</li>
+    </ul>
+Note how each list element contains some kind of content, but all 3 items are enclosed in the unordered list.
+For any list to work and display content, you're going to have to add list items into it.
+When displayed in the browser, unordered list items create a list of bullet points.
+This is also becuase, as the name suggests, the order of the items in this list doesn't matter.
+But if you need your items to be presented in a particular order, you'd create an ordered list.
+It functions similar to an unordered list with the syntax :         <ol></ol>
+And a full example being:
+    <ol>
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Flour</li>
+    </ol>
+This Ordered list will give you a number next to each item based on the number that you put into this ordered list element.
+Now we'll do the exercise for this lesson, same format as previous, complete index.html to produce the output shown in goal.png.
+Simple exercise, needed some heading tags, 2 unordered lists for the ingredients items and an ordered list for the instructions.
+Note that at times, if the content between 2 html tags is long enough, the closing tag will automatically be put onto the next line.
+The formatting comes down to personal preference, but make sure they follow a static structure to prevent cluttering and messiness.
+
+## 19. Nesting and Indentation:
+
+In this lesson, we're going to take the concept of how lists work a little bit further and look at how to nest things inside others.
+For example, we saw that we could already nest th elist elements inside an unordered list.
+Now we can go that step further and actually nest a list inside another list, such as an unordered list inside an unordered list.
+To do this, we put the nested unordered list inside a list item after the text content of the list item.
+For example:    <li>
+                    <ol></ol>
+                </li>
+This is also where indentation of your code becomes super important, because if all lines of code started on the same indent level, it would be marginally harder to understand what's happening in the code.
+The indentation allows you to read the code faster as it hints at the hierarchy and order of the lists or other elements in the code.
+Now we'll do the exercise for this lesson in it's usual format.
+Note that having the nested list layer inside a list item element or not doesn't seem to impact the structure and layout at all.
+Also note that I did this in a top down replica approach, however and easier means of doing this wouldn've been one layer at a time.
+    By this, I mean do the first list to completion, the do the next nest layer, and then the next after that, instead of top down with full index and nest mental management.
+Note that VS Code handles some of the indentation for you, it auto-indents the code as fits the code you're writing with the nesting.
+    The indentation helps greatly with debugged as you can match your element tags to find when the tags are missing or mis-matched.
+
+## 20. Anchor Elements:
+
+This lesson is going to cover a bit more about another aspect of HTML elements, which is their attributes.
+To do this, we're going to learn about the Anchor element, which allows us to create hyperlinks.
+This is an anchor element:           <a>This is a link</a>
+Same usual opening and closing tags, but there's something special about this element.
+And that's because in it's based format above it's not an active hyperlink.
+In the opening tag, we need to add an additional attribute to the element, which goes in the opening tag of the element.
+    So to have the anchor create an active hyper, the opening tag needs to have an attribute in it looking like this:           <a href="https://www.google.com">
+Attributes always come after the name of the tag and are separated by a space, within the angle brackets.
+An attributes adds additional information to the HTML element, link in the above case showing where the anchor element should link to.
+A general format for an HTML element with attributes is the following:          <tag attribute=value attribute=value>Content</tag>
+You can have as many attributes as you want in the element opening tag.
+The href attribute with the anchor element is a specific attribute, because it's where we add the url that the hyperlink should link you to.
+Without an href, it becomes plaintext, but with an href, the content gets styled to signify it has a link.
+Specific attributes are attributes relevant to a particular element and reserved specifically for those elements.
+In addition to specific attributes, there are also Global Attribtues that every single HTML element has access to and can have it applied to.
+We'll now go through the exercise for this lesson, same usual task.
+Easy enough, creating an ordered list where each item in the list is an item enclosed in anchor tags linking to the item it references. (Anchor tag inside the list tags)
+Note that with attributes, any values in the attributes that are text are enclosed in "" to differentiate them from reserved words in the language.
+An additional challenge was given to use the start attribute for the ordered list to reverse the order of the list.
+    Set the start attribute to equal "5", so the ordered list counts from 5 to 9.
+
+## 21. Image Elements:
+
+Plain websites are rather boring, so can spruce them up a bit by adding images to them.
+We'll now be adding images to our website using the image element.
+It looks like this:     <img src="url" />
+Note the main component of this element is the src attribute which contains the url link to our image wherever it is located.
+Note also that this is a void element so it has no closing tag and instead has an "/" at the end of the tag.
+Void Elements are also known as "Self-Closing Tags"
+There's a website similar to the lorem ipsum website mentioned previously, called Picsum which provides you with a random photo each to you call the link to it to load an image for placeholder images.
+The link is: "https://picsum.photos" and at the end of the link, you can add in the size of the image that you want (e.g. "/200")
+The other attribute for an image tag that is incredibly important that you should always have is the alt attribute.
+    Alt stands for alternative text description.
+    It's important because people who are blind/visually impaired don't look at the internet the same way we do.
+    They use what's called a screen-reader, and when the screen reader hits an image, it will look at the alternative text provided, and read it to the person.
+You can use a chrome browser extension called SilkTide to simulate how a screenreader would read your website out.
+We'll now be doing the challenge for this lesson.
+Simply created an h1 heading followed by an image element for the chosen link followed by the alt attribute with the relevant text.
+Note you can also use gifs for animated images in these resources.
+Note there are some edge cases where you don't need to create an alt text attribute for your image element due to it not being relevant to the page itself.
+
+## 22. [Project] Birthday Invite:
+
+This lesson is going to be a project where we put together everything that's been done thus far.
+This project is going to be creating a party invite to help invite all your guests.
+Having downloaded the project files, note the 2 goal PNGs containing what we'd want to create for this project.
+This project will be creating a website to tell people that it's our birthday, along with some information regarding the birthday.
+The image url and link to be used for this project.
+Simple enough to have achieved.
+Note to self, maybe spruce the project up after successful completion in future projects.
+    Complete the project, then copy the code and do your own thing for a little bit after that.
+Doing the above in the index_homebrew.html file.
+
+### This marks the end of this lesson ###

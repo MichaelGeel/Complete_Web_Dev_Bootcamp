@@ -1,0 +1,215 @@
+# Section 7: Intermediate CSS
+
+## 43. The Cascade - Specificity and Inheritance:
+
+The lesson will cover the CSS Cascade and will provide understanding as to why the language is called Cascading Style Sheets.
+The Cascade is only really relevant when we look at multiple different conflicting CSS rules.
+    If you have different rules that target the same element (e.g. an h1), then you have to determine which one is higher up in the hierarchy.
+    This method of working out which of the rules actually get applied and which ones get ignored is how the Cascade comes to be.
+If you look at a waterfall cascade as a metaphor, if there are multiple levels at which CSS is being applied.
+    Then when the browser find a rule at a higher level in the cascade, and then works it way down to the lower levels, and find another rule.
+    The rule on the lower level is what gets applied.
+This means multiple styles can be applied to the same thing, but because of the order of importance, the one that's most important by the end of the cascade is 
+    what the user will actually see on the screen.
+So for example is you have an ordered list with list items.
+    If you have an external rule targeting all li elements, it'll take affect,
+    but if there's an inline rule conflicting on one of the li elements, that inline rule will be what takes affect.
+There are four broad categories which we look at when we're determining the overall level of importance of a CSS rule:
+    1) Position
+    2) Specificity
+    3) Type
+    4) Importance
+Position:
+    The first thing we look at at the very top level is whether a rule is at a higher or lower position in the CSS relative to other rules.
+        For instance, you first change the color of an element to red, and right after to blue.
+            li {
+                color: red;
+                color: blue;
+            }
+        Both of the rules gets applied, but the one that's lower down replaces the previous one, so the colour will always end up as blue.
+    The Position of a CSS rule can apply to the position within the curly braces of a selector, 
+    but it could also be that you target the same element again lower down in the file.
+        In which case, that lower down rule will always be the final one to take affect.
+Specificity:
+    The next thing we look at is Specificity.
+    This refers to how specific the selector is in terms of the elements that you're applying the CSS Rule to.
+    Say we continue the list item example above and give the first one an ID attribute and the draggable attribute.
+        We now have 4 means of targeting this li element, by element, class, element w/ attribute and by id.
+        Each of these selectors have a different specificity level.
+    The highest/least important is the list item element selector (Element Select)
+    Then comes the Class Selector.
+    After that comes the Attribute Selector.
+        A lot of sources say that the Attribute and Class selectors are the same level of specificity, in practice, the attribute generally overrides the class.
+    Finally, the lowest level/most important selector is the ID Selector.
+        This is most specific because theoretically there should only be one element with an ID on a given web page.
+Type:
+    We know there are 3 different ways that we can apply CSS to a particular file.
+    In terms of level of importance:
+        External is least important/highest level.
+        Then Internal
+        And most important/lowest level being the Inline styling.
+Importance:
+    This is defined by a keyword that you can apply to any CSS rule.
+    This keyword is the "!important" keyword.
+    For example:
+        h1 {
+            color: red !important;
+        }
+    This keyword overrides and sets the rule it applies to to be the most important one.
+Now doing an in-vid quiz on the levels of importance here.
+When it comes to classes, you can apply multiple classes to an element so long as you leave a space between each class.
+    e.g.: <h1 class="first second"></h1>
+We'll now be looking at the exercise for this lesson.
+    We're only coding CSS here.
+    Again, goal.pgn has the end result.
+    No changing existing code, only adding CSS.
+    So obviously need to manage the hierarchy and importance of the CSS rules.
+
+## 44. Combining CSS Selectors:
+
+This lesson is going to focus on how to combine different CSS Selectors so that we can target a very specific element in our website in order to apply our style.
+In the previous exercise, we saw how we had to use a class to change the text colour of the p elements and needed to give one a class in order to achieve different colours.
+    Now when a webpage gets big enough, that becomes pretty cumbersome, so there's a need for an alternative to giving each element an id/class.
+That alternative is the combining of selectors to select something specific.
+    Using the code from the previous example with the p elements:
+        <p>Yellow Text</p>
+        <div class="box inner-box">
+            <p>White Text</p>
+        </div>
+    Notice that the p element we want to have white text lives inside a different div with it's own classes.
+    This bit of info can be used and combined to select a specific element:
+        .inner-box p {
+            color: white;
+        }
+    Now what the above rule does, is it first looks at the elements with the particular class (inner-box), and then it looks at any of the decendants of that class.
+        Note that the descendant could be one level down under it or 3, so long as it's under it as a descendant.
+        As long as the element is unclosed within the div, it counts as a descendant of that div.
+There are different ways that we can combine CSS selectors.
+    Group Rule Combination:
+        This is done using a comma-space between selectors:
+            selector, selector {
+                property: value;
+            }
+        What the grouping does, is it selects both the selectors or even more selectors, and applies the same style to the entire group.
+            For example, you could set both h1 and h2s to the same colour using this grouping.
+        Will now be taking a look at the exercise for this lesson in relation to the Group Rule.
+            Want to target both h1 and h2 and have a blueviolet text colour.
+        Note that the selectors you use in the Group Rule isn't restricted, you could group a class and id selector together if you wanted.
+    Child Combination:
+        This is done to target the child of another selector.
+            selector > selector {
+                property: value;
+            }
+        Here, the first selector is the parent, and the second, the child.
+            The rules in this combination target the child.
+        This means that if we had a div, then any element one level down is a direct descendant and thus a child of the div which is then the parent.
+        This parent-child relationship is only one level deep.
+            So if div1 is a parent of div2, and div2 is a parent of p1.
+            p1 is not a direct descendant/child of div1.
+        In the exercise, we'll use this selector rule to change the first p element's colour.
+        Again, the actual selectors in this rule are not limited.
+    Descendant Combination:
+        Here we have 2 selectors separated by a space: the Ancenstor and Descendant.
+            selector selector {
+                property: value;
+            }
+        The rules in this combination target the descendant in the combination rule.
+        In this combination, the descendant can be any number of levels deep, so long as it is a descendant of the ancestor selector.
+        We'll use this combination in the exercise to set the list item colors to blue.
+    Chaining Combination:
+        Here we're saying to apply the styles to the instances where ALL the selectors are true.
+        This combination is achieved by stating one selector and then immediately another without any separation.
+            selectorselector {
+                property: value;
+            }
+        For example:
+            li#item-id.class1.class2 {}
+        In this way, we can be incredibly specific in our element selection by chaining selectors in this method.
+        Note, if you're including an element selector in your chain, put the element first as it may not be apparent as an element selector later on in the chain.
+        Now in the lesson exercise, need to set list items 2 and 3 to a seagreen colour using this combination method.
+    Combining Combiners Combination:
+        We've now looked at how to combine different selectors.
+        But we can also combine these different combiners together.
+        It's gets complex like this, but gives you additional specificity in your selections.
+            For example:
+                selector selectorselector {
+                    property: value
+                }
+                In this example, you're using the chain combiner to select a specific descendant element.
+        We'll use this method to target the p element in the ul in the lesson exercise.
+Be mindful when choosing to use the parent-child vs the ancestor-descendant selectors.
+    If you change the layout, this can cause issues in the formatting as well.
+    Typically only use the parent-child combination if absolutely certain that that's the only necessary use case for those rules.
+
+## 45. CSS Positioning:
+
+We'll now be looking at something related to the positioning of elements on the screen.
+There are 4 different types of positioning we'll be going through:
+    Relative Positioning
+    Absolute Positioning
+    Fixed Positioning
+    Static Positioning
+We'll be looking at how each of these values work and when you may need each of them.
+Static Positioning:
+    This is the HTML default positioning, as soon as you insert any piece of HTML, they'll have this particular positioning by default applied.
+    For static positioning, you can set the the CSS position property to static.
+        But seeing as it's the default, you don't necessarily have to.
+            position: static;
+    This positioning effectively just puts the element underneath whatever the previously element above it was.
+The Pesticide Chrome Extension helps view the positioning for debugging greatly as well.
+Relative Positioning:
+    This will be the most common positioning type that you'll use and come across.
+    This is where an item gets positioned relative to its default position.
+    In Static positioning, the items just go on top of one another.
+    Relative positioning basically takes that original position and lets you apply some changes to it so you can move it relative to where it should be.
+        For example:
+            position: realtive;
+            left: 50px;
+            top: 50px;
+        This example pushes the item 50pixels right and down.
+        It's effectively like putting in a margin.
+    Just be sure to remember that Relative means relative to its Static position.
+Absolute Positioning:
+    This positions the element relative to the nearest positioned ancestor OR to the top left corner of the webpage.
+    For example, if we have div2 as a descendant to div1.
+        We set div1 to a Relative positioning, and div2 to Absolute positioning.
+    For this property to work, one of it's ancestors needs to have a position property set, otherwise it defaults to the top left of the screen.
+            position: absolute;
+            top: 50px;
+            left: 50px;
+    If the element goes to the top left, any positional changes will still take affect (such as left: 50px;)
+    Another aspect of Aboslute Positioning that's important to look at is the Z-Index.
+        This determines which elements go on top of which in the Z-axis.
+        The higher the Z-index, the more forward the element is in relation to others.
+        Everything on screen has a default z-index of 0.
+        But when you set an element to have Absolute Positioning, it actually takes the element out of the original HTML flow and puts it on another layer.
+            That's why if it has the same z-index as another element, it won't fit in with the rest of the elements.
+Fixed Positioning:
+    This is a positioning that is going to be relative to the top left corner of the browser window.
+    This means that even if you scroll up and down the webpage, the element is going to remain in the same location relative to the browser.
+The top and left properties are how we further position elements in addition to the position property.
+    We also have right instead of left and bottom instead of top.
+Note that the position property sits outside of the margin from the box model.
+We'll now go onto do the lesson exercise.
+    We'll be making a rectangle with a circle inside.
+For this, we'll need to know how to create a circle using CSS.
+    Say we have a div coloured in so we see a square.
+    If we define a border radius, which sets the radii of the outer border.
+        It rounds the corners of a div.
+    If we set the border-radius to 50%, it creates a full circle out of the div.
+For the exercise, note the dimensions provided in the goal.png.
+If you give a child element a height and width but not the parent div, the div expands automatically to match that of its child.
+Note that when positioning an element, when you define the position, remember you're defining the position of the top-left corner of the element.
+
+## 46. [Project] CSS Flag:
+
+This section project will be building the flag of Laos using only CSS and HTML.
+Again, no HTML editing, simply just add CSS.
+    There are hints inside the HTML as well and can use the link and inspect it for the colours.
+There's a great shortcut for getting the selector for a particular element in CSS.
+    In the CSS Inspector, right-click the html element you want, select Copy -> Copy selector.
+    And then you can paste that which is the selector for that particular element.
+    Granted it's not always a good idea to blindy copy-paste things.
+        But it gives you a starting point, which can then simplify it.
+Also note that sometimes when targeting a particular parent element, the CSS styling gets inherited by its children, which can throw you off sometimes.
+    Be sure to use the inspector to check what is or isn't inherited to ensure you're target the right thing.

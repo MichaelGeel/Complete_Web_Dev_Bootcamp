@@ -1,0 +1,243 @@
+# Section 8: Advanced CSS
+
+## 48. CSS Display:
+
+In this section, we'll be diving into CSS for website layout.
+    Starting with the CSS Display property.
+Previously when looking at a paragraph element for example, we've seen how its border takes up the entire full width of the webpage.
+If we didn't want this to be the case and for example, wanted paragraphs which are short enough to have the next line wrap up then we'd need to use a different element.
+Another type of element is something called a "span", and normally you'll see the span element in the middle of another element.
+    For example:
+        <p>Hello <span>Beautiful</span> world</p>
+    What's cool and unique about span is that it by default has a different display property.
+There are 3 common types of display values that we're going to look at.
+    The span has the value defaulted to a display value of "inline".
+        For example, if we had 2 h2 elements and set both their display properties to inline, they'd appear directly next to eachother rather than one on top of the other.
+    By default, most elements have this display property set to the "block" value.
+        And this is the full width rectangle that we've seen on elements thus far.
+To set the display property value:
+        selector {
+            display: value;
+        }
+The 3 values we'll be look at for this property are:
+    -inline
+    -block
+    -inline-block
+Block:  
+    When an element has its display set to block, it takes up the entire webpage width.
+    And if you have another element, it'll go below it.
+Inline:
+    With inline, elements will be placed next to eachother until no more can be fit on the width of the web page.
+    Only once the full wed page width has been reached will the inline elements be placed on the next line.
+    An important thing to remember about elements which are inline is that you can't set the size of these elements.
+        You can't set their width and height.
+        The reason for this is because the size will default to the size of their content.
+            For example, an inline p element with the content of Hello would only be as big as required to fit the word Hello.
+Inline-Block:
+    What's unique about this type, is that the block portion allows us to set the height and width and the inline aspect allows us to have leements that go on to the same line.
+    So this display value gives us the best of both worlds.
+The values of the display property allows us to determine the layout of our website.
+There's an additional display property value to look at:
+None:
+    When you set the display property to this, it effectively makes that element dissappear.
+    This is useful for interactibility to remove elements or make them appear.
+Note that even if a block element's width is shortened, it'll still take up the entire width of the page regardless of whether an inline can fit in next to it or not.
+Now we'll move on to the lesson exercise.
+    There are 2 steps to this lessons challenge.
+    First challenge is to only change the display property to achieve the goal1.png result.
+        Answer to use inline block for all 3, remember that inline sizes can't be altered, but inline-block sizes can.
+    The Second challenge is get them all vertically under each other by changing the display property only.
+        This is done with all set to the block display property.
+
+## 49. CSS Float:
+
+Another important CSS property for layout if the Float.
+The main thing that this allows us to do is to wrap text around a particular element.
+    For example, if you have an image with a width of 200px inside a div that's 300px wide, this property allows your text to fill the remaining 100px and then once  it's past the height of the image, it goes on to fill the full 300px width of the div then.
+If you wanted to use the float property, you'd have to target the element you want the text to wrap around.
+    So in the above example, you'd give the image the float property, and then you'd define where you want it to float.
+    For example:
+        img {
+            float: left;
+        }
+    Here "left" tells the image where to float, so float left means the text can wrap around the image on the right side.
+Similarly, "right" would have the text wrap around the left side of the image.
+When you assign the float property to something, it's taken out of the normal HTML flow and are actually floating around the text.
+Notice how the property is on the element the text is wrapping around, yet the behavior sits on the text?
+Now sometimes you might not want the text to wrap around the floated element.
+    Such as if you had a footer that shouldn't wrap around the image.
+    To achieve this, we'd use a related property on the text-based element called "clear"
+    Then on the text element you don't want to wrap, you add the clear property and assign it a value.
+    For example:
+        footer {
+            clear: left;
+        }
+    What this clear property does is it clears any responsibility to wrap around things that are floating.
+        In the above exmaple, this clears the footer of the left float and it will now go into its normal position and ignore anything that's floating around it.
+You could achieve a web layout of 2 divs next to eachother with a separation giving the one a float left and the other a float right.
+So if you have something that needs to ignore a float left and right, then it needs a clear value of "both" to ignore all floats around it.
+Now we'll be doing the lesson exercise.
+    We have 2 divs that need to float left and right.
+    In each div is an image that the text in the div needs to float around.
+    The footer at the bottom can't float around the divs either.
+Note that in modern web development and web design, we don't actually use the float property to achieve the designs because there are much better tools for us to use.
+    Tools like Flexbox, Grib, Bootstrap and a bunch of others.
+    These are all less complicated to use and understand than using float.
+There can be very unexpected results if you're trying to achieve a complex layout using float.
+The recommendation is to only use float when you want to wrap text around an image.
+    This is what you'll see most people using float for in modern Web Design.
+
+
+## 50. How to Create Responsive Websites:
+
+
+A really important concept in terms of layout is how it should change depending on the size of the screen.
+In modern times, there are many different screen sizes:
+    desktops, laptops, iPads, mobile phones.
+We want our website to look good on all of them.
+    And in order to do this, we need to make our websites responsive so that it responds to changes in screensize.
+    For example, change the browser window size while on a website and see how the page changes according to the browser window size.
+        If you look really closely, you'll notice that at certain points in the browser window width, certain changes in the website will occur.
+There are 4 main ways of achieving this responsiveness:
+    1) Media Queries
+    2) CSS Grid
+    3) CSS Flexbox
+    4) External Frameworks e.g. Bootstrap
+We'll be covering the first 3 in this lesson.
+Media Query:
+    This is essentially something that you put in instead of a selector in your CSS.
+    For example:
+        @media (max-width: 600px) {
+            /* CSS for screens below or equal to 600px wide */
+        }
+    The max-width: 600px is what we refer to as a breakpoint.
+        It essentially says, look inside the braces and apply this CSS when displaying onto a screen that is equal to or below 600px wide.
+CSS Grid:
+    This has an entire section dedicated to it later on as it's a harder concept to understand.
+        Conversely, it's also far more flexible to match the complexity.
+    Say you have a layout that you want to implement.
+        You create a div, containing child divs that match the "cards" in the layout you've chosen.
+        Then main div is called the containing div and gets a different style where we apply the "display: grid" to the containing div.
+        By setting the display to grid, we're basically saying that we're going to use this system of CSS Grid to do the layout.
+    It's a simple system where define how you want the columns and rows to be layed out.
+    The grid container code looks like this:
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 100px 200px 200px;
+                gap: 30px;
+            }
+        Note that "fr" stands for fraction.
+        The grid-template-columns says that we want 2 columns.
+            The fr in this case means both columns will be an equal width portion of the screen.
+        The grid-template-rows defines the rows in our grid.
+            In the above case, 3 values means 3 rows.
+            When defining the columns/rows you can use either fractions or pixels (fr/px)
+            The values define the height of the rows.
+        Then lastly the gap defines the gap width between each of the rows and columns.
+    Lastly, we can change the first div to span 2 columns if we wanted:
+        .first {
+            grid-column: span 2;
+        }
+CSS Flexbox:
+    This is another big system that we'll dive into with it's own section.
+    If Grid was something that applies to 2D layouts, where you've got columns and rows.
+        Then Flexbox is great for creating 1D layouts.
+    Whether you want everything laid out as boxes horizontally or vertically.
+    Say we have a div container containing 4 divs.
+        The parent div container will have a display set to "flex"
+        This tells the CSS that we're using the Flexbox system.
+    Then this system will allow us to set each of the divs inside the flex container and give them different settings.
+        You can give each of the cards a flex, which will tell the system to divide the width between the cards according to 
+            their flex values.
+        If all 4 cards had a flex of 1, it'd distribute the width equally among them.
+    If the above settings is the default, then you could go ahead and customize the settings.
+        So if you set one box to have a flex of 2, it'd be double the width of any box with a flex of 1.
+    This system alows you to determine easily how you want the layout to be laid out horizontally or vertically.
+    Because everything is a ratio and a %, by default that means your page is by default responsive.
+        This is because if the width changes, then everything is going to change proportionally.
+Bootstrap Framework:
+    The last method of creating responsiveness that we'll look at is using the Bootstrap Framework.
+    The reason why this is called a framework is because it's external.
+        It's not something built into CSS.
+        Effectively someone else's code that we're going to then use.
+    What's been done is that a bunch of classes in CSS have been defined with relevant selectors.
+        For example you could have something called "card"/"row"/"container" etc.
+            And each class or id points to some CSS code inside the Bootstrap container which has predefined layout.
+    In terms of responsiveness, this also has a sort of flex system because Bootstrap is in fact built on top of Flexbox.
+    Their system is a 12 division system.
+        If the full width of your website can be divided into 12 equal portions.
+        Then you effectively have 12 "slots" of column width that you can fill per row of cards.
+        For any given card, you give it an additional class to define how many slots you want it to take.
+            Those classes are laid out like this: col-num.
+                Where num is the integer of slots you want that card to take up.
+    As we resize the website, the width of the column slots and therefore the cards will resize accordingly.
+    There will also be an entire section dedicated the using the Bootstrap Framework.
+The next lesson will cover Media Queries as it's not as complex and doesn't require an entire section like the other 3 Options do.
+This does beg the question on how to choose a responsiveness solution.
+    There is no "best" when it comes to programming.
+    Everything has something it's good at, and other things it's not so good.
+    So you'll effectively learn what to use and when.
+    Otherwise you can choose whichever stands out to you.
+The code shown in this lesson is provided in the lesson activity to be played around with and testing.
+
+
+## 51. Media Queries:
+
+
+Media Queries are pretty simple to understand as seen before.
+Example:
+            @media (max-width 600px) {
+                selector {
+                    property: value
+                }
+            }
+We start with the "@media" keyword and then in the brackets that follow it we set our breakpoint.
+    The breakpoint basically sets a rule and so long as that rule is met, the CSS styling specified should be applied.
+For example:
+    Say we have a div with a width and height of 200px.
+    Then we can declare a media-query that halves the dimensions of the div when the screen width is smaller than 600px for example.
+This enables better use of the available screen real-estate and the elements are scaled to fit the screen size.
+The max-width media query effectively applies to any screenwidth equal to or less than the specified value.
+    If the condition is met, then we provide an override to the default styling.
+Alternatively, we could use different keywords for defining the breakpoint.
+    One such keyword in min-width.
+        Which is the minimum width the screen width needs to be for the overriding CSS to apply to.
+        This is more geared towards targeting bigger screens.
+        It's effectively the opposite of the max-width keyword.
+You can also combine the breakpoint keywords to target screen sizes that fall within a very specific range:
+        @media (min-width: 600px) and (max-width: 900px){
+            /* Styles */
+        }
+    This targets any screens bigger than 600px and smaller than 900px.
+    You can also swap the keywords around in this scenario to apply styling to any size EXCEPT a specific screen size (600-900)
+            i.e max 600 and min 900.
+In addition to the max- and min-width keywords, there's also the "screen" keyword.
+    This isn't necessary by default because it's going to apply it to all screens.
+    But if we think about the alternative to screen, it's a keyword called "print".
+        This allows the media query to target only when your website is being printed and give it a different layout.
+    For example:
+            @media screen/print(orientation: landscape) {
+                /* styles */
+            }
+Head to the dev docs to see more on the use of media queries in formatting CSS.
+    There's a lot of information of the possibilities using media queries.
+Moving onto the lesson exercise.
+    Here we're setting up some media queries to target screen sizes and change the colour accordingly.
+Another way of testing out the responsiveness using the Chrome Dev Tools is to open up the CDTs.
+    In the top left of the CDT screen is an icon featuring a screen and mobile phone.
+    Pressing this icon lets you alter the screen size to view how the website responds to the altered screensizes.
+        The screensizes are even model specific and also allows you to freely drag-change the screen to view the responsiveness.
+Note that when combining the breakpoints, there must be a space before and after the "and" otherwise the syntax will break.
+
+
+## 52. [Project] Web Design Agency Website:
+
+
+This section project is going to be creating a website for a web-design agency.
+The project has a header, 2 cards with text and a footer.
+The website also scales responsively.
+    We'll mainly be scaling it to the iPhone sizing.
+First need to take a look at the base code provided.
+Will first aim for the same result as the solution.
+    Thereafter will do a slight homebrew for this project.

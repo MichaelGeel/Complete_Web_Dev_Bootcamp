@@ -1,0 +1,288 @@
+# Section 9: Flexbox
+
+## 54. Display: Flex:
+
+This module is going to cover the CSS Flexbox.
+A lot of web layout was originally inspired by newspapers and magazine articles, which is where the various displays all come from.
+    Over time, the layout of the web has become more and more complex to the extent where it's no longer that similar to a magazine and a website has become far more complex and far mroe interactive.
+Over the years, there have been many ways of implementing HTML and CSS to layout a website.
+    One of the earliest ways was using HTML.
+        We had these things called tables that you could create to create a layout for your website.
+        The table element is still in use in modern web design, but being an HTML element, it should really only be used when you're actually trying to create a table.
+    After people stopped using tables for layout, they started using what we've explored previously, which is using the Display property.
+        For example, you could have 3 divs set to inline-block so they all sit on the same line and then you can set their width manually to stack them next to eachother in different columns.
+        There are problems with this approach though.
+    Then we got float.
+        Which is a very useful tool for floating images to get text to wrap around it.
+        And float can be used to create more complex layouts as well.
+        Float is great, but only for the intended purposed of getting an imge in place with text wrapped around it.
+Now if we want to create a page-structure, we want to use something specifically designed for creating web layouts such as Flexbox, Grid and Bootstrap.
+Flexbox is incredibly easy to use.
+    For example, to create a a layout of 3 columns containing text, simple put those divs inside a container div, and set the container to have the display: flex;
+    That's all you effectively need for this layout.
+    You can then add a gap: 10px to put a 10px wide gap between each of the columns.
+Note that flex is set on the display property.
+    And from previous lessons, we've seen teh inline, block and inline-block display properties as well as none.
+    For the flex display property, consider it a completely different system.
+When thinking about flexbox, through the other dislay properties out the window.
+    That doesn't mean they won't be used.
+    When you make something Flex, it no longer abides by any of the rules relating to the other display properties.
+    It's a different system with different rules and we have to learn about it and think about it as a separate entity.
+What happens when we declare something to have display: flex;, we give a little bit of the control to Flexbox to layout our content in a reasonable and commonly desired way, 
+    but we have all of these different modifiers in order to tweak it, to have the exact layout that we want.
+As mentioned previously, different elements by default have different display values.
+    For example a div is a block display, a span is by default an inline element.
+When you use Flexbox, and you enclose all of the elements that you want to dislay inside a flexible container, then what happens is that all of these previous display values will be ignored.
+    Instead, everything is going to be laid out by flexbox.
+    And the width of each of the elements inside the flexbox, will normally be based on the content size.
+    It's going to try and let you have all of your content displayed in one line.
+    It doesn't matter what type of element you have inside the flexbox, it's going to try to apply the flexbox rules to each of them.
+As seen, we have the gap property to add a gap between the elements in the flexbox.
+            gap: 10px;
+    If you want your gaps to be more responsive, you could set it to 1 rem in size so it adapts to the screen size.
+By default, when you declare a container to be display: flex, it's going to create a container that is more or less like a block element.
+    It's going to be 100% full width.
+There's also an option where instead of setting the container to be display: flex, you instead set it to be display: inline-flex
+    Similar to inline-block, it allows the flexbox to occupy as much space as it needs, but it means that other things can also occupy space in the same line.
+We'll now be doing the exercise for this lesson.
+    From index.html, there are a bunch of other HTML pages it's linked to that showcases the various layout methods mentioned during this lesson.
+    The challenge in this exercise, is to take the index.html page, and turn the list into a navigation bar using flexbox.
+
+
+## 55. Flex Direction:
+
+In this lesson, we'll be looking at a Flexbox property called "flex-direction" so that we can learn how to modify our Flexbox in order to achieve the layouts that we want.
+When we think about an HTML default flow, normally items get laid out inline and continue stacking inline until there's no more space.
+    Or if block display type then they'll stack one on top of the other, top to bottom.
+As previously seen with Flexbox, as soon as we put everything inside a flexible container, all of the items that are contained gets put onto the same row and lined up, one after the other left to right.
+    This reason for this is because there is a property in Flexbox called the flex-direction.
+    By default, this flex-direction is set to row.
+                flex-direction: row;
+    Meaning the elements within will be laid out along a row.
+    Here, when we say row, it's because we're looking at how the next item is going to be stacked onto the page.
+In Flexbox, when you're setting the flex-direction to row, you're setting something called the "main-axis"
+    In the case of row, the main-axis is left to right on the horizontal.
+Then you also have what's called the "cross-axis"
+    This axis goes perpendicular to the main axis.
+    If flex-direction is row, then the cross-axis will be columnar from top to bottom.
+Now if we set the flex-direction to column:
+    Then it's going to make all of the items in the flex container go from top to bottom.
+    Now we changed the main-axis to be columnar from top to bottom and thus the cross-axis is row from left to right.
+The main- and cross-axis matters when we want to continue to customize our Flexbox items.
+    We'll use an example property here called "flex-basis"
+            flex-basis: 100px;
+    This property is almost like setting the height/width in this case.
+    The flex-basis sets the initial starting size value of the flex items.
+    Setting this property expands/shrinks alongs the main axis to provide that much space for each item in the flex container.
+        If the main-axis is row, then the width expands/shrinks, if the main-axis is column, then the height expands/shrinks.
+    Effectively, flex-basis and a number of other properties flex along the main-axis.
+We'll now go into the lesson exercise.
+    Need to change the flex-direction to column as well as set the height of each item to be 100px.
+Note that the flex-basis is set on the child element.
+Solving the lesson exercise:
+    First:
+        Set flex-direction to column on the container.
+    Second:
+        Note that be default, everything accopies 100% of the width, which we don't want.
+        To solve this, instead of flex, we set the display to inline-flex.
+            Note I simply added a flex-basis here, but that isn't responsive to changes in width of the elements.
+    Third:
+        We now want each of the elements to be a little taller.
+        We'll now want to set the flex-basis property, but it get's applied individually to each of the elements.
+        To solve this, we need a selector combination to target each of the items in the flexbox.
+            Specifically, we use the child selector (>).
+        So we'll use the universal selector to select all direct children of the container.
+            .container > * {}
+
+
+## 56. Flex Layout:
+
+
+In this lesson, we're going to dive deeper into probably the biggest topic of Flexbox, which is creating layout.
+    Including how you create layout, what is the automatic/default behavior of Flexbox and what you can change to make it what you want it to be.
+One of the first things to differentiate when we're talking about the different properties to set is:
+    Is this property going to go onto the child, which is the flex item?
+        Each item contained within the flexible container is a child.
+    Or does the property go onto the parent or container?
+It's important when learning Flexbox to really differentiate between these 2 things.
+    As seen earlier, if you set a property intended for the child on the parent then it won't work.
+The first property we'll look at here is the "order" property.
+                order: 10;
+    This sets the order of your child items.
+        Note that by extension this means this property goes onto the child-items.
+    By default, all items have an order of 0, so they're arranged by their order in the HTML.
+    If you were to set a div's order property to 1, it'll get sent to the end of the order.
+    So essentially, the lower/smaller the order value is, the higher up/closer to the start of the flexbox the item will be.
+The next property to look at is the "flex-wrap" property.
+                flex-wrap: nowrap;
+    This property is useful when you run out of space on the horizontal.
+    For example, you have a row-based flexbox running left to right.
+        Say now you run out of space to place the items on the screen.
+        The items are just going to be pushed to the end and will continue off screen.
+        It won't go to the next line.
+    The above is the default flexbox behavior where the flex-wrap property is set to "nowrap"
+    If you want the items to continue to the next line instead of being invisible, then change the flex-wrap property to "wrap".
+        What this will do is it'll move all the elements that don't have enough space to fit in its full minimum width on the top line to the next line and continue wrapping.
+    Note that this property is a property that goes onto the parent.
+        I.e. It goes onto the flex-container itself.
+    Can check out: https://appbrewery.github.io/flex-layout/ to view how the wrap property works.
+    There's also the wrap-reverse, which takes all the flex items to the bottom left of the screen and then they wrap upwards left to right (from a row perspective.)
+Looking at the "justify-content" property:
+    This is also a property that goes onto the parent container.
+    It sets the distribution of our items along the main axis.
+    If our flex-direction is set to row, and we set our justify-content to "flex-start"
+                justify-content: flex-start;
+        Then our flexbox will look like it normally does by default.
+        Everything is going to be bunched up to the left. (or start of the flexbox)
+        Conversely, "flex-end" sends the flex items to bunch to the right (or end of the flexbox)
+    These values are provided that when all the items are expanded to their maximum width, there is still space left for us to actually justify the content.
+        If the items have already taken up all the space, then the property won't behave as described.
+    We can also set it to "center", where it simply centers the items to the middle of the flexbox.
+        It's a comparatively easy method for centering items in CSS.
+    There are also properties which allow you to have spacing between the different flex items.
+        Namely the "space-between" justify-content.
+        But also the "space-around" and "space-evenly" values.
+            "space-between" ensures the first and last items in the flex row/column are at the start and end of the line and the rest of the items spaced evenly between them.
+            "space-around" creates the exact same margin sizing on all the items in the flex row/column no matter what. 
+                The margin left and right or top and bottom of the items are the exact same, meaning more spacing between the flex items than between the flex item and the container border as it doubles the effective gap between items.
+            "space-evenly" creates 100% even spacing between each flex item in a line (no margin doubling effect like with space-around)
+    Flexbox handles all the maths and calculations for these spacings for us.
+The next property is called "align-items"
+                align-items: flex-start;
+                height: 70vh;
+    This works differently to justify-content, even though the values may seem similar.
+    This sets the distribution of the items along the cross-axis.
+    It's a property set on the container.
+    But in order for this property to work, we have to set the height of the container.
+            When setting the heigth and width of elements on screen, we can use the vh and vw elements.
+                vh stands for Viewport Height.
+                vw stands for Viewport Width.
+                    These are the height and width of the window you're viewing the page on.
+                The number before the vh/vw is the percentage of the window height/width that the element in question is set to.
+                    So 70vh is 70% of the height of the window you're viewing the screen on.
+    The 'flex-start' bunches the items to the top/left of the flex container. (The start of the container)
+    The 'flex-end' bunches the items to the bottom/right of the flex container. (The end of the container)
+    The 'center' places the items in the middle of the cross-axis in the container.
+    Note that align-items doesn't seem to work if the flex-wrap is set to a value other than nowrap.
+    If you wanted to align everything in the container to the center.
+        So you use the align-items: center, but now you want a single item to be at the top.
+        That single item would need a different align value.
+        So within that particular item, you can give it the property "align-self"
+            You can then set this property to be whatever you want the item to be.
+                    align-self: flex-start;
+            The align-self uses the same values as align-items but only applies to the item it's a property of.
+For reference material on working with Flexbox, see this Cheat Sheet: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    This sets out all the available settings and configurations for setting up the Flexbox in CSS.
+Finally, looking at the "align-content" property.
+    This property also sets the distribution of the items along the cross-axis.
+    This property works similar to align-items, but only works when you have the flex-wrap set to 'wrap', and consequently, 'wrap-reverse'
+    If we apply align-content: center; and make your flex-wrap: wrap; then when the width of our window decreases everything bunches up together and wraps to a second line if necessary.
+    This is effectively the wrap enabled version of align-items.
+The exercise for this lesson is completing the flexbox froggy game.
+    https://appbrewery.github.io/flexboxfroggy/
+    You basically need to get the frog onto the lily-pad.
+    There are multiple challenges and levels to go by.
+Can also reference this link to review flexbox behaviour with the various properties:
+    https://appbrewery.github.io/flex-layout/
+
+
+## 57. Flex Sizing:
+
+
+This lesson is going to look at how to size the items in a Flexbox container, shrinking and growing and how it should behave in a responsive situation.
+Let's say we have a web page with 4 paragraph elements.
+    We know that paragraph elements are going to be full width as they're all block elements and come with a default margin and padding setting.
+If we put these p elements into flexbox container, it'll turn each of these p elements into flex items.
+    The items get stacked along the main axis and the sizing is based on their content size.
+    At this stage, even without writing any sizing properties, the items have a default behavior.
+        If we change the width of the viewport/window, such as make it narrower, we'll see the blocks shrink in response.
+Flexbox does most of this automatically having a behavior that in most cases is what we would want, but sometimes you're going to need to customize this 
+    And to be able to customize how each of the items inside a Flexbox is sized, we're going to need to learn a bit about how it actually gets worked out and what is the algorithm that Flexbox uses to determine each of the flex item's sizes.
+The way that it works it out if basically a priority list.
+    It first looks at whether there is a minimum width and a maximum width that's set on the item.
+    If this is not set, then it's going to look at the next things, which is "Is there a flex-basis set?".
+        flex-basis as we saw previously is a way to set the width on a row-based flexbox or height on a column-based flexbox.
+    Otherwise it then looks at the width/height for row/column based flexboxes.
+    Lastly, if none of the above are set, it looks at the actual content width.
+        Let's say you had an item containing a paragraph with the words "Web Development".
+            The content width, the ideal width, is basically the width that allows that text to be lined up next to eachother.
+            If the flexible box had to shrink, it'll go down to the minimum size, which is where the text wraps and is stacked one on top of the other.
+We're going to look at examples of all 4 ways of setting the sizing and how it works in code format with examples.
+To set up, we'll have a flex container with a flex display and a gap of 10px;
+    Inside the container, we have 4 paragraph items with some text of varying lengths in them.
+If we go ahead and just by default put these items inside a flex container.
+    When we shrink the size of the window, what'll happen is each of the items will automatically shrink until they reach the minimum content size.
+        Minimum size being where there's only a single word wrapped on each line as mentioned above.
+    The minimum width of the box is determined by the longest word and the height by the box with the most/longest text.
+    If you try to shrink the container even further, some of the items will just be pushed off the page and no longer be visible.
+    As mentioned, the max-width looks at the longest possible line of text, and the minimum width looks at the longest word.
+If we manually set the width of each of the items to 100px.
+    We'll now see that the flex items each have a width of 100px due to us having targeted them directly with CSS.
+    Now when we shrink the window, the container will try to respect that width we've set until there isn't enough overall width in the container.
+    If there isn't enough width to respect the width we declared, it'll then shrink the items in the same algorithm as seen above.
+    When there's enough space, it'll respect the width that was assigned to the items.
+The next thing to try adding is the flex-basis.
+    If we maintain the width set, and add a flex-basis: 200px; we'll see it completely ignore the width, because of the flex-basis and each flex item will be 200px wide.
+    This again is in a situation where there's enough space in the flex container for each item to have that flex-basis width.
+    However, once again if there isn't enough space in the flex container for each item to have the flex-basis width, then it'll revert back to the default algorithm and shrink down to a min-width and then get pushed off-screen.
+    With a flex-basis present, there is no point to having a width what-so-ever.
+Lastly, looking at the min-width/max-width.
+    There is a default max-width and min-width that's based on the content.
+    The max-width is all of the content lined up, occupying the ideal estate, which in the form of text is to have everything on 1 line.
+    The min-width is the width of the largest item/word in the flex-item at the font/sizing that's set.
+    You can also manually set each of these properties and completely ignore the content, and in some cases that may be useful.
+    If we now deleted the width but kept the flex-basis of 200px set on each of the items, but go ahead and also set a max-width: 100px;
+        So the flex-basis is larger than the max-width.
+    If our flex container has enough space for the full width, we'll see that the max width is being respected and no items are expanding beyond 100px as set by the max-width.
+        The max-width determines the max width that the item si allowed to grow to.
+    However, if the flex-basis is smaller than the max-width, then the flex-basis will be respected instead.
+        The respected property between these 2 solely comes down to the smaller between the 2.
+    On the other hand, there's the minimum width.
+        This determines how small each of the items can shrink to.
+        Reverting back to the flex-basis 200px example.
+            If we now set the minimum width to 300px we'll see each of the items 300px wide.
+        It respects the minimum width where it's larger than the flex basis.
+        If we try to shrink the flex container, the items won't shrink beyond the minimum width size.
+The growing and shrinking is an important concept to understand in Flexbox, because a lot of the flexibility, the flexible part of the flexbox comes from the ability to grow and shrink.
+    These properties are represented by flex-grow and flex-shrink.
+    Using an example where flex-basis: 100px; and flex-grow: 0; flex-shrink: 0;
+        If we try to grow or shrink the items by increasing/decreasing the window width, the flex item sizing remains constant.
+    If we now change flex-grow and set it to 1
+        Then each of the items will start out at 100px and remembering that the flex-basis is simply the initial starting size value.
+        The items will start out at 100px, but if there's space left in the container, then the flex items will grow until the entire width of the container is filled up by the items.
+        But when the width of the window is reduced, the item size reduces to the flex-basis amount, but it doesn't go any further.
+    If we now switch it around, setting flex-grow to 0 and flex-shrink to 1.
+        Again, the items are set to the flex-basis, but it won't grow at all.
+        Now if you shrink the window width, the flex items will shrink beyond the flex-basis down to the minimum width (if not set then minimum width of content) and then get pushed off-screen.
+        Then as you widen the window it'll grow to the flex-basis in size again and no further.
+    The flex-shrink being 1 and flex-grow being 0 is the default setting of Flexbox items.
+    Now if flex-grow and flex-shrink are both on.
+        Then the items automatically grow to fill the flex container and can freely shrink down to the minimum width.
+        In this case the flex-basis is for all intents and purposes ignored.
+        It grows to max-width and shrinks to min-width (if not set then inferred from the content of the items.)
+    The default for flex-basis is actually "auto" which is complex because it looks at the amount of content in each of the items.
+        It gives more flex-basis to items with more content and less flex-basis to the items with less content.
+    If you don't want the behavior and instead want everything to be equal width/height, then you simply switch it off by setting flex-basis to 0.
+There's a shorthand way to set the flex-basis, -grow and -shrink without writing out all three.
+    And that's to write:            flex: 1 1 0
+    Here, the first value is the grow, the second the shrink and the third the basis.
+        Essentially:            flex: grow shrink basis;
+    And because the {1 1 0} set is so commonly used, you can shorten this even further by simply writing:
+                flex: 1;
+    We'd seen this previously.
+        Where we set different items in a container to flex: 1; flex: 2; and flex: 3;
+        Here the grow and shrink are set to 1 1, 2 2 and 3 3 respectively.
+    In this way, we're able to set a ratio for how our elements will respond responsively.
+        So no matter if you grow or shrink, it's going to try and keep these ratios and it's going to try and respect those that even while it's being responsively resized.
+We'll be doing an exercise now at this link:
+    https://appbrewery.github.io/flexbox-sizing-exercise
+    In this exercise the goal is to get the blue flex-boxes to match the sizing and behavior of the green flex-boxes by applying the appropriate CSS.
+
+
+## 58. [Project] Pricing Table:
+
+
+For this section's project, we'll be building a pricing table using Flexbox.
+These are pretty common on the internet for various subscription/purchase tiers that customers can choose from.
+We'll be doing a simplified version of this.
+The aim here is to achieve the large and small sizing based on screen size using only CSS styling.

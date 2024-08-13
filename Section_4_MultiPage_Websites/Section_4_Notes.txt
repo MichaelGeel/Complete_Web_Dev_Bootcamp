@@ -1,0 +1,270 @@
+# Multi-Page websites
+
+## 25. Computer File Paths:
+
+This is a general computing concept, but becomes incredibly important for Web Development.
+We'll look at Absolute and Relative paths, what they are and how they work.
+You can thing of a file path as a unique location for a file or folder on your computer.
+    You can use a file path on a computer to direct the computer to look inside a specific location in your hard drive.
+Normally, a regular computer user doesn't need to think about file paths because it's all done graphically.
+    You can use paths to navigate to the same location and retrieve the same files as you would graphically.
+A file path can direct you to a file or a folder.
+The Root of a path is usually the starting point of your computer filing system, and this is usually called your HardDrive.
+    On Windows, referred to as C: drive or Macintosh HD on a Mac.
+As mentioned, there are 2 types of file paths:          Absolute and Relative file paths.
+    An Absolute file path is likely the easier to understand, and it's a file path that is relative to the Root of the computer.
+        I.e the path starts from the Root and goes all the way to the desired final location on the hard drive.
+            For example:
+                On Windows:     C:/Project/Images/cat.png
+                On Mac:         /Project/Images/cat.png
+        An Absolute file path is really useful when you're navigating on a computer because no matter where you are currently in the file structure, you can always provide the absolute path and the computer
+        would know how to get to the desired location.
+    For Web Development, a more useful type of file path is a Relative File Path.
+        As the name suggests, the path is relative the location where the code being written will be housed.
+        Relative file paths are usually somewhat shorter than absolute file paths.
+        More importantly, with Relative paths, it doesn't matter if you move your folders around (i.e. to other devices etc) it'll always going to be valid. (With some considerations in place)
+        In web development, when we're referring to a particular resource, say we want to bring up an image or sound etc, we will usually use a relative file path. 
+        Using the same example above, say our code is housed in the Project folder, then the relative file path to the cat.png would be:
+                Images/cat.png
+When writing Relative file paths, there are special characters that can help and make easier to navigate file structure.
+    One of which is this:           ..
+        When we write 2 double dots at the beginning of our relative file path, it means go up a level and then navigate to the desired location.
+        So if we used this character in a file inside the project folder, the path would first go out that folder into the level that the folder is housed in.
+        Note that you'll always separate a level by a forward slash "/", so the double dots would be followed by a / as well.
+    Another special character is the singel dot:        .
+        This dot tells the computer to stay within the current directory and look within it.
+            So if you're in the Project folder, it means that the computer must only look within the Project folder for the location/resource.
+For future note, "Current Directory" refers to the folder that your file is directly located in.
+        But note that whenever you want to access something in the current directory, you can also omit the ./
+            Sometime this doesn't work, so it can be a good idea to include the ./ in the directory path anyways.
+Now we'll be doing the exercise for this lesson.
+We need to create 5 image elements according to the headings provided matching the relevant images to their headings and navigating the file directory to find each image.
+Done, however can't exactly do much customizing for this particular project, but was able to use Relative File pathing for all 5 images.
+VS Code innately gives file path recommendations when creating file paths, this can be a means of confirming that you're building the file path correctly based on the file recommendations being given.
+    It also helps save time and using it minimizes the possibility of making spelling mistakes.
+
+## 26. What are Webpages?
+
+We'll now be using what we've learnt to build multi-page websites and alongside this we'll look at the concept of webpages.
+Normally for the projects we've done thus far, we have a project folder that contains the entire website, inside of which is our starting file (the index.html file) and any subsidiary files (like a folder containing all the images.)
+But in order to create a multi-page website, we'll need multiple web pages, meaning we'll need additional html files for each web page in question.
+All these web pages then go into the same project folder and it becomes our multi-page website and the page structure will look something like this:
+    Inside the project folder, will be all the web page html files, and then the subsidiary folders like the assets folder
+If we want to load the other webpage, we have to then reference that file in our anchor tags using links for the user to be able to navigate to the other pages.
+    Here the href attribute of the anchor tag will be the filepath to the other html file.
+        It'll look like this: <a href="./admin.html">Admin Page</a>
+When the using clicks on the link to the other page, the browser should then redirect the user to the associated web page.
+We'll now be doing the lesson exercise.
+    The project has an assets folder, containing an images folder with cat.png inside.
+    The project also has a public folder containing 2 additional html files in it.
+Note that the public folder normally contains all the html files that are not our home page.
+    So everything apart from the index.html (the home page) gets organized into the public folder.
+The exercise goal is to recreate the solution.html output (without looking at the solution.)
+    Supposed to use image of self in the page but will rather just use the cat image provided. (Saving image transport hassle)
+    The image will link to the about.html page, and below will be a text link for the Contact Me page.
+Simple enough, embed the anchor tags inside the paragraph element around its text, and embed the image element within anchor tags as well.
+    Turns out, don't need the paragraph element for the Contact me, could've been done with just the anchor element, but not all the text will always be a link so it's good practice to encase the anchor in a paragraph element.
+
+## 27. The HTML Boilerplate:
+
+We'll now be looking at the bigger picture, what's called the HTML Boilerplate.
+This'll allow us to understand the structure of our HTML files.
+The structure to our HTML files looks something like this:
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>My Website</title>
+            </head>
+
+            <body>
+                <h1>Hello World!</h1>
+            </body>
+        </html>
+This is what is called an HTML Boilerplate.
+It's what you usually start off with when you create any new HTML file.
+We'll be going through it line by line to ensure we understand it.
+At the top of every HTML file, there should be a "DOCTYPE declaration"
+    That's what this tag does:      <!DOCTYPE html>
+    It tells the browser which version of HTML the file was written in.
+    The latest of html being version 5.
+    The above seen example tells the browser that our code was written in html version 5.
+Next comes the html elements.
+    <html lang="en">...       </html>
+    This is going to be the root of the document.
+    It means that every other element, no matter what it is, will go inside the opening and closing html element tags.
+    The lang attribute declares the language of the text content in the element.
+        For example, a website targeted to english speakers will have the lang attribute set to "en".
+        This attribute is more important for the users who can't see the webpage, because the screenreaders and other assistive technologies that'll look at the lang attribute to know what language to read.
+The next part of the biolerplate is the head element.
+            <head>
+                <meta charset="UTF-8">
+                <title>Website Name</title>
+            </head>
+    This is an area where important information about our website is placed that is not going to be displayed to the user.
+    It includes things that will help the webiste render in the browser correctly, but it doesn't include any content (e.g. Text or images) that the user will see.
+    One of the things that should always be present in the head element is a "meta" tag for the character set encoding of the web page, which in the above example is "UTF-8"
+        What this does is ensure that the characters you're using on your website gets displayed correctly.
+        For example, in certain char sets, it won't allow emojis to render.
+    Usually, by cenvention in our HTML Boilerplate, we simply just include this tag as is using the UTF-8 charset (one of the most common)
+    Another important thing to have in your Head element is the <title> element containing the title of your website, and the title is what gets displayed in the tab header for your web page in the browser.
+There are many more things that can go into the head element, but we'll focus on the above 2 for now.
+After the head in the boilerplate comes the body element.
+            <body>
+                <h1>Heading 1</h1>
+            </body>
+    Inside the body element is where we'll spend the majority of our time creating and writing our website.
+    This is where all the content of the website goes, the text, images, links etc.
+        All between the body tags.
+This boilerplate is what the typical websites HTML code is made up of.
+Will be doing a home brew exercise for this lesson to familiarize using the boilerplate.
+It's becoming more clear how much nesting is in an HTML document, and it's going to be a concept that's going to become super important as we learn more and more programming.
+When it comes to HTML elements with opening and closing tags, we note the following:
+    If we can see the beginning and ending of the element clearly and can fit the element onto one line, then we do so.
+    Otherwise, we place the opening and closign tags on their own independent lines.
+It's important that when we write our code, that we indent our code properly so that the opening and closing tags of elements line up to allow for an easier time reading the code and establing what matches with what.
+In VS code, there's a shortcut to not needing to type out the boilerplate for each new project.
+    On the empty html file, type in an "!" and then hit enter, and it'll load up the boilerplate for you.
+    Note that this only works if you're creating a .html website. (the file is an html file)
+When VS Code loads up the boilerplate, there are some new lines we haven't looked at yet in the header:
+            <meta http-equiv="X-UA-Compatible" content="IE-edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    The first new meta tag keeps our code compatible with Internet Explorer.
+        This isn't necessary as internet explorer has become deprecated and is no longer in use.
+    The second meta tag identifies your viewport, and defines how the website should be displayed relative to the screen it's being rendered on.
+        It tells the browser how to display your website when it first opens.
+
+## 28. [Project] Portfolio Website:
+
+The project for this lesson is going to be our very first Web Developer Portfolio, where you can show off all your work.
+Most web devs and designers have their own website where they actually show people what they've built before and link to those websites they've created so that if somebody wanted to hire you, they can review your work...
+    and contact your or learn more about you.
+This first version will be a very simple iteration using just HTML.
+We'll need to be able to take screenshots for this project.
+Naturally will also need to download the starter zip from the course resources.
+    As always, trying to create what's seen in the goal.png.
+    We'll be adding screenshots of the Movie ranking project and the Birthday invite project as well as linking to those project pages.
+        Copies of the projects are provided in the extract but will rather be copying over my own files.
+        Also adding in a personal touch of myself in an image of me.
+Take the screenshots of the previous projects and save them, also copy over the code from the other projects.
+This website will be getting hosted online after this.
+Note the screenshots may originally be massive, so in the index.html there's a note to set the height attribute of the image to 200 to ensure it fits.
+
+## 29. How to host your website for free with GitHub:
+
+This lesson is going to look at the basics of Web Hosting, how it works, and by the end of the lesson, how to put the project from the previous lesson live onto the internet.
+Web Hosting is essentially the process of making your website available anywhere on the Internet.
+    Then people from around the world can access your website.
+In order for the website to be available to everyone, we first have to put our website and all of the data and files it consists of onto what's called a web server.
+    What's different about a web server is that it is actually connected to the internet.
+    Meaning whatever you put on it, will be available 24/7 and ready for anyone anywhere in the world to access your files, which is what's required to view the website.
+At the moment we can view the website locally because all of the files are on your computer.
+    This is what we call Local Development.
+    Meaning all files and folders are locally available on your computer.
+Now when somebody else wants to access that website, you'd need to send them a copy of the files, which isn't what we want.
+So we'll do as previously mentioned and loading the files onto a web server.
+    It's this process of taking all the files and folders that make up your website and putting that onto a web server that's hooked up to the internet that is called Web Hosting.
+So to host our project from L28 online, we'll do the following:
+    First, go to GitHub.com and create an account.
+    Then create a new repository and name it html-portfolio and set it up.
+        Be sure to set it up as public.
+        Add a README
+        Finally create repository.
+    Now we'll upload the files for our website onto the GitHub repository.
+        Make sure all your home page code is inside index.html as that's what GitHub will look for for the home page.
+        Also don't drag over the project folder, it has to be the contents at the index.html layer.
+    Once everything is uploaded, ensure the files and content are correctly uploaded.
+    Then go to settings, nav to pages and change from "none" to "main" branch which contains the root folder (which contains all the files we uploaded)
+    Then after a few minutes, you'll see a popup saying the site is live and provides you a link.
+        You can then visit the site.
+    You may get an error message saying no server is currently available or another error message, it's no issue and just reload the page until it works.
+And thus once it loads successfully, we can see our site up online and it's being hosted online for anyone to view.
+
+## 30. Introduction to Capstone Projects:
+
+As a professional web developer, the most important thing people want to know about you is what you have done.
+Many web developers showcase their recent work on their personal website.
+    It means anyone looking to hire the developer can see what they've done, who they've worked with and what they're made of.
+Any interviewer interviewing someone for a web developer role will be looking for/at the prospective's online portfolio.
+    What have they built, what does their code look like, what are they able to do?
+This is an incredibly important step in a career and evolution as a developer.
+    You need to be able to show people what you're capable of, and the online portfolio is the way to go about doing that.
+We'd previously created a GitHub account, and it's here where we'll be starting our portfolio.
+On your profile in GitHub, you'll be able to pin and highlight some of the projects that you've built and this is where your portfolio is going to start to evolve.
+Another cool feature of GitHub is that it shows you a developers activity level.
+    You can see how often they upload to GitHub as a proxy for how often they're working and writing code.
+    This is another great way to tell how active a programmer is and how much they're practicing and polishing their skills.
+The next lesson contains the instructions for the capstone project for what has been learnt thus far.
+    Perfectly tailored to current level of development.
+    Will be provided an example for reference for the project.
+The reason why Capstone projects can be added to your portfolio is because it's going to be entirely your own work.
+    The specifications are there as if you're a professional developer, getting the instructions from your clients.
+Note that means there's also no actual solution, and it's entirely up to you to meet the specifications using your own ability.
+These are great for getting out of Tutorial Hell, which is where you're relying heavily on tutorials.
+    Need to be able to handle struggle and solve problems yourself to be able to evolve and get by as a developer.
+
+
+## 31. Instructions for Capstone Project 1 - Online Resume:
+
+Instructions for Capstone Project 1 - Online Resume
+Project Specifications
+Create an HTML file named index.html.
+
+Use the <!DOCTYPE html> declaration at the beginning of the file to indicate that it's an HTML document.
+
+Create a head section that includes a title element with the text "My Resume".
+
+Inside the body section, write HTML code to create an online resume covering the following aspects:
+
+Summary or objective statement
+
+Education (list degrees, schools, and dates)
+
+Work experience (list job titles, employers, dates, and responsibilities)
+
+Skills (list relevant skills or areas of expertise)
+
+Awards, certifications, or other achievements (list any relevant awards, certifications, or other accomplishments)
+
+Use appropriate HTML tags to format the content of each section, such as h1 for section headings and ul or ol for lists.
+
+Use HTML tags to add a profile photo of yourself.
+
+Use relevant anchor tags to create a multi-page website, listing other aspects of your resume such as Hobbies and Contact details.
+
+Add a footer element with your name and any copyright information or other disclaimers. (Hint: use the MDN docs for things you don't know how to do: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
+
+Save the index.html file and open it in a web browser to ensure that it displays correctly.
+
+Add your website to your GitHub to start building your portfolio.
+
+Publish your website using GitHub pages and share it here (in the Q&A) with other students.
+
+Comment and make suggestions to other students' projects.
+
+
+
+Example
+https://appbrewery.github.io/capstone-1-example
+
+
+
+Requirements
+In order to keep the project within scope (time, energy, resource), you can only use HTML to complete thing project. Even if you know CSS and JS (which we're assuming you don't yet), you are expected to only write the website using HTML.
+
+Imagine you are a professional developer working on this project. There will be things you don't know, things you want to do but haven't yet learnt how to. As a professional developer, you need to know the limits of your abilities and look up other things in Google, MDN docs, the internet.
+
+
+
+FAQs
+1. Can I use these Capstone projects in my job interviews?
+
+Yes! That's the point of these capstone projects. Unlike course projects, which have solution code and video walkthroughs, Capstone Projects are meant to be entirely your "own work". There are over a million students who have enrolled on this web development course worldwide. If you add a course project to your portfolio, it's very likely that your client will know it's from this course. The capstone projects on the other hand, have no solution code, no walk through, no design specs. It's it purely your creation So it can definitely be counted as your own work and be added to your portfolio.
+
+When I hire developers, I always ask for a portfolio. I consider what they have built by themselves to be far more important than which University they went to or if they have a computer science degree. Many of my friends who are CEOs in multi-nationals and startups agree.
+
+
+
+2. What if I don't remember how to do something, even though I watched all the videos?
+
+Watching a video is often not enough to learn a skill. That's why these capstone projects are a great opportunity to identify your weak points. While you're building, you'll find yourself stuck or forgetting how to do things. Great! It's then time to review previous lessons or online documentation to fill your knowledge gaps.

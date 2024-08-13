@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+
+    .main-flex-container {
+      display: flex;
+      height: 748px;
+      width: 748px;
+      align-items: center;
+      justify-content: center;
+      background-color: black;;
+    }
+    
+    .grid-painting {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template: 414px 1fr/ 320px 1fr;
+      gap: 9px;
+    }
+
+    .section {
+      background-color: #F0F1EC;
+    }
+
+    .one {
+      background-color: #E72F24;
+    }
+
+    .two {
+      background-color: #F0F1EC;
+    }
+
+    .three{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      gap: 9px;
+      background-color: black;
+    }
+
+    .s3_block1 {
+      height: 296px;
+      background-color: #F0F1EC;
+    }
+
+    .s3_block2 {
+      height: 20px;
+      background-color: #F0F1EC;
+    }
+
+    .four {
+      display: grid;
+      grid-template: 296px 20px / 360px 50px;
+      background-color: black;
+      gap: 9px;
+    }
+
+    .item1 {
+      background-color: #F0F1EC;
+    }
+
+    .item2 {
+      background-color: #F0F1EC;
+      grid-row: span 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bluesub {
+      flex-basis: 130px;
+      background-color: #004592;
+      border-bottom: 11px solid black;
+    }
+
+    .whitesub {
+      flex-basis: 184;
+    }
+
+    .item3 {
+      display: flex;
+      gap: 9px;
+    }
+
+    .yellowsub {
+      background-color: #F9D01E;
+      flex-basis: 198px;
+    }
+
+    .greysub {
+      background-color: #232629;
+      flex-basis: 153px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="main-flex-container">
+      <div class="grid-painting">
+        <div class="section one"></div>
+        <div class="section two"></div>
+        <div class="section three">
+          <div class="s3_block1"></div>
+          <div class="s3_block2"></div>
+        </div>
+        <div class="section four">
+          <div class="sub item1"></div>
+          <div class="sub item2">
+            <div class="bluesub"></div>
+            <div class="whitesub"></div>
+          </div>
+          <div class="sub item3">
+            <div class="yellowsub"></div>
+            <div class="greysub"></div>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>

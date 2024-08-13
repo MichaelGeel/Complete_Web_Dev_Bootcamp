@@ -1,0 +1,288 @@
+# Section 12: Web Design School - Create a Website that People love
+
+
+## 68. Introduction to Web Design:
+
+
+Up until this point, we've been working on how to build websites that have great functionality and how to use HTML and CSS to build up the structure of the website.
+This section will be convering something a little different, namely, how to design websites so that your website doesn't only have great functionality, but also looks beautiful.
+The most important thing to make a webiste loved by users is pretty much the design.
+When people talk about websites, they say things like "It looked so beautiful, It worked just like I wanted it to."
+We'll be looking at some of the different aspects of design when it comes to websites.
+There's the saying "You only have 3 seconds to make a good impression" and this is pretty accurate to web development.
+    Your website has a crucial few seconds before the user starts judging your company, brand and product.
+        For example, if your website looks terrible, it can negatively impact how much users would be willing to pay for your product.
+Design is incredibly powerful, it's one of the cheapest ways to make your company or your product look expensive because it's elevating.
+Fortunately, it doesn't take a lot to get good at design.
+As mentioned, this section will be covering some of the principles of web design.
+This includes:
+    -Colour Theory
+    -Typography
+    -User Interface Design 
+    -User Experience Design
+These above 4 are the 4 pillars of good web design.
+
+
+## 69. Understanding Colour Theory:
+
+
+Colour theory is the art and science of creating the right palette for your website.
+    If you were to look at a design using brown, green for a phrase like "flowers show your love" and pink and purple for "Paintball for the daring", it'd look really weird and inconsistent.
+    But if you had to swap the 2 colour schemes around, it'd suddenly be fitting and the colours would match the message the phrase is portraying.
+When picking colours, you have to be aware of the modd of your colour palette.
+    The predominant colour that is going to be in your design really tells a story and it conveys a message to the user.
+Looking at some colours:
+    Red:
+        Conveys love, energy, intensity.
+        Which is why you'd see a red car on a red background in a lot of car adverts.
+            It's trying to convey a feeling of energy to associate with the car.
+    Yellow:
+        More about joy, intellect, attention
+        The important thing about yellow, is how attention grabbing it is because it's almost impossible to not look at something that is very yellow.
+            An advert that's predominantly yellow is impossible to ignore when you come across it.
+        If you're creating a logo or some sort of headline, then yellow is a great choice.
+        But when you're creating something that's designed to be looked at for a long period of time, then yellow can be too attention grabbing.
+            It might actually hurt your user's eyes to try and read a whole article that's backgrounded in yellow.
+    Green:
+        It's all about freshness, growth, safety.
+        This is why a lot of grocery companies use this colour because they're trying to convery that their food is edible and fresh.
+    Blue:
+        Gives a sense of stability, trust and serenity.
+        You see a lot of companies which need to convery that they're trustworthy use this colour.
+            Such as finance related companies.
+        There was an interesting psychology study where they compared how interviewees wearing different coloured shirts were perceived by their interviewers.
+            The study showed that changing the colour of your shirt to a blue one, vastly increases the amount of trust given to you by others.
+    Purple:
+        Signifies wealth, royalty and femininity.
+The important thing to think about is that you're making a conscious decision when you're choosing a colour palette.
+    It's not just whichever colour you like or your favourite colour.
+    It's "What message are you trying to convey to the user?" and picking the appropriate colour.
+Usually, you're not just going to be using a single colour for your design.
+    You're probably going to be using 2 or 3.
+So at some point you have to think about which different colours to combine.
+    This is likely the most scientific part of colour theory.
+Very often, designers will rely on scientific ways of combining colours.
+    For example, taking 2 colours right next to each other on the colour wheel.
+    This creates what's called an Analogous Colour Palette.
+        There designs look inredibly harmonious and really work well together.
+        These colour palettes can be really good for things like navigation bars and the body of your website.
+            Or things like a logo and its background.
+    What it's not so good at though, is standing out.
+    If you want your design to pop, you're better off taking 2 colours from opposite ends of the colour wheel.
+        This creates what's called a "Complimentary Colour Palette" or a "Clashing Colour Palette".
+        This palette really creates that pop.
+            It really brings out each of the colours.
+What you shouldn't do with clashing/complimentary colors is try to style text and text background with it because it looks very jarring and creates this feeling of your eyes getting fuzzy looking at it.
+    Keep these palettes to things like logos or icons that you really want to stand out from each other.
+There's a lot of different ways that you can combine colours.
+    Such as drawing an equilateral triangle to create a "Triadic Colour Palette".
+        Or drawing a perfect square.
+There's a website called "Abode Colour" which lets you mess around with all kinds of colour combinations.
+    You can select the type of colour palette that you want to create and then mess around with the colours like that.
+    Once you're come across the mood of your project, then you can pick the hex codes and plug them into your website.
+Alternatively, if that's too much effort, can use a website called Colour Hunt.
+    This is a website where professional designers have curated some of their favourite colour palettes and you can grab the relevant hex-codes right from the website.
+Both these sites are linked in the resources for this lesson and should be bookmarked accordingly.
+When you create a website that has a beautiful, consistent colour scheme, it allows the design to really stand out and becomes really colourful and playful.
+    It also allows you to convery different messages using your choice of colours and your colour scheme.
+
+
+## 70. Understanding Typography and How to Choose a Font:
+
+
+Looking at Typography.
+But why is Typography important.
+Let's say it's valentine's day, and you decide that you want to write a letter to your beloved Valentine and you change the font to something cursive.
+    In cursive it looks romantic and sweet.
+    But in another font it could look creepy and gruesome.
+Fonts really matter and it's important to consider not only their mood but also how to combine different fonts, and it's a really easy way to make your designs look very professional and slick.
+Out of all the fonts in the world, there's 2 large families that you should really know about:
+    1) Serif Family
+        They have "feet" at the end of the stems of the word.
+        They have these feet because the serif typeface is inspired by the marble carvings of olden times.
+        When choosing a Serif typeface, you're making your design look more serious, authoritative and also a little bit older.
+            Great for designing something like a letterhead for a legal company or a magazine for architectural design.
+        If we look at the family of Serif typefaces, they're actually further subdivided into smaller sub-families llike Old style, Transitional, Modern and Slab-Serif.
+        Interestingly, you can tell how old a typeface would look by looking at the different between the thickest and thinnest parts of each letter.
+            The more exagerrated the different between the 2, the more modern the typeface is.
+        So if you want something that looks authoritative but modern, then maybe you want to go for a modern serif typeface.
+            But if you want to come across a little older, more aged then you'd likely go for a more Old-Style serif instead.
+Just like how colours have different moods and emotions, different fonts also have different moods and emotions.
+    They also convey a different message to a user depending on which one you choose.
+    The Serif Family generally come across as traditional, stable, respectable, authoritative.
+        These are the words thrown around by designers when they're thinking about the serif typeface.
+    2) Sans-Serif Family
+        This is a different typeface family, because instead of the little feet in the Serif family, they have perfect right angles.
+        These right-angles make the sans-serif family look much more friendly and approachable, more novel and contemporary.
+        For example, you'll tend to get words like sensible, simple and straightforward.
+            This is why a lot of startups love to use the sans-serif typeface in their websites.
+                The Humanist typeface, for exmaple, is a sub-family of the sans-serif and is known as a highly readable typeface.
+        Within the Serifs and Sans-serifs, you will tend to see designers going for the Sans-serifs if they want to write body text which needs to be more legible and readable.
+        Even within the family's sub-families, there are differences in terms of legibility and readability.
+            How easy are the words to read and how pleasant is it to read the letters.
+        If you manage to get a user to read through more of your sales copy by using a font that's easier to read, then they're probably going to be more convinced and more likely to buy your product.
+When choosing fonts, readability and legibility is incredibly important.
+    When looking at the letters, to identify legibility you're going to look for are:
+        Open shapes.
+        A lot of space between the letters (not packed on top of each other.)
+        That the forms look unambiguous (you can tell at a glance what you're looking at.)
+        Varying proportions (such as a different between an O and a 0) so you can tell the different between the letters.
+Having looked at using fonts, it's often that you see people go a bit oveboard where they choose 2 fonts in the same design.
+    This makes your design look very cluttered and very unprofessional.
+    It's recommended to stick to around 2 fonts in 1 design.
+    It'll make your designs look a lot cleaner and tighter.
+When combining fonts, you want to try to go for similar moods and a similar time era.
+    You don't want to combine ultra-modern with uber-old styles.
+In terms of contrast between your selected fonts, you want to contrast things like:
+    The "Serif-ness"
+        For example, have the heading be a Serif and the body be a Sans-Serif or vice versa.
+        This creates more interest in your design.
+    The font weight
+        This adds to the interest by changing up the weights between the heading and the body.
+            Such as making the heading bold or even using a black typeface and making the body text using somethign like thin/regular/light.
+Steer clear of fonts that are difficult to make look good or create moods that are difficult to fit into a professional setting.
+When designing a website, think about what typefaces you're going to choose, what you're trying to convey with those typefaces and then pick the appropriate fonts from the 2 above families.
+
+
+## 71. Manage ATTENTION with effective User Interface (UI) Design:
+
+
+A fundamental mechanism in our brain sees us drawn to the bigger, bolder, squarer things.
+And as designers, we can use this knowledge to define Hierarchy.
+When writing something out, such as a birthday invite:
+    If you were to write everything with equal weighting, the reader would have to read through everything to get the info they need, they can't just skim thorugh it to get the important information.
+        This will in turn take a lot longer.
+    On the other hand, if you were to apply rules of Hierarchy, then the most important information gets conveyed over first.
+Hierarchy can be established in a number of ways.
+    The most obvious, is through the use of colour.
+        Colours that really pop and stand out and have contrast with their background, tend to be used for high hierarchy.
+            If all the colours in a section are the same, then everything feels like it has equal importance.
+            But if you have something very bright and standout-ish versus something a bit more grayed and muted, then we know exactly where our eyes will go to first.
+    In additon to colour, you should also think about Size.
+        The bigger items often draw your eyes to it and in this way you can direct users to whatever you want them to focus on first on a page.
+On top of establishing Hierarchy, in terms of User Interface, you should think about the Layout of your website.
+    On one hand, you could just have a big block of text which is just your website where everything is all laid out in the same way.
+                    OR
+    You can create more interest by creating a block of text and then interspersed with pictures and then create some different sizes and shapes and hierarchies to make your design look more interesting.
+    Wikipedia pages are a good example of bad design.
+        They're incredibly bland.
+        Notice how long each of the blocks of text are.
+            It's very hard for a user to keep their eyes tracking along the same line.
+    In terms of User Interface Design, there's an optimal line length.
+        Too long and it gets a little bit tedious to read, too short and it gets choppy and awkward to read.
+        You want to aim for something around 40 to 60 characters per line so that it feels comfortable to the user and they'll be able to get through the information and still be interested in your website.
+    When you have good layout, it's not only interesting but it also chops up the content into smaller pieces so that you actually get through more of the website and you take more of it in.
+Next in User Interface Design, is Alignment:
+    This has to do with how you position each of the elements on the screen relative to each other.
+    For example, if your heading text is center aligned but the body text is left-aligned, it looks awkward and like they text isn't meant to be together.
+    But if you simply shift the alignment so that both starting points are the same for the title and the body, it suddenly looks a lot more consistent and designed.
+    One of the easiest ways of making any sort of design you create look professional is just to reduce the number of alignment points.
+        Let's say you're creating a slide deck for your next presentation or you're creating a poster for your birthday party.
+            Take a look at all the things that are on the design and identify a line which goes through the beginning of each item.
+            If you can reduce the number of apparent lines, then suddenly the design looks a lot more coherent, like all the pieces are meant to be together and it just looks more professional.
+    Use these grid lines in your designs to hlep visualize where the starting points of each element is and try to line them all up.
+    Even if you do nothing else but just alignment, your designs will look better and more professional.
+A really important concept in all design is White Space.
+    This refers to empty space around text or around your elements.
+    One of the simplest tools for luxury shops and designer stores is just injecting white space around their products, space things out and it suddenly makes everything look a lot more expensive.
+    Whereas when you have everything tightly crammed together and a lot of product on show, it makes it look like it's some sort of discount store.
+    This same principle applies when it comes to digital design as well.
+    Just by adding some white space around each element on the screen you can make your design a lot more minimalist and at the same time elevate it.
+Lastly in User Interface Design, and probably the most important is design for your Audience.
+    A lot of the above concepts change depending on your target audience.
+    For example, don't make an advert for a children's concert look like a funeral advertisement.
+    Think about what would appeal to your audience and what's important to convey to them.
+    When you're designing websites, design it for your audience even if it's something a little bit messier, a little bit bolder in terms of colour.
+        As long as it fits your audience, that's perfectly fine.
+Have flexibility in your designs so that you're not just creating one style all the time.
+    Create one style for a particular audience and create another for a different audience.
+    The flexiblity in your design skills is really important when it comes to User Interface Design.
+Keep the 5 aspects in mind:
+    Hierarchy
+    Layout
+    Alignment
+    White Space and 
+    Audience
+
+
+## 72. User Experience (UX) Design:
+
+
+This is the last pillar of Web Design.
+A lot of people often get confused as to what this is.
+        User Design could be seen as laying down pathways for users to walk.
+        User Experience is ensuring those pathways are the best routes so that users don't trample and kill any grass next to the pathways.
+We thing of design as having an aesthetic, what we think looks good and enforcing that on the user.
+User experience is meant to be invisible.
+    If you have a good experience with a website, it's meant to be unobtrusive and just lets you do your thing.
+    It feels like everything is easy and effortless.
+There are 5 things to think about when it comes to user experience:
+    1) Simplicity.
+        Keeping things simple is always better than making it more complex or more cluttered.
+            A complex/cluttered design can end up hurting the users eyes.
+        Whenever you're having to choose, should it be more complex or more simple, go with the simplicity.
+    2) Consistency
+        Keep your designs consistent, but also keep the functionality of your product consistent.
+        Inconsistency within a website means a user is going to be confused when they go from one part of the website to another.
+            Effectively having to re-learn how to use your website.
+    3) Reading Patterns.
+        One of the most common reading patterns is the F-pattern.
+            This is where the eye starts at the top left corner, tracks right, and then flips back again.
+            It continues with this pattern browsing down the left gutter.
+        You can design for this using the F-layout.
+            Have the most important parts of your content on the left gutter.
+            Have the logo at the top and everything follows this pattern.
+        Another common pattern for reading is the Z-pattern, where our eyes go from left to right and then zig-zagging down the website like that.
+        All this depends on the type of website.
+        If you have something more sparse with more video content or if somebody is trying to browse a website a little bit faster, you see then using the Z-layout.
+        So when designing, think about how people naturally look at the page and place your content in that pattern to make it easier for people who are using your website.
+    4) All Platform Design.
+        It's not enough anymore to just design a website that's meant to be opened on a desktop computer.
+        Now you have to think about mobile as well.
+        Having a webiste that scales up nicely onto mobile, what we call "Mobile Responsive", is really important.
+        You down want a big website that's designed to take up a landscape kind of screen to be crammed onto a phone.
+            This looks really bad and it is very hard to read the individual links, and more often than not, your fingers end up being too big to actually tap onto the link you want.
+        This applies in reverse as well.
+            A design can look great on mobile but then when it's rendered on a desktop with a wider screen, it doesn't use up enough of the screen real-estate.
+        Think about how you're using the available space and make sure that your website re-arranges itself when it's being rendered on a portrait smaller screen vs a larger landscape screen.
+        Also ensure that your website doesn't have so many banners on the mobile version that your content becomes impossibly small.
+            Don't go crazy with the real estate either and make huge pictures and text that take up the entire screen.
+    5) Don't use your powers for evil.
+        Some designers use the knowledge they have about human psychology and User Interface and User Experience design to do bad.
+        In the design world, these are called Dark Patterns.
+            Patterns which get a user to perform an action or behavior that is beneficial to the company/designer but not necessarily what the user wants.
+        This creates a bad user experience and leaves the user feeling disappointed and upset.
+        For example, with delivery options, making the most expensive delivery option a brighter colour that ups its hierarchy and tricks your into selecting the more expensive option, making the vendor more money.
+When a website has a bad design, a user can very well feel inclined to never return to that website again, which we don't want.
+
+
+## 73. Web Design in Practice - Applying what we've learnt:
+
+
+We'll now be applying what we've learnt to build a design together.
+There's a website called Daily UI that gives you a design task to do every day for 100 days.
+    Free and great for improving designing skills through repeated practice.
+Similarly, there's a website called Collect UI where you can see some examples of UIs from Daily UI that have been collected together in a showcase.
+We'll be taking some of these ideas as inspriation and create our own website design by applying the 4 pillars that we've learnt about.
+For the project, we'll be making use of Canva.
+    We'll sign up.
+    Then create a new design and set the dimensions to 1400px by 800px.
+    Once inside the design, the first page will be considered the first screen that the user sees.
+    There'll be 3 pages in total for the website.
+The first screen will be a title screen.
+    You can use templates, images, shapes and all kinds of other widgets to add to the design of the website.
+    Add in a title and subtitle using the Typography concepts.
+Notice in Canva how you get auto-alignment done for you as well by being able to snap elements together.
+The next page will be for selling the features of the hotel.
+    This would make increased use of imaging to pique the users interest to coax them into wanting to buy whatever's being sold.
+        Photos can be framed to give them a more appealing look.
+    Along we the appropriate layout.
+    You'll likely need fitting heads/sub-headings and body text and ensure that the typefaces match the layout used in the title page.
+    Throughout all of this we're being sure to establish heirarchy in our pages.
+    Additionally, we're ensuring that there's good layout within all our designs that we're doing.
+Lastly, the contact page.
+    This is a relatively simple page with the contact details included in it.
+    Maintains the same styling as with the title page and layout of the page.
+Canva also has a publish website feature, and while this isn't great for a final product, it is great for conceptualizing.
+    You can throw up a design, visualize it and share it to others to get their opinion on it.
+    

@@ -1,0 +1,21 @@
+nsiBot know-bot
+    In here, there's already a class called "gradient-background", and this code comes from a codepen by Manuel Pinto, where he created a pure CSS gradient background.
+    We're simply using this code but defining some unique colours of our own.
+    Similar to what's been getting done with Bootstrap, simply need to add this class to HTML elements to get the gradient to show.
+Notes from doing this exercise:
+    SVG's behave differently when put directly into the HTML vs linked via an image element.
+    CDT is your friend, use him.
+Notes after completing the exercise and looking at the completion video:
+    An easy way to identify extra padding vs margin is the background of the extended area.
+        If the background is extended, it's padding.
+        If it's whitespace, it's margin.
+    Always check that there is no margin, if an element inside a div has a margin causing whitespace, it may not 
+        show up when hoverin over the div, so always drill down to check the inner components.
+    Remember that most sizing and spacing manipulation can be handled using classes in Bootstrap
+    The testimonial section comes from the Jumbotron section in the Bootstrap website.
+    Remember a container always needs a row div in it.
+        Then in the row goes the column items.
+    Note can also have multiple rows within a column.
+    With Bootstrap, sometimes the element you're using can be changed without affecting the result too much.
+        For example changing an h1 to h2.
+        This is because the design is based on the class rather than the element itself.

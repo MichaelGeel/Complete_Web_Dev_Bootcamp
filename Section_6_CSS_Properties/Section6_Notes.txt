@@ -1,0 +1,235 @@
+# CSS Properties.
+
+## 38. CSS Colours:
+
+This lesson is going to cover a deep dive into some of the most important CSS properties that you'll see and use.
+    Starting with CSS colour properties.
+We've seen a few already, in setting the background colour and text color properties.
+    Using background-color and color.
+So far we've been using Named colours in our CSS.
+    These are specific colours with names associated to them, and there are many of these types of colours.
+    We can find the named colours in the MDN docs in the course resources.
+    You access a named colour by simply inputting its name in the CSS property you want to set to that colour.
+Sometimes you may want a more unique colour palette.
+    There's a tool called ColorHunt.co created by and for designers.
+    This contains professionally designed colour palettes.
+However in the above tool, there are no names attached to the colours, so how would we use them?
+    Instead, the colours have "hex codes".
+Hex Codes are a way of representing a larger number code for that particualr colour.
+There's also the rgb (red-green-blue) colour combo
+    This is a 3 number tuple of red, green and blue that makes us a colour.
+    Each of the 3 numbers range from 0 to 255.
+    It's the combination of the 3 colours that gives us the various shades.
+    There are tools available online that allow for converting hex codes and rgb combos.
+Now we'll be doing the lesson exercise.
+    Instructions in the index.html file.
+    Note the goal.png.
+
+## 39. Font Properties:
+
+This lesson is going to be looking at the CSS properties we can set to change the appearance of text in our websites.
+    We've already seen coloring as an exmaple to this.
+    There's many other properties, such as font-weight, size and family, which we'll be looking at now.
+Starting with Font Size.
+    We can change the size of a font by simply using the font-size property and setting it to a particular pixel(px) size.
+When we talk about pixels in terms of sizing:
+    1px = 1/96th of an inch.
+    Note that this is in imperial units because a lot of the sizing for websites and for design work comes from the days of book printing/binding.
+    In metric units, 1px is about 0.26mm
+        Note that a pixel is square, so its .26mm wide and .26mm high as well.
+    There are other ways that we can represent font-size when writing CSS.
+    Another common method is using a point (pt)
+        1pt = 1/72nd inch.
+        1pt = 0.35mm
+        The point is often used in many different applications.
+            For example, the font size in MS Word is in points, so size 12 is 12pt sizing.
+    There are some other ways of representing font-size:
+        The "em" and "rem"
+    "em" (pronounced "m"):
+        1em is defined as the full width of an m (by definition).
+            The m is probably one of the widest letters in the English aphabet, and this unit simply represents that entire width. (By definition)
+        When we use it in CSS:
+            This measurement means when you set an element to have a font size of 1em.
+            If that element has a parent (such as a body tag with it's own font size) then 1em equals the same font-size as the parent.
+                For example, an h1 has a 1em size and is in a body with a 20px size, then the h1 will also be 20px in size.
+                And if the h1 were 2em, then it'd be 40px in size.
+            em is effectively a relative size.
+    "rem" is closely related to the "em"
+        This is also a relative sizing, but instead of to the parent, it's relative to the root of your HTML file.
+            The root is normally the HTML element enclosing everything inside.
+        This makes rem a more consistent way of changing the sizing.
+            It's recommended to use the rem when setting font-sizes.
+            This is because the parent of an element for the em unit isn't always clear and can make it difficult to size.
+For viewing a practical example of font-sizing, look at font-size.html that is in the zip file for this lesson.
+Looking at Font Weight (font-weight):
+    You can have your font weight be normal or bold.
+    There are additional values you can set the font weight to:
+        normal/bold are the basic keywords.
+        lighter/bolder are relative to the parent element.
+        number(100-900) to determine how light/bold you want the font.
+    Note: lighter removes 100 from the boldness (down to 100 min)
+        Similarly, bolder adds 100 to the boldness (up to 900 max)
+Now looking at Font Family (font-family):
+    This determines what you want your text to look like.
+    Each "font" we reference is part of a Typeface.
+    Now some typeface fonts are for example Mac-specific, so a windows computer wouldn't own the typeface font.
+    So when writing a font-family, we don't just write 1 font name.
+    We add a comma after the font name and then provide a back-up generic font type.
+        For example: font-family: Helvetica, sans-serif;
+        Here, Helvetica is a mac-specific, and san-serif is our backup generic.
+    There are 2 main different typefaces:
+        The sans-serif type font
+            Squared letter corners.
+        The serif type font.
+            Little feet/decorations at the letter edges.
+    It's important to have the generic typeface for the font-family to fall back on if the first font cannot load.
+    Note that if a font has multiple individual words, you need to encase it in "" to ensure that it's being read properly.
+        for example: "Times New Roman"
+    Also note that your back-up generic should ideally be the typeface type the main font falls under so that the backup font doesn't change the look of the site too much.
+    If you want a custom font, you can find free fonts is fonts.google.com.
+        There are many available to choose from.
+    Sometimes the custom fonts have different font faces for the different weights.
+       Others don't have any weights.
+       Simply select the weight you want to use when selecting the font.
+        When doing this, the user may not have the font.
+            So in the top right corner of the site, click the "view selected families" button where you can view all your selected fonts.
+            Here you can choose what fonts you want to include.
+            Ensure the <link> radio button is selected and then copy the code below it into the starting file.
+            Then inside the head element, just after the style tag, and what you've included now is a link that'll pull in that font for any user on the internet.
+            You can then also copy over the CSS rule for applying the font to an element.
+There are a number of generic fonts and font families available to choose from.
+Lastly, looking at Text Align (text-align):
+    This can for example allow you to center your text, or set it to the left or right.
+    There are other values like start and end.
+        For instance since arabic is left-right, you can set where the text will start from.
+All these properties are available in the MDN docs to be looked at.
+Now finally to do the lesson exercise, follow the instructions in the index.html file to achieve the goal.png.
+
+## 40. Inspecting CSS
+
+This lesson is going to take a deep look at CSS Inspection and look at the Chrome Developer tools that allow us to figure out
+    what our CSS is doing and potentially diagnose any bugs resolve any issues.
+The Chrome Developer Tools are a really powerful suite of tools that is completely free and comes bundled with the Chrome browser.
+    If you aren't using a Chrome browser, you won't be able to access it.
+    It's essential for this course.
+To bring up the CDT:
+    In the Chrome browser, click on the 3 dots context menu.
+    Then select more tools and then select Develop Tools.
+    You can also quick open them using F12 or CTRL + Shift + I.
+    Alternatively, you can also right-click any element you're interested in, and click "Inspect"
+Once the Dev tools are open, in the top left corner, is a button you can click that allows you to visually select an element to inspect.
+    This is the Elements tab of the Dev tools.
+    From this tab, we're going to be exploring a subsection of this tab, the "Styles section"
+Notice that from the above method, whenever you select a particular element, the styles section updates to show you the styles applied to that element.
+    If your element isn't altered with custom CSS, you'll see it has automatic, preloaded CSS that you get by default on a given element.
+    You can even see what file your CSS affecting an element comes from.
+        You can also click on the file to view the source code of the CSS.
+You can even change your CSS live in the Chrome Developer Tools:
+    When you have a particular element selected, in the top right corner of the Styles subsection is a plus sign "add" button.
+    Pressing that allows you to add styles to the h1.
+    As you add rules you can see it reflected live in the browser window.
+    If you hover over the CSS rule, you can also turn the rule off so it remains there but doesn't take affect.
+It's important to remember that any changes made in the Chrome Dev Tool DOES NOT affect the original file.
+    All it does is alter the local copy of the file you have running in your browser.
+    It's all temporary and is for you to look and test and try things out for the website before adding it to the source code.
+There's much more available in the Dev Tools that we'll look at in future, for now we don't need to worry too much about the different properties.
+    The main thing to focus on is how to use the inspector to understand other people's and your websites and how the CSS is laid out.
+Sometimes, when you select an element, you may see some default CSS properties that are striked out.
+    This is when a CSS rule gets applied that conflicts with some of the automatically applied rules, it overrides the default.
+If you want to see what's actually being applied to your HTML element, you'll use the Computed subsection under Elements.
+    When you go to this tab, you'll see the CSS properties that are actually being applied to the HTML element.
+Going into the CDT context menu (3 dots) again, in there you can go to More Tools you'll find "CSS Overview"
+    Then you then select "Capture Overview" and it'll show you a bunch of useful information.
+    This gives you a great breakdown of the CSS properties in effect on a given page (yours or others).
+The exercise for this lesson is a link provided to a website designed to be inspected, and you'll then answer the 4 questions on the website using the inspector.
+Note that sometimes CSS properties are inherited when not specified, for instance the font-family of the p element is inherited from the body in the exercise.
+
+## 41. The CSS Box Model - Margin, Padding and Border:
+
+This lesson is going to cover the Margin, Padding and Border properties, which, along with Width and Height, 
+    form an incredibly important CSS concept known as "The Box Model"
+When you have a website, you can't always necessarily see it, but each different HTML element is effectively a box in itself.
+    We can change the dimensions of those boxes using the above mentioned properties.
+The invisible box around each element describes how that element would be laid out of screen.
+The height property of an element can be changed to alter the amount of vertical spacing the element takes up on the page.
+    If it increases, it pushes the box of any other elements lower on teh web page.
+Similarly, we can change the width of an element to allow it to take up more space horizontally.
+We can set the height and width using Pixels or Percentages.
+    For example:        width: 10px             height: 10%
+    With Percentage, it is a relative measurement to the max width of the parent element.
+You can then also set a Border on any HTML element.
+    If you imagine the HTML element being the box, this would be the border of the box.
+    This property works slightly different.
+        It can take three values, each separated by a space.
+            For example:
+                    border: 10px solid black;
+        The first value that you should provide is the thickness of the border as a pixel value.
+        The second value is the style of the border, such as solid, dashed etc.
+        The third value is the colour of the border, which can be any form of colour as we've previously learnt.
+    These above 3 values together determine what the border should look like.
+    Note that regardless of the properties of your border, the height and width of the html element does not change.
+        This means the border goes outwards, not inwards.
+    Once you've defined a border, you can further modify it with more specific rules.
+        For example, if we have the above border defined, we can then add this line:
+            border-top: 0px;
+        Note that it's incredibly important that this line be put AFTER we've defined the border.
+    The way these rules are evaluated is first they will look at the first line defining the whole border, 
+        and then evaluates the next rule, which tells it to amend the top of the border to 0px.
+    There's the border-width property as well and it works similar to the border property.
+        It can take up to a maximum of 4 values.
+        For example:
+            border-width: 0px 10px 20px 30px;
+            The first is the top border, second right border, third bottom border and fourth the left border.
+        You could also just provide 2 values.
+            The first value will set the top and bottom border widths
+            The second value will set the left and right border widths.
+The next property in the Box Model is the Padding.
+    The padding property sits under the border.
+    So if you had a border and then added padding to an element, the padding would then push the border outwards.
+    Again, the height and width of the element does not change.
+The last property in the box model is what's called a Margin.
+    This property sits outside of the Border, between it and any other on-screen elements.
+    For example, margin: 10px; would create a 10px wide gap of whitespace between the border and any other elements on the page.
+    If you have 2 elements next to eachother with a 10px margin each, then there would be a 20px margin between each.
+Inside the CSS Inspector, you can see a visual representation of the box model.
+    It shows you the margin, border, padding and width and height in different colour layers.
+When looking at the box model in the inspector, you can actually change each of the values to see how the element would change as you change the box model settings.
+    This also will assist you in formatting the layout of the website to get the elements laid out as you want.
+Note that Padding and Margin function in the same way as the border-width property in regards to setting the 4 width values.
+    The 4 values in order top-right-bottom-left.
+    Or the 2 values of top/bottom - left/right.
+In addition to the boxes created by elements, we can actually create our own boxes independent of that, 
+    and this is useful for grouping different bits of content together so that we can style them together or lay them out together.
+    For example, if you want your image element to have a caption, you'd want to style them together, so you'd wrap a box around the 2 elements.
+In order to create these boxes, we'd use an HTML element called the Content Divison Element.
+    It looks like this:     <div></div>
+    These elements are completely invisible, unless you apply CSS styling to it.
+    This elements whole purpose is to act as an invisible box that can contain content between its tags.
+        We can place as many elements as we want inside a div element.
+    This allows us to group the elements into separate boxes known as divs.
+Because divs are invisible, it can be really ahrd to debug them and understand what's going on.
+    There's a free chrome extension called Pesticide that makes the debugging a little easier.
+    What it does is, when you activate it on your website, you can see the div boxes show up on screen.
+    It even highlights different elements in their respective box models as well.
+    If you don't have the Chrome Dev tools open and it's activated, you can hold down CTRL and it'll tell you what node of your HTML you're hovering on.
+        It also shows some of the properties of those elements.
+Now for the lesson exercise.
+    The index.html will provide the instructions for this exercise.
+    This lesson is effectively using the box model to align a number of boxes.
+The main challenge here was doing the maths of the box model widths to align them.
+Take big note on reading instructions and learning how to understand why things go out of alignment at times.
+    Take it slow, don't scan, read properly and interpret the properties in effect on an element.
+    Especially when it comes to default properties that elements get.
+Note that in addition to the margin property and its 4 values, there's also a dedicated property to each side of the margin/padding as well.
+    padding-left, margin-right etc.
+
+## 42. [Project] Motivational Poster Website:
+
+The final project of this section is going to be a motivational poster website, that we can make meme's on.
+This project effectively entails an image with a border, and black background, a large main word and a sentance beneath it.
+    The main tasks are broken down into a todo list.
+But own sight so will be customizing to fit own designs.
+Easy, granted the hints on alignment did the hard part for me.
+Going to create a copy with my own edits now homebrew.html
+Did little extra, played with nested divs and alering borders and sizing.
+Note that when adding CSS to element, choosing between the class and id comes down to how likely you'd be to reuse your CSS settings as the website is extended.

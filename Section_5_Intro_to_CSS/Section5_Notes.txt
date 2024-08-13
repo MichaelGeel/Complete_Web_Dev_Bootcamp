@@ -1,0 +1,180 @@
+# Introduction to CSS
+
+
+## 32. Why do we need CSS?
+
+
+This lesson will cover an intro to CSS, how it works and why we need it to be able to style our websites.
+CSS stands for Cascading Style Sheets.
+A Cascade is simply a multi-tier waterfall.
+In CSS we start with the most general styling and then move down to the most specific styling requirements.
+The second part of the name "Style Sheet" is a type of language (Style Sheet Language).
+    This is a language that allows us to specify how things should look in our website.
+    There are many different types of Style Sheet langauges.
+        Naturally we're learning Cascading Style Sheets, which is also the most important one.
+        But there's also Syntactically Awesome Style Sheet (SASS) and Leaner CSS (Less) and more.
+Originally, when the internet was still new, there was no CSS, only HTML.
+    Then developers wanted to be able to style their websites.
+    And so the W3 Consortium responded b releasing a new version of HTML, HTML 3.2, and this came out in 1997.
+    This version introduced new HTML tags (like the font tag that allows you to define the font size, colour and face of the content.)
+        There were a number of other attributes and tags that became available and allowed styling the websites.
+Note that all these tags and attributes are now deprecated.
+    Deprecated means it's no longer in use.
+    This is because the HTML is suppose to be for content.
+    Adding in a ton of styling into all that content will clutter up the HTML intensely.
+Then in 1996, a new recommendation was proposed by the W3 Consortium.
+    This recommendation was the beginning of CSS which allowed us to attached styling to the HTML documents.
+    This was also what allowed us to separate the styling from the content.
+The modularity this enables us to achieve is super important.
+When adding CSS, absolutely nothing changes in the HTML, only CSS gets included.
+
+
+## 33. How to add CSS
+
+
+There are 3 ways of adding CSS to an HTML website.
+    1) Inline
+    2) Internal
+    3) External
+We'll be looking at all 3 different ways, why they're important and in what situations to use any given way.
+Looking first at Inline:
+    As the name suggests, it goes into the same line as a particular HTML element.
+    For example:            <html style="background: blue"></html>
+    The inline CSS goes into the opening tag of the element, which is where the CSS exists.
+    It's done via the global style attribute, and the value is a string with the styling inside it.
+    The value of the style attribute is where we add our CSS code.
+                    CSS code is structured like this:
+                        The first part is the prooperty that you want to change.
+                        The second part is the value of that property that you want to set it to.
+                        Ie: property: value.
+    Inline elements are useful for adding CSS style to just a single element on your HTML page.
+    This is normally cumbersome as each website can potentially have hundreds of HTML elements.
+    It's not normally recommended to use inline styles in your entire document.
+    It's only for sepcific sections, or when testing or only want it in one single element or line in the HTML document.
+Then the second way to add CSS is via "Internal CSS"
+    This is done through a special HTML tag called the "Style Element"
+    We have an opening and closing style tag <style></style>
+    And inbetween these tags is where we add all of our CSS.
+    For example:        <style>
+                            html {
+                                background: red;
+                            }
+                        </style>
+    Note this CSS is slightly different to what we say in the inline CSS.
+    Internal has more because in Inline CSS, it was inline inside a particular element, affecting only that element.
+    In Internal CSS, our internal styling can apply anywhere within the same HTML document.
+    It can style any HTML element before or after it.
+    Because of this, we need to add on what we call a selector, which comes before a set of curly braces, which encases our CSS code.
+        Note the above example demonstrating this.
+    Inside the Internal styling, we can target and style as many elements as we want.
+    Internal styling is useful for applying it to only one HTML document.
+        This is because the style is limited to the HTML file that it sits in.
+If you have a multi-page website, then you'd likely go for the External styling option.
+    The biggest difference between External styling and internal and inline styling is that the CSS lives in a completely different file.
+    The file is generally a main/styles.css file and will always be of the .css extension.
+    Inside the .css file is where we write our css rules.
+    Note the CSS in this file is structured the same as it is seen in the Internal styling method.
+    In order to link up the style sheet file with our index.html file:
+        Inside the head element of our HTML, we need to add a link element:
+            This element is self-closing.
+            It has 2 attributes we normally provide:
+                The relationship attribute "rel" which refers to what is the role of the file that we're linking to.
+                The href attribute to specify where the file is located.
+    This style of CSS is what's used most commonly in Web Dev.
+        Just because this is the most common doesn't mean the other 2 styles of adding CSS aren't used or have a use, they each have their own unique cases.
+Use cases in Summary:
+    Inline - Single Element target
+    Internal - Single Page target
+    External - Multi-page target.
+We'll now be doing this lessons exercise.
+    In this exercise, we'll be adding CSS to the relevant html file using the style matching the filename.
+    We'll also get some multi-page practice on the index.html file referencing all 3 of the other html files.
+Simple enough, needed to use the color property of the h1 element to style them.
+Note that with the Internal styling method:
+    Although the style element works for the entire html document no matter where you put it, 
+    Most developers place the style element in the page head as a convention.
+
+
+## 34. CSS Selectors:
+
+
+This lesson will cover CSS Selectors, which will help us choose where to apply our CSS.
+If this is an example of CSS:
+            h1 {
+                color: blue;
+            }
+    What this lesson is going to focus on is the CSS Selecors, which is what comes before the curly braces (ie where the h1 in the above example sits.)
+That is where the CSS Selector always sits.
+A CSS Selector is what selects the HTML that the rules specified in the curly braces will be applied to.
+The example above uses one of the simplest styles of selector, called the Element Selector.
+    This selector targets a particular type of HTML element, so the above example would target ALL h1 elements (even though there should only be 1 per page.)
+    So if the HTML had 3 h2 elements and targeted the h2 element in the css using the Element Selector and set it's color to red, it'd change the colour of all 3 h2's to red.
+Now let's look at other types of Selectors:
+    The Class Selector:
+        For example:
+                        .red-heading {
+                            color: red;
+                        }
+        This selector requires a special symbol, the dot (.) at the beginning of the selector.
+            Immediately after the dot, comes the name of the Class being selected.
+        A Class is something that we can add as an attribute to any HTML element.
+            This effectively groups a number of particular elements together into the class.
+                        <h2 class="red-heading"></h2>
+            This grouping allows you to apply the same CSS rule to all of the elements in the class.
+        So using the 3 h2 element example again, if only one of the h2 elements had the class attribute set to "red-heading", then only that h2 would be affected by the above exmaple of CSS code.
+            If we then added a p element and gave it the "red-heading" class as well, then it'd also be affected by the CSS code regardless of what element it's applied to.
+        This is useful for multi-page websites with many elements where you don't want to just select a particular type of HTML element.
+    This ID Selector:
+        For example:
+                        #main {
+                            color: red;
+                        }
+        This selector also has its own special symbol, the hash symbol (#) which is then followed immediatley by the ID name.
+        This selector targets all elements with the matching id attribute:
+                        <h2 id="main"></h2>
+        This selector works similarly to the Class Selector.
+        The difference between this selector and the Class selector is that:
+            -The class attribute can be applied to many different elements in an html file.
+            -The id attribute should only be applied to a single element in the html file.
+        Note that convention, that an id should be unique to a single element in an html file.
+    The Attribute Selector:
+        For example:
+                        p[draggable]{
+                            color: red;
+                        }
+        We know that we can add as many attributes to an element as we like.
+        This selector allows us to select elements with particular attributes OR attribute values using the above exmapled notation.
+        Notice the first part of the selector is the HTML element you want to select, followed by a set of square brackets containing the attribute you want to select.
+            The above example for instance would target all paragraph elements with the draggable attribute.
+        This is only targeting elements based on the presence of a particular attribute.
+            We can go a step further by selecting the value an attribute needs to have in order for that element to be targeted by the CSS.
+                For exmaple:
+                        p[draggable="false"]{
+                            color: red;
+                        }
+            This example would now select all paragraph elements with the draggable attribute present but only where the draggable attribute is set to false.
+    Lastly, The Universal Selector:
+        For example:
+                        * {
+                            color: red;
+                        }
+        This selector is denoted solely by the asterisk (*) symbol, followed by the CSS rules.
+        This selector targets all elements in the html file that it is affecting.
+We'll now be doing the lesson exercise.
+    We'll be using an external stylesheet to style the webpage based on the styling requirements set out.
+    Just ignore the already existing bit of CSS present in the style.css.
+    Remember to refer to goal.png for the endgoal.
+Note that if a CSS rule doesn't take affect on the web page, check if all the spelling is correct as there may be a spelling error.
+From the exercise, when created the li element Attribute Selector rule, if only had the "value" attribute without the specific value, 
+    would notice all li elements except 3 changes to blue, and 3 stays green.
+This above occurred because of something called "CSS Specificity", which relates to how specific the rule is.
+    This'll be covered in Section 7: Advanced CSS later on.
+
+
+## 35. [Project] Colour Vocab Website:
+
+The project to close off this section will be a website to help you learn spanish.
+    More specifically, a vocabulary flashcard website.
+As usual, see the goal.png image to see what the final product will look like.
+We'll need to create our style.css file for this project.
+At the bottom of the index.html file is the TODO list for this project.

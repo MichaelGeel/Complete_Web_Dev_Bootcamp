@@ -1,0 +1,234 @@
+# Section 10: Grid
+
+
+## 60. Display: Grid
+
+
+This section is covering the CSS Grid, the CSS tool that's going to make it easier for us to create two dimensional layouts.
+Grid is intended to make complex web layouts a whole lot easier.
+Now looking at the difference between Flexbox and Grid:
+    Flexbox:
+        Think of it as a tool that helps align content along a 1D line.
+        It's really easy to use it to place our items and define how we want them aligned on our page.
+    Grid:
+        Think of it as a tool for laying out content along a 2D grid.
+        Depending on how the design looks, if it's in 2D, so has an X and a Y, then you're going to be better off using grid.
+It's not an either/or situation.
+    You can have flexbox inside of a grid.
+    Or a grid inside of a flexbox.
+Each tool has their own strengths and weaknesses.
+Knowing how to use different too sets gives you the flexibility to create things exactly the way you want it to.
+Just because grid is for 2D layouts, it doesn't mean you can't use it for 1D layouts.
+    But it does behave a little differently.
+As you resize the window with a grid layout, you'll notice grid's natural inclination is to create a grid and everything lines up with each other
+    on a column and row basis.
+    The gaps between all items are all matched up with eachother.
+Flexbox behaves very differently.
+    It's actually very difficult to get the flexbox items to line up with each other like in a grid.
+    This is because it's flexible and tries to adapt to squish all the content on the screen.
+It depends on the kind of behavior you want your items to have.
+    Do you want them to prioritize spacing out content and aligning content, or do you want everything to be boxy like a grid.
+Having seen grid's behavior, we'll now look at how to create an actual grid.
+    Say we have a div container with 4 p elements that'll be our grid items.
+    All we have to do, is set the container display to grid             display: grid;
+    Then we'll also need to create grid template columns and rows.
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+        We'll be looking at this notation in detail in later lessons.
+    fr stands for fractional ratio, where this is naturally a fractioned ratio of the columns for how the grid space is distributed between the columns/rows.
+    Then we define a gap to create some space between the columns/rows.
+We'll now move onto the lesson exercise to see what happens when we set something to display grid.
+    Inside index.html there are a lot of div and we're tring to create a chessboard as seen in the goal.png.
+    We want to style the container to use grid and set it to a chessboard style.
+While doing the exercise, if we only set up the grid-template-column property, we'll see we already get the layout that we want.
+    But if you have extra width, then gaps start forming in-between the columns.
+    This is because the container is trying to take up the full width of the screen.
+    You can set the width of the container to match the width of the items to limit this behavior.
+This default grid container behavior only applied to width.
+    It doesn't try to take up all the height so there's no need to set the height.
+
+
+## 61. Grid Sizing:
+
+
+One of the most important things to figure out using Grid is how to size our columns and rows to conform to our design.
+If we start out with a with grid container that has four grid items and add some CSS.
+    In this case, we set the display to grid and set the rows and columns giving them fixed pixel sizes.
+    When we run this code, we'll end up with the fixed size grid.
+However, fixed size grids are not responsive.
+    Meaning any change in window width/height will produce no changes in the grid itself at all.
+In addition to pixels, we can also use rem.
+    This is still fixed because rem sizing is relative to the root of the html.
+    If your body/HTML has a certain size specified and you change that size, then the rem size will go up and down with it.
+    But this does not make it responsive to the screen size.
+Another way the sizing may be represented is, instead of separately specifying the rows and column sizes, we simple define the template size:
+    This is done by combining the 2 properties:
+                grid-template: 10px 20px / 40px 80px
+                First rows, then columns.
+    This isn't recommended up front as it's better early on to have the code be explicit so that when you're reviewing your code and you're trying 
+    to spot problems, it's easier when you have the rows and columns defined.
+Another way that we can define our grid-template rows and columns is to use the "auto" keyword.
+    This gives us a little bit of responsiveness.
+    Each columns is going to try and fit to 100% of the horizontal available space.
+        So if you define the first column as 200px wide, and the second column to auto, then the second column will take up ALL the remaining available width.
+    However, auto behaves differently in the rows.
+        It doesn't try to take up 100% of your screen's height.
+        Instead, what is does is it tries to fit to the content.
+        So the grid row will only be as high as the content in that row requires.
+Looking at the Fractonal sizing layout.
+    Frequently, what you might want in your layout is to define the different areas of your alyout with ratios for sizes.
+    You may want the first row/column to be half the size of the second.
+    This is where the fractional unit comes in with the "fr".
+        This unit defines the ratios between rows and columns.
+    For example, if you set your rows and columns template to: 1fr 2fr;
+        This would make the first row and column half the size (width/height) of the second row/column.
+    What this sizing does is it grows/shrinks according to the available width and the content size for the verticle.
+Next, looking at the MinMax sizing:
+    Sometimes, you want to define how your grid is responsive, especially on the horizontal.
+                    grid-template-rows: 1fr 2fr;
+    One of the functions we can use for this is called minmax(), and here we can define the minimum width and the maximum width we want our column to be.
+        This effectively says that if we have enough space on the horizontal, we want to give the column set to minmax more space.
+    So the minimum width is the minimum width the column can shrink to and maximum width is the greatest width the column can expand to when there is additional spacing.
+        This allows us to limiting sizing inside our grid to match requirements for our content.
+    In the previous lesson's exercise, we had to repeatedly set our ratios for all 8 rows and columns while using the fr, which can make it rather cumbersome.
+        We can shorten the amount of typing needed by using the repeat function.
+        For example:
+                    grid-template-rows: repeat(2, 1fr);
+        This effectively tells the grid to repeat that sizing on the rows/columns for the specified number of times.
+Now what would happen if you were to define a grid larger than you have items for?
+    Say we have 4 grid items in our HTML, but we set our grid to be 2x3.
+    The items are fitted into the grid from top left to bottom right.
+    Once the first row is laid out left to right, it moves to the next row and continues.
+        If there aren't enough items, the final few in the grid are simply left out.
+        Note however that the items in a partial row still adhere to grid layout and don't wrap like in flexbox.
+And what would happen if you don't define enough rows and columns:
+    Say we have 5 items and define a 2x2 grid.
+    Anything added after the grid is finished based on the sizing provided, gets an automatic size based on its height and the associated column width.
+If you wanted to change the above, for example if you had code that would add more divs in the future.
+    You can use the following 2 properties to define the row and column sizing for future additional divs:
+            grid-auto-rows: 300px;
+            grid-auto-columns: auto;
+        This effectively says that for anything added to the grid after the original grid has been created, give it this sizing.
+    This allows you to control your styling no matter how many items gets added to the grid.
+Looking a little more at how we can use the Chrome Dev Tools to investigate and debug our CSS Grid.
+    As we fiddle with flexbox or grid, it can be quite hard to know exactly what's happening behind the scenes.
+    When you've defined a grid, in the CDT, next to your defined grid, there's a little chip with the word "grid" on it that shows up next to your grid definition.
+    If you click on the chip, it'll offer you a bunch of information regarding the layout of your grid.
+    You can change the layout of the overlaid stuff by going into the Layout tab (under Elements, on the Right had side).
+        Here, you can change the settings of what is being shown by the grid tooltips on your grid.
+We'll now be trying out the lesson exercise.
+    We want to alter the purple grid to match the green grid.
+    The width and height requirements have been added to the various items.
+    Note the column behavior as well.
+
+
+## 62. Grid Placement.
+
+
+This lesson is going to focus on how to lay out items in the grid that we've created and how to place them in the areas that we want.
+In order to do this, it's important for us to define some of the terms that are used often in CSS grid.
+    Firstly, we create a Container that contains all of the items and this is usually a div called the Grid Container.
+    Next, the items placed inside the grid are called Grid Items.
+    When we create and size our grid, we create rows and columns, which are collectively known as tracks.
+        We have Row Tracks and Column Tracks.
+    Within intersections between the tracks, we create these small units called a Grid Cell.
+        Grid Cells are the smallest unit in a grid and they can be different sizes.
+        They sit between the columns and the rows.
+        You can use multiple cells to create a grid item, either vertically or horizontally.
+    Lastly, there are the lines that separate our tracks.
+        We have horizontal lines and vertical lines, and these are called teh Grid Lines.
+        We can only control grid lines by using that gap property to specify its height/width.
+It's all the above things together that allows us to create these layouts using our grid.
+Let's look at how to create this layout using actual code.
+    For starters, lets say we have a container div with 3 item divs inside it.
+    We'll update the CSS for the grid container and give it the following:
+        3rem gap
+        1fr 1fr 1.5fr columns
+        1fr 1fr rows.
+        100vh height.
+            By default a div will only occupy as much vertical space as there is content, but by setting the height of our container to 100vh,
+            it's going to take that container and make it stretch all the way to the bottom of the window.
+    Once we have the grid container, we can create the tracks, which is the row and column definitions with the grid template properties.
+    With our tracks, lines and container, so now the items get placed in by default.
+        Starting from the first and then into each of the cells available.
+    Lastly, we also created a 3rem gap to define the lines so that we don't need to use padding/margin to separate the items in our grid.
+    When visualizing this layout, we'll see we have an entire unoccupied track because the items are only taking up a single cell from the start.
+Before continueing, need to try and center each of the items in their cell as a challenge.
+    We'll be doing this by using flexbox within grid.
+    we'll be doing exercise 1 here.
+    This is achieved by turning each grid item into a flex container.
+        Then use align-items and justify-content to center to center the items.
+We'll now move on to creating the layout we're aiming for.
+    We'll start with the cowboy grid item.
+        To get it to take up 2 columns, we'll give it this property:
+                grid-column: span 2;
+        If we were to use the CDT and turn on the Grid viewer, we can now see the lines and tracks in our grid.
+            Selecting the cowboy div, means it goes from track 1 to track 3 and bridges 2 columns.
+        This is what the span 2 property does, it allows the grid items to spread out and cover multiple columns/rows.
+        It starts at the position where the div is supposed to be, and then spreads out over the specified number of columns.
+        Back in the CDT, looking at the grid-colum css style, there's an arrow that you can expand.
+            This will reveal that this style is shorthand for 2 other style rules:
+                grid-column-start: span 2;
+                grid-column-end: auto;
+            These define where the item should start and end in the grid column.
+                If we were to rewrite the CSS using these 2 properties:
+                    The start would define the line number where it starts from. (i.e. line 1/2/3/4 etc)
+                    And the end would define where the item ends.
+                If the start and end were 2 and 4, then it would span 2 columns and run from line 2 to 4.
+                    When specifying the last line in the grid, there are alternatively negative numbers that you can use.
+                        The negative values are effectively the lines counting down from the right hand side to left.
+                        So in a 4 line grid, the number 4 line is also the -1 line.
+                These numbers are handy as 1 will always be the left hand most line and -1 always the right hand most line.
+        You can also start and end in whichever direction you want.
+            For example, you can start at line 4 and end at line 2 and it'll still span the 2 columns between them.
+        The settings that makes up the original span 2 setting is a start of span 2 and an end of auto.
+            And this takes it from the automatic initial position of the div before any positioning was done and spans 2 columns.
+        It's important to remember that the grid-column property is acutally short for 2 other properties.
+            We can set those properties separately, or we can set it by using grid-column.
+            The span 2 setting basically tells it to start wherever it's meant to start and span as many columns as we specify.
+        Naturally, there's a corresponding property called grid-row for the rows, along with the properties it's shorthand for.
+            grid-row-start and grid-row-end.
+    We'll now move onto the next div we want to lay out, the second horizontal span div.
+        This is because in our example, the next item is in the last remaining column in that row of the grid and setting its grid-column
+            to span 2 isn't going to do anything because there are no more columns left to span and by default it's going to start right 
+            after the previous div.
+        One way we can fix this is by using the order property and the order property here works the same as in flexbox.
+            So we can increase the order of this div to make it the rightmost/bottom-most item in the grid.
+            Again, the order runs left to right, top to bottom.
+Having learnt how to set orders and the column spans, we need to set the green div to span 2 columns and be ordered last.
+This is the task of challenge number 2 for this lesson.
+There's an alternative way to defining the order of the items.
+    We could instead have just defined all the grid-column and grid-row properties.
+        In this way, we could define the stand and end of both the rows and columns to set the position.
+        i.e. column start and end at 1 and 3, row start and end at 2 and 3.
+    There's also a grid-based shorthand for these 4 properties, and that's the grid area property:
+            grid-area: 2 / 1 / 3 / 3;
+        Note that there needs to be spaces between each position and the slashes.
+        The numbers are in the following order:
+            grid-area: row-start / column-start / row-end / column-end;
+        This creates a 4 coordinate layout that pens in our grid item.
+An important thing to keep in mind about using grid-area:
+    If you want the rest of the items to behave as expected, then they all need to use grid area.
+Now we'll do exercise 3 to finish off the layout and have the orange item span 2 rows using the grid-row property.
+    Easily done using span 2.
+    You could have alternatively used the grid-area to do this.
+Lastly, one of the biggest differences between grid and flexbox is that grid lets you overlay items onto other items.
+    You can do this by simply positioning items ontop of eachother in the grid.
+    Easiest way for this is using the grid-area property.
+Note that when using hex codes, the first 6 numbers are the colour, you can add an additional 2 numbers which gives your colour transparency.
+    This value is known as "Alpha"
+    The value 80 is roughly 50% transparency.
+We'll now be doing an exercise similar to flexbox froggy, called Grid Garden for practicing grid skills.
+    Found at: https://appbrewery.github.io/gridgarden
+    Do all 28 levels at intermediate.
+
+
+## 63. [Project] Mondrian Painting:
+
+
+We'll now be using what we've learnt in CSS grid to create our section project.
+    He's created paintings like in CSS grid.
+We'll be creating a to-scale version of a Mondrian Painting.
+We'll be doing the HTML and CSS to create this painting.
+This project was solved originally by using a 4x4 grid and spanning the divs across the grid cells in the shape of their requirements.
+However, I managed to do this by nesting grids and flexboxes to achieve the same end result.

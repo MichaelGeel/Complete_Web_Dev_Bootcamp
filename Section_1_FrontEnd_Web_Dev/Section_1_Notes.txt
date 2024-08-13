@@ -1,0 +1,48 @@
+This file contains all of the notes taken in Section 1 of this course.
+Note that for this section, only the lessons that contain useful and important information will be noted on here.
+
+## 5. How Does the Internet Actually Work?:
+
+The internet is not an abstract cloud.
+It's actually just a long wire that connects various computers around the world together.
+There are massive wires that run under the ocean between the continents to allow all computers to be connected around the world.
+Some of the connected computers have a very special function, they have to be online 24/7 ready to serve you all the data and files that you're requesting when you try to access a website.
+These are called servers, and they serve you all the data and files you need to be able to access and interact with certain websites.
+Any computer a user would use to access the internet it called a client.
+You can imagine a web server as a giant library that's open 24/7, and you can go in there at any hour of the day and request something, and it'll be able to serve you all the files and data to view whatever you want.
+Now with how many things there are being stored in this "library", it's going to be difficult to quickly locate the thing that you want out of this giant library.
+So to explain this using an example, if you type "www.google.com" into your browser, behind the scenes, your browser will send that message to your ISP (Internet Service Provider), who you pay to access the internet.
+The message your sending the ISP is that you're looking for google.com, and your ISP will relay that message (or request) to what's called a DNS server.
+DNS stands for Domain Name System and is essentially a suped-up Phone book.
+And what happens is when you make the request through your browser, the DNS server will up in its database to find the exact IP address of that website that you're trying to access.
+Every single computer connected to the internet has an IP Address, and when you need to send/receive files on the internet, each computer can be located and contacted using their unique IP address.
+Once the DNS server finds that IP address, it sends it back to your browser through the ISP, over the internet.
+Then you can make a direct request to that address.
+And what lives at the end of that address is a server that can send bck all the files and data you need to be able to view the site in question.
+You can find the IP address associated with a website using the NsLookup.io website, where you can type in the domain name and it'll provide you with the IP address of that domain.
+
+## 6. How Do Websites Actually Work?:
+
+Let's now look at how websites actually work and understand the role of the browser and different files it uses to render your web pages.
+The data that you receive from a server that you submit a request to via IP Address, usually consists of three types of files:
+    -HTML
+    -CSS
+    -JavaScript
+These 3 files are incredibly common and integral to how websites work.
+Each of these files have different jobs:
+The HTML code file is responsible for the content in your website (like text or image content)
+The CSS code file is responsible for the styling of the website, it determines you your website will look (such as background colour or rounded corners on a button.)
+    It targets all the content in your website that was created in the HTML file and applies the styling to those elements.
+The JavaScript code allows your website to do things or have functionality.
+    It turns a static website with just images and text into a dynamic website that user can interact with. (posting images or sending an email)
+Our browser is a piece of software that specializes in dealing with these 3 file types.
+With all this, we can already start messing around with real webistes.
+If you open your browser and go to google.com, you can right click on a button and click on "Inspect"
+    This brings up the Chrome Develpoer Tools, which is an amazing tool suite for Web Developers.
+    When we bring up the tools, it'll auto-highlight the code block responsible for the element we've clicked on (such as a button)
+    In the code you can find the title of the button, which you can then modify and when you hit enter, it'll modify the button's text right there.
+        Notice next to it there's another parameter called "aria-label" which is for text readers rather than for our browser, we won't see anything change in changing this.
+Now depending on the HTML content that you're inspecting, the part that you'd have to change might be different.
+    For example, a blog post headline will contain the text in a different area where you'd need to change it.
+Note that if you refresh the page, all the changes you made will revert back to their original values, and this is because you're asking the associated server to deliver all the files once again so that it can be rendered again.
+    When you edit it, you're editing the local version which is never saved.
