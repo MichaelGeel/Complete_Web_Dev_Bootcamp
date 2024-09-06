@@ -1,0 +1,52 @@
+Header:
+
+Hi! I'm Michael Geel
+
+I'm currently employed as a Data Scientist and am an aspiring Web Developer. 
+I'm building out my skills in the Frontend technologies and will be expanding my skillset into Fullstack Development in the future.
+
+I started out as a Configuration Analyst but I've always had a passion for coding and development, 
+but had been unsure which genre of development I truly wanted to go into up until I started learning Web Development.
+
+Resume:
+
+Want to know me in a professional context?
+
+If you're more interested in looking at me from a professional perspective, 
+you can find my resume at this link here.
+
+Portfolio:
+
+Some of the work I've done:
+
+This project is a simple showcase of the South African Big 5.
+
+Here's an online media group's page along with some various features.
+
+If you want to see more of the guided and curated work I've done learning Web Development, look here.
+
+About:
+
+I'm a huge advocate for physical fitness, I gym and run regularly. (I'd do more if I could!)
+
+I thorough enjoy reading and constantly learning and expanding my knowledge.
+
+I value my peace and quiet and find myself needing to dedicate some time to mindfulness regularly.
+
+Contact:
+
+If you want to get in touch with me:
+
+You can contact me directly at:
+
+Cellphone: 1234567891
+Email Address: fakeemail@gmail.com
+
+Instagram
+Facebook
+LinkedIn
+GitHub
+
+Footer:
+
+Copyright, All Rights Reserved.
