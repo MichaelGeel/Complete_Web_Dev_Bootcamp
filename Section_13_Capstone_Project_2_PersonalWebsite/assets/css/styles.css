@@ -8,3 +8,20 @@
 #2A2A33
 
 */
+
+.hero-bg-color {
+    background-color: #414366;
+}
+
+.resume-bg-color {
+    background-color: #30303c;
+}
+
+.resume-link {
+    text-decoration: none;
+    color: #3939EB;
+}
+
+.resume:visited {
+    color: #FFFFFF;
+}

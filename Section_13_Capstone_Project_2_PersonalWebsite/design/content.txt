@@ -1,13 +1,3 @@
-Header:
-
-Hi! I'm Michael Geel
-
-I'm currently employed as a Data Scientist and am an aspiring Web Developer. 
-I'm building out my skills in the Frontend technologies and will be expanding my skillset into Fullstack Development in the future.
-
-I started out as a Configuration Analyst but I've always had a passion for coding and development, 
-but had been unsure which genre of development I truly wanted to go into up until I started learning Web Development.
-
 Resume:
 
 Want to know me in a professional context?
