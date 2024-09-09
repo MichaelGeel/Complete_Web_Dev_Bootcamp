@@ -43,3 +43,33 @@ In CDT, the next tab to the right of Console, is Sources.
 Console is more meant for testing out single lines of code, whereas the Snippet editor is for multi-line code testing.
 This snippet editor is also what we'll be using for the next few lessons and challenges.
     Though the code will likely be translated over for the sake of recording the lessons.
+Now how will we know when we've given an erraneous instruction:
+    If we have the 2 alerts previously made, and then on a 3rd line, we write: say("Yo!");
+    This is an incorrect line, and when we run the code, the first 2 lines will run successfully, but the 3rd line will be where the code crashes with and error.
+    The console will then give you an error message to tell you what the error is so you can troubleshoot it.
+        In the example we just used, say is not a keyword that the browser recognizes.
+So to see what are valid keywords, we can head over to the MDN Docs and select JavaScript as our technology, then you can see all the documentation for JavaScript available here.
+    If you search for the alert we used, we'll get the "window.alert()" method that we used and it'll detail how the code actually works.
+    You'll also be given an example of the code and what the output looks like.
+    Notice that the full version of the code we'd written is:
+                window.alert()
+    But what we used and what most people go with is the shorter version:
+                alert()
+Looking at the alert() keyword, these keywords are referred to as "functions" which is a behavior that is executed by the browser.
+At the end of each line is the semi-colon, which denotes the end of the instruction, so the browser doesn't confuse one line and the next.
+Everything between the open and close brackets are what gets used by the function in question.
+Note that there are many different languages in the world, and each one uses different syntax (they're written differently).
+    For example python doesn't require a semi-colon at the end of each line.
+Note that in a programming language, the open/close quotation marks are the same symbols and what you get in a word processor are not the same, 
+    however, when typing in a IDE, the symbols are auto-converted correctly.
+    It's important to be aware of this when copy-pasting code from various sources.
+Be aware of the styling of the code, such as where to put spaces, as this affects the readability of the code.
+    Convention dictates that double quotes be used for text strings.
+The important thing is that: All code in any code-base should look like a single person typed it, no matter how many people contributed.
+Note the starred GitHub repository for the JS style guide: "idiomatic.js"
+    Important to read through this to learn the styles and conventions of JavaScript coding.
+
+
+## 77. Data Types:
+
+
