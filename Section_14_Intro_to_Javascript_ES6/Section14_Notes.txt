@@ -73,3 +73,26 @@ Note the starred GitHub repository for the JS style guide: "idiomatic.js"
 ## 77. Data Types:
 
 
+Continuing from the previous lesson's examples, from the alert("Hello"); function, how does the browser know which part of the code
+is actual code and what is the text we want to display.
+    So the quotation marks encapsulating the Hello denotes that it's a string.
+Everything enclosed in single/double-quotation marks gets interpreted as a string, which means it's not run as code but instead interpreted as text.
+This is important as the computer needs to know which parts are code vs which are just text.
+This is where Data Types come in, because a string is exactly that, a data type.
+Data Types are a way of classifying data to tell the computer how the program intends to use the data.
+There are numerous other data types beyond strings.
+Naturally we have the number data type, in the form of numbers.
+And Boolean, in the form of True/False
+In the console, we could just type 2+3 and it'd output the answer of the sum.
+    Or we could type alert(2+3); which would have the popup displaying the answer to the sum.
+Now we'll be looking at a different function:
+            typeof()
+    This function tells you the data type of whatever you put in the brackets.
+    For example: typeof(23); will output number.
+        typeof("bob"); will output string.
+        typeof(true); will output boolean.
+
+
+## 78. JavaScript Variables:
+
+
