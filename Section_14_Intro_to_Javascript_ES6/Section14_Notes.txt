@@ -1,0 +1,45 @@
+# Section 14: Introducton to JavaScript ES6
+
+## 75. Introduction to JavaScript:
+
+
+Back in the 90s, HTML websites were all form and no function, and if it needed some functionality, the website would have to send the request to the server, which would do all the computation and return the webpage with the new data.
+However, a more dynamic web was envisioned with animations and real-time user interaction.
+To do this, you needed to remove the server from the equation and have the code able to run in the browser.
+So a small scripting language needed to be created, and the requirements for this languge was that it needed to be simple and easily usable by non-developers and non-coders.
+JavaScript has become the foundation for the web, and in your browser, you can disable JavaScript, and will see just how different everything looks without it, but some websites can't even be loaded (such as YouTube) with JavaScript disabled.
+Originally, JavaScript had many different versions and eventually, the langauge got standardized by the European Union, and the language was called ECMAScript.
+    Often, you'll see different versions of JavaScript referred to as "ES5" or "ES6" and here the ES comes from ECMAScript.
+The "Script" in JavaScript comes from the fact that the scripting languages uses scripts to tell websites/HTML Elements what to do.
+Java and JavaScript are completely unrelated and dissimilar and the only reason JavaScript was called that was because in the 90s the word "Java" was incredibly popular and in fashion.
+    The main difference between the 2 is that JavaScript is an interpreted language whereas Java is a compiled language.
+        An Interpreter executes code line-by-line.
+            This takes comparitively longer but allows you to know where an issue occurs as it occurs.
+            It also immediately begins code execution upon being run.
+        A Compiler executes all the code in one go.
+            This takes a little longer up front as it reads all the code, and then executes everything incredibly fast.
+            But if there's an issue, you won't catch it until the program has finished running.
+Originally, JS was just a Frontend language for adding animations or allow some user interaction.
+    Nowadays, JS has frameworks for Frontend, Backend and everything else.
+    Some of which we'll learn about later on.
+JS is also the only langauge supported by all major browsers, other languages can be used and compiled into JS, JS is still most popular and the language powering the web.
+
+
+## 76. Javascript Alerts - Adding Behaviour to websites:
+
+
+In chrome, in the CDT, next to the elements tab, is a tab named "Console" which is a JS console that allows you to start writing JacaScript straight away and will run the code as you hit Enter.
+    For example, writing:
+        alert("Hello"); and hitting enter so Chrome runs the code, will result in a popup appearing with the message of Hello.
+While the CDT Console is useful, it has a downside, for example if we wanted 2 alerts to happen, as soon as we've coded the first alert and hit enter to the next line,
+the line is executed and the alert appears.
+    The way to get around this, is to hold Shift + Enter, which takes you to the next line without executing the previous instruction.
+    Though this is still painful, so let's look at another way to write JS code that can be executed in Chrome.
+In CDT, the next tab to the right of Console, is Sources.
+    And in the left sidebar window, there's a double left arrow at the top, it brings a dropdown, and we'll select "Snippets".
+    We'll then click a new snippet, and give the script a name.
+    We now have a JS file that we can start writing code inside of the file, as many lines as we want.
+    Then when we want to run the code, at the bottom right of the code window is a play button that we can press to run the code.
+Console is more meant for testing out single lines of code, whereas the Snippet editor is for multi-line code testing.
+This snippet editor is also what we'll be using for the next few lessons and challenges.
+    Though the code will likely be translated over for the sake of recording the lessons.
