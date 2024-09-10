@@ -96,3 +96,49 @@ Now we'll be looking at a different function:
 ## 78. JavaScript Variables:
 
 
+We can commit pieces of data to the memory of the computer, but first we need to enable the user to enter a piece of information.
+    To do this, we'll now learn about the prompt(); function.
+Inside the CDT sources file, we're going to write:
+            prompt("What is your name?");
+    Running this will show you a prompt, which is a popup that allows the user to input something.
+At the moment, the information entered goes nowhere, you can't retrieve it or get it back.
+    It's not being committed to memory.
+In order to commit the information to memory, we can use a variable.
+    For example, we can write:
+            var myName = "Mike";
+    If we run this in the source file and then go to the console below it and just type in the variable name "myName" the console will output the value we assigned to the variable.
+    This is because that piece of data has been committed to memory.
+Looking at the syntax of code we wrote above:
+    "var" is a keyword that tells us we're creating a new variable or data container in memory.
+    "myName" is the name we've given this variable and is what we use to reference the container and its information.
+    the "= 'Mike'" is the value that we're assigning to the variable/data container.
+        And so now whenever we use myName, the computer will know we're talking about the string "Mike".
+Looking at the syntax a little deeper:
+    Whenever the computer encounters the keyword var,it essentially knows that it has to construct a new container
+    The container gets given a name, which is what follows the var keyword.
+    And whatever comes after the "=" is what is going to be housed in the container.
+    And finally the semi-colon marks the end of the line.
+'var' stands for the word variable.
+    Meaning the data inside the variable container can be changed.
+    So if we wanted to change the value, we can tap into that variable container by writing its name, and set it to equal a new value.
+        myName = "Bob";
+    And whenever you re-assign the variable value, the old value falls out of memory and is replaced by the new value.
+Notice in the above case, we didn't have to repeat the var keyword.
+    The keyword "var" is only used when you're constructing a new variable to contain your data.
+When you decide to use/change the variable, you only need to reference it by name.
+If we wanted to output the variable as an example:
+            alert(myName);
+    This will output the value contained inside of the variable.
+In the same way we can save information provided by the user:
+            var userInput = prompt("What is your name?");
+Now we can write an alert that combines the variables together.
+            alert("Hello "+yourName+"!");
+    This creates a message using the variables we're referencing and substitutes their values in their place.
+On a more practical level, you could have a variable:
+            var gameLevel = 1;
+    And whenever the user progresses, you can increase the gameLevel value which you can then reference back to whenever needed.
+
+
+## 79. JavaScript Variables Exercise Start:
+
+
