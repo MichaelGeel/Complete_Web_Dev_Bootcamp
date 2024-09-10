@@ -142,3 +142,18 @@ On a more practical level, you could have a variable:
 ## 79. JavaScript Variables Exercise Start:
 
 
+Between lesson 79 and 80 is a coding test intended to test understanding of JS variables.
+The exercise provides instructions on what to do along with a code space in which to do the exercise.
+This particular exercise has 2 present variables and the goal is to swap the variables around.
+    The solution will be copied into the JS files associated with this lesson (79).
+Note in JS (seen in the exercise) to print something to the terminal, we use:
+            console.log();
+    Similar to print() in Python.
+Note the rules provided in the instructions related to this particular challenge.
+When we're done with the exercise, we can click the "check solution" in the bottom right corner to confirm if it's correct.
+Note that lesson 80 contains the solution for this exercise, and the solution will be copied into the lesson 80 file as well.
+
+
+## 80. JacaScript Variables Exercise Solution:
+
+
