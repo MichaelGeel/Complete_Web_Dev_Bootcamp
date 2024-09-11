@@ -194,3 +194,14 @@ A quiz regarding variable naming best practice follows this lesson.
 ## 82. String Concatenation:
 
 
+Previously, we saw we can combine strings using the plus sign, this creates a single string using what's called "Concatenation"
+    Here, you're joining together everything that's inside a quotation mark and ignoring everything else.
+    For example:
+        "a"+" "+"b" becomes "a b" as a single string.
+Challenge to utilize variables along with a prompt and string concatenation to greet a user who's just entered their name.
+    See associated file for the code.
+
+
+## 83. String Lengths and Retrieving the Number of Characters:
+
+
