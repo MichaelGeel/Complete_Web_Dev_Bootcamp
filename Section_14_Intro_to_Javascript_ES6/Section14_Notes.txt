@@ -157,3 +157,9 @@ Note that lesson 80 contains the solution for this exercise, and the solution wi
 ## 80. JacaScript Variables Exercise Solution:
 
 
+Solution involved creating a temp variable and setting it to one of the variables, then setting that variable to the other, and then the other to the temp variable.
+
+
+## 81. Naming and Naming Conventions for JacaScript Variables:
+
+
