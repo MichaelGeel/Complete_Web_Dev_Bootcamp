@@ -205,3 +205,26 @@ Challenge to utilize variables along with a prompt and string concatenation to g
 ## 83. String Lengths and Retrieving the Number of Characters:
 
 
+Another feature of JS strings is that we can easily determine the number of characters in a string by tapping into its "length" property.
+To get the number of characters inside the string, we can simply write:
+        string.length
+    This returns the number of characters in the string as a number.
+Challenge:
+    Write some JS code where the user can enter some text.
+    The code then tells the user 2 things:
+        -How many characters long the string is.
+        -How many characters out of 140/280 they have remaining.
+    See solution code in the associated file.
+Needed to use the minus operator as well to calculate remaining char length.
+There are 2 ways to comment code is JavaScript:
+    Using // to comment out all code that follows after the // for the rest of that line only.
+            Or
+    You can encapsulate multiple lines betwen /* text */ to comment all those lines out at once.
+Note some of the data used for this solution could have been done inline as well as opposed to what was done in storing it all in variables.
+Note that if you run the code and then swap tabs, your prompt popup gets dismissed and your variable storing the user input gets a Null value, 
+    which causes the code to error out as a Null value has no length property.
+
+
+## 84. Slicing and Extracting Parts of a String:
+
+
