@@ -228,3 +228,26 @@ Note that if you run the code and then swap tabs, your prompt popup gets dismiss
 ## 84. Slicing and Extracting Parts of a String:
 
 
+Continuing with the example from the previous lesson, we'll be building upon it.
+In this lesson, we'll improve the functionality so that instead of simply giving a character count, we just removed the extra characters.
+To implement this in JavaScript, we'll be using a function called:
+            slice(x,y);
+What this function does, is it allows you to slice a string to separate them into individual characters (or portions).
+Note to quick comment a line, highlight it and press CTRL + /
+Looking at how slice works, say we have a string variable of x length, we can get slice of that string by calling:
+            stringVar.slice()
+    And in the brackets after the slice, we can include 2 values, the index where the slice starts and where it ends (non-inclusive).
+    So if we say stringVar.slice(0, 3); it'll return the first 3 letters of the string variable.
+Note that indexes of characters start at 0.
+If we only pass a single value to the slice, it'll return everything in the string from that index position to the end of the string.
+Note that with slices, if you provide a stop index for the slice that is bigger than what is available in the string, it'll simply return what's left in the string from the start to the end.
+Challenge for the lesson:
+    Improve the previous exercise, so that when you enter the text block, if the text string is longer than 280 characters, it cuts off the rest and returns only the 280 characters.
+Solution code in the associated file.
+    Simply had a user prompt for text, a slice assigned to the variable, and then outputting it into an alert.
+Alternatively, could be done without variables and having it all in a single line.
+
+
+## 85. Challenge: Chaing Casing in Text:
+
+
