@@ -163,3 +163,34 @@ Solution involved creating a temp variable and setting it to one of the variable
 ## 81. Naming and Naming Conventions for JacaScript Variables:
 
 
+This lesson will cover some important points about how you should name your variables so that you're upholding programming best practices.
+Starting out separately, if your console is getting cluttered with lots of outputs, you can clear the console using CTRL + L.
+    This does not clear the variables and information stored in memory.
+If we wanted to clear all of the data, we're going to have to do a hard clean.
+    We're going to have to empty our cache and delete all of the data.
+    In the browser window, click on hold on the reload button, and you get 3 options, one of which is "Empty Cache and Hard Reload"
+    Now if you select that option, none of the variables will be in memory anymore and you'd have to re-initialize all the variables again.
+There are some rules that govern how you should name your variables.
+    It doesn't actually matter what you call a variable.
+        But this doesn't mean go ahead and type anything, because a hard to type variable will make it difficult to be referenced again later on in the code.
+    And you want the variable name to maintain meaning related to what it stores, so that you can quickly and easily know what the variable stores.
+These are the common rules that good programmers will follow:
+    1) Give your variables meaningful names.
+        So that anyone who sees the name can quickly and easily figure out what data is likely stored inside it.
+    2) There are certain things that JavaScript will not let you do when you're trying to name a variable.
+        You can't call it a keyword.
+            But you can have a variable that contains the keyword as part of it.
+        Your variable name cannot begin with a number.
+            But it can contain numbers anywhere else in the name.
+        Your variable name cannot contain spaces, as the space causes the program to think you're trying to write a separate piece of code.
+    3) Your variables can only be made up of letters, numbers (except first character), the $ and the _.
+        No other symbols are valid for naming variables.
+    4) Lastly, we name all our variables using camelCasing.
+        Meaning the name starts with a lower case, and every subsequent word is capitalized.
+            This is useful as it prevents words from being misread.
+A quiz regarding variable naming best practice follows this lesson.
+
+
+## 82. String Concatenation:
+
+
