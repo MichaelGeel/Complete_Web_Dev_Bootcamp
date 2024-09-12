@@ -338,6 +338,7 @@ If you want to increase/decrease it by more than 1, you can use the following:
     This is a shorthand way of saying:
             x = x +/- 3;
     This works for addition, subtraction, multiplication and division.
+Additional note, when you use the Increment expression, if you're assigning another variable to it at the same time, the new variable will take on the value of the old variable and the old variable will be incremented.
 
 
 ## 89. Function Part 1: Creating and Calling Functions:

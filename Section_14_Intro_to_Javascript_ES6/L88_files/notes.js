@@ -20,3 +20,8 @@ x *= 3; // short for x = x * 3;
 
 // Shorthand for dividing a variable by a value:
 x /= 3; // short for x = x / 3;
+
+// Increment/Decrement Expression asisgnment:
+var y = 3
+var x = y++
+x // x == 3, and y == 4
