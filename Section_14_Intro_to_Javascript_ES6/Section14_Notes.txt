@@ -268,3 +268,20 @@ See solution in the next lesson's code.
 
 ## 86. Challenge: Changing String Casing Solution:
 
+
+See the solution for the challenge in the associate code file.
+    We get the user name and store it in a variable.
+    Then we use .slice and .toUpperCase to capitalize the first letter of the user's name in a variable.
+    Then we use .slice and .toLowerCase to lower the rest of the letters in the user's name in a variable.
+    We bring then together using string concatenation to recreate the user's name with a capitalized first letter.
+    Finally, we send the user an alert with their capitalized name.
+Note to use the length property to specify exactly how many characters to slice out of the lowerCase portion of the name variable.
+The important part of this goal was taking a problem, and breaking it down into smaller tasks that can be tackled one at a time.
+Also note that it's important to code defensively/securely.
+    For example, you don't necessarily need the .toLowerCase part of the code, but a user might add an upper case letter in the middle of their name, 
+    which would fall through the cracks and not look right.
+
+
+## 87. Basic Arithmetic and the Modulo Operator in JavaScript:
+
+
