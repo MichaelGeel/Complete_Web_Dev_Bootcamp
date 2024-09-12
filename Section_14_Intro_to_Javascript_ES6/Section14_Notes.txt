@@ -285,3 +285,37 @@ Also note that it's important to code defensively/securely.
 ## 87. Basic Arithmetic and the Modulo Operator in JavaScript:
 
 
+For the most part, working with Numbers in JavaScript is pretty straightforward.
+You can add Numbers using the + sign:
+        var a = 2 + 3; //5
+You can subtract using the - sign:
+        var b = 3 - 2; //1
+You can multiple using the * sign:
+        var c = 3 * 2; //6
+You can divide using the / sign:
+        var d = 6 / 3; //2
+The only operator that's somewhat strange, is the module operator, represented by %
+        var e = 9 % 6; // 3
+    What modulo does is, it gives you the remainder of the division of the 2 numbers you're working with.
+    For example, 9/6 is 1.5 (i.e 6 remainder 3) and what it returns is that remainder value.
+This operator is useful in cases where you're trying to work out if a number is even or odd.
+    If a number modulo 2 (numVar % 2) equals 0, then it's an even number and if it equals 1, then it's odd.
+So far, it's pretty straightforward, but looking at a slightly more complex operation:
+        var cost = 2 + 3 * 5;
+    Depending on which operation we execute first, the value of the cost variable will change.
+This is why we have what is called Precedence, to resolve these kinds of ambiguity. (See BODMAS)
+    This rule states that we must first multiply and divide before we add or subtract.
+    This rule is from Math and holds true in programming.
+However, if we wanted the addition to be executed first, then we would encase that portion in a set of brackets as it would then be prioritized.
+In order for your code to be easily readable and easily understood, it's good practice to encase the operation that happens first in brackets, even if you know what the result would be.
+Lesson Challenge:
+    Dog to human age converter.
+    Equation:   humanAge = (dogAge - 2) * 4 + 21;
+See solution in the associate JS file for this lesson.
+    The solution could be simplified by not storing the humanAge in a variable.
+    Also needed to add another set of brackets to show the multiplication's precedence over the + 21 portion of the equation.
+
+
+## 88. Increment and Decrement Expressions:
+
+
