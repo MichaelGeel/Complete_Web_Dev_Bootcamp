@@ -319,3 +319,27 @@ See solution in the associate JS file for this lesson.
 ## 88. Increment and Decrement Expressions:
 
 
+Thus far all the operators we've seen exist in normal mathematics.
+But we'll now be looking at some that only exist within mathematics.
+    Doing it in normal maths, we'd set a variable x to equal a value, then write:
+            x = x + 1;
+But in most programming languages, instead of writing the above out, you can simply write:
+            x++;
+    This increments the value of x by 1.
+    This is referred to as the Increment Expression.
+You can also do this with minus 1 as well:
+            x--;
+    This reduces the value of a variable by 1
+    It's referred to as the Decrement Expression.
+Remember with ++ and --, you're only ever increasing or decreasing the value by 1.
+If you want to increase/decrease it by more than 1, you can use the following:
+            x += 3;
+            x -= 3;
+    This is a shorthand way of saying:
+            x = x +/- 3;
+    This works for addition, subtraction, multiplication and division.
+
+
+## 89. Function Part 1: Creating and Calling Functions:
+
+
