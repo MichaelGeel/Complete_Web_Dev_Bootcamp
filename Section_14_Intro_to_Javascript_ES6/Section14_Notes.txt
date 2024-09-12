@@ -248,6 +248,23 @@ Solution code in the associated file.
 Alternatively, could be done without variables and having it all in a single line.
 
 
-## 85. Challenge: Chaing Casing in Text:
+## 85. Challenge: Changing Casing in Text:
 
+
+The last string related method we're looking at is the .toUpperCase() method, which changing all characters in a string to upper case.
+    For example:            stringVar.toUpperCase();
+Note that a function like this doesn't change the variable itself, it's applied onto the data of the variable as it's being outputted.
+Only be assigning the variable.toUpperCase to another variable (or itself) would the all-caps string be saved.
+There's also a method that does the opposite, and converts all the characters in a string to lower case:
+            stringVar.toLowerCase()
+Also note that apparently the console only outputs the last message sent to it in the code.
+    For example, in you call 2 variables to be printed to the console, it'll only show the last one.
+This is useful because it allows for you to implement consistency across all information when you're getting inputs from various users.
+Lesson Challenge:
+    Prompt the user for their name.
+    Then respond with an alert saying "Hello, " and the user's name with only the first letter capitalized.
+See solution in the next lesson's code.
+
+
+## 86. Challenge: Changing String Casing Solution:
 
