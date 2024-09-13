@@ -401,3 +401,10 @@ See the related code file for both the provided solution and my solution.
 ## 92. A Quick Note about the Next Lesson:
 
 
+This lesson simply provides some code allowing to follow along with next lesson (lesson 93).
+See the associated file for the code in question.
+
+
+## 93. Function Part 2: Parameters and Arguments:
+
+
