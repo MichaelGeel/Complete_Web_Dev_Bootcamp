@@ -394,3 +394,10 @@ Additional challenge:
 ## 91. The Karel Chess Board Solution:
 
 
+This lesson simply contains the notes for the solution to the Chessboard Karel the Robot Challenge.
+See the related code file for both the provided solution and my solution.
+
+
+## 92. A Quick Note about the Next Lesson:
+
+
