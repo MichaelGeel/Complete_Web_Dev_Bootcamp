@@ -369,6 +369,28 @@ If using alerts get tiring, we can instead use:
     The console is meant for the developer for debugging and testing code.
 
 
-## 90: Functions Part 1 Challenge - The Karel Robot:
+## 90. Functions Part 1 Challenge - The Karel Robot:
+
+
+This lesson will be a challenge to start writing our own functions, in an online tool called Karel the Robot.
+Change the world to a 5x5 world.
+Then you'll notice a function called main:
+        function main() {
+            // code
+        }
+    Everything you put into this function will get executed when you click the run button.
+The robot can take a certain number of commands, that can be viewed.
+We're able to write additional functions outside of the main function, which we can call inside the main function.
+For this challenge, we need to write a function that moves Karel from the bottom left corner to the top right corner.
+See the solution in the associated JS document.
+Second Challenge:
+    Need to put beepers down in a straight line from the Bottom Left corner to the top right corner.
+See solution code in the lesson's JS document.
+Additional challenge:
+    Have Karel put beepers down in a chessboard formation.
+    This challenge will be covered in the next lesson.
+
+
+## 91. The Karel Chess Board Solution:
 
 
