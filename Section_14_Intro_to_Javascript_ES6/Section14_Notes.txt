@@ -344,3 +344,31 @@ Additional note, when you use the Increment expression, if you're assigning anot
 ## 89. Function Part 1: Creating and Calling Functions:
 
 
+This lesson and the coming lessons will be looking at how to create functions.
+A function is basically a series of repeatable actions to save on needing to repeatedly re-type the same code over and over.
+    It's a series of lines of code packaged together into a block of code and given a name.
+The syntax for creating a function in JavaScript is as follows:
+            function funcName() {
+                //insert code here
+            }
+The 'function' is a keyword that tells the computer that you're constructing a function.
+    Then it's followed by a name and a pair of brackets immediately after the name.
+    And lastly some curly brackets that contain all the code you want to be executed in the function.
+Once you've created that function, you simply call the function by its name, and it'll automatically execute all the instructions you've coded inside of it.
+Now we've seen how to create the function, but to call (use) the function you simly need:
+            funcName();
+    This is a command, and it's how you get the computer to execute the code inside of the function you created.
+Note that the naming rules we saw for declaring variables applies for functions as well.
+In terms of style, when creating a function, it's good practice to make sure that all of the instructions inside the function are indented.
+    An indent is a tab level.
+    The closing curly bracket does not get indented as it indicates the end of the function.
+If using alerts get tiring, we can instead use:
+            console.log();
+    This displays the message in the console, instead of creating a pop-up.
+    Note that the alert is something that's seen by the user, the console is only seen by the developer.
+    The console is meant for the developer for debugging and testing code.
+
+
+## 90: Functions Part 1 Challenge - The Karel Robot:
+
+
