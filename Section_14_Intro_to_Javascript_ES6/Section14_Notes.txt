@@ -438,3 +438,9 @@ For this challenge, dividing the money by the cost of milk doesn't always give a
 Between Lessons 93 and 94 is a Coding exercise.
     This exercise is to create a function that takes your current age and returns how long you have to live from now until you're 90 in days, weeks and months.
 Lesson 94 discussed the solution to the challenge, and my solution code will be in the file as well.
+Because the exercise output had to be in a certain format, my code is exactly the same as the course solution.
+
+
+## 95. Functions Part 3: Outputs & Return Values:
+
+
