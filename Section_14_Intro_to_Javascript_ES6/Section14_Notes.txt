@@ -408,3 +408,33 @@ See the associated file for the code in question.
 ## 93. Function Part 2: Parameters and Arguments:
 
 
+There are 3 versions of functions.
+    What we've been working with is the basic version, the simplest form of the JavaScript function.
+The next version of a function in JavaScript is where your functions are able to take inputs.
+    Previously, we had nothing between the brackets in a function because the function didn't take any inputs.
+So now when adding an input into a function, you can use that input within the function based on your specific need for it.
+To add an input into a function, you provide an input name between the brackets when declaring the function, and you can then use that variable within the function.
+        function newFunc(funcInput){
+            //code using funcInput;
+        }
+    The input is effectively a variable that contains the user's input.
+Now when you call the function, between the brackets of the call, you need to pass a variable that will be assigned to the input you specified when creating the function.
+        newFunc(inputValue);
+    Whatever you pass as the input, it gets bound to the name of the input as declared in the function.
+If you don't specify an input for a function that requires an input, the program will error out as it's expecting a value to be passed in the function call.
+This is great for adding some dynamics to the funciton.
+Challeng:
+    Create a function that receives an amount of money and calculates how many milk bottles it can buy.
+    Assume a bottle to cost 1.5.
+See Solution for the challenge in the lesson's code files.
+For this challenge, dividing the money by the cost of milk doesn't always give a "money friendly" answer, so for this solution we needed a method called Floor.
+    This method cuts away the decimal places in a division and only returns the whole numbers of the sum.
+    Note that the Math.floor() method takes a value, so whether you feed the equation directly or before and just pass in the answer you'll still get the same result.
+
+
+## 94. Life in Weeks Solution:
+
+
+Between Lessons 93 and 94 is a Coding exercise.
+    This exercise is to create a function that takes your current age and returns how long you have to live from now until you're 90 in days, weeks and months.
+Lesson 94 discussed the solution to the challenge, and my solution code will be in the file as well.
