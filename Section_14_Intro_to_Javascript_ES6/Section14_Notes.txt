@@ -444,3 +444,24 @@ Because the exercise output had to be in a certain format, my code is exactly th
 ## 95. Functions Part 3: Outputs & Return Values:
 
 
+We'll now look at the last type of function, which are functions that give an output.
+    For these functions, we can use the keyword "return" to specify that this function provides an output.
+The output is whatever follows after the return keyword:
+            function funcName(input){
+                //code here;
+                return returnValue;
+            }
+The output you get from the function can then be bound to a variable when you call that function.
+            var funcOutput = funcName(input);
+Note that a function returning a value signifies the end of the function's run.
+    If there's more code after the function return, that code won't be run.
+    In this way, a function can be conditionally exited early depending on certain factors.
+You can also use functions to call other functions inside of them.
+And if you want a function to have multiple inputs, you seperate them with a comma:
+        function funcName(input1, input2){}
+A function output doesn't need to be stored in a variable when being called, it can be directly inserted into another operation where required.
+
+
+## 96. Challenge: Create a BMI Calculator:
+
+
