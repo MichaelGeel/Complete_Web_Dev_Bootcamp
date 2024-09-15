@@ -460,8 +460,22 @@ You can also use functions to call other functions inside of them.
 And if you want a function to have multiple inputs, you seperate them with a comma:
         function funcName(input1, input2){}
 A function output doesn't need to be stored in a variable when being called, it can be directly inserted into another operation where required.
+Note that if you use multiple inputs, when calling the function, the order of your input values matters.
+    You can either reference with value is for which input by specifying the name of that input from the function:
+        funcName(input1=5, input2=10);
+    Or you just need to ensure that your input values are in the correct order of the inputs for the function.
 
 
 ## 96. Challenge: Create a BMI Calculator:
+
+
+This lesson is an introduction to a Coding Exercise that follows after this lesson (before 97).
+We have to write the code to create a BMI calculator.
+The equation is included in the challenge description.
+We need to create a function that takes weight and height as inputs and outputs the BMI.
+The code solution for the challenge will be included in the file for lesson 97 where we'll look at the solution in the course.
+
+
+## 97. Challenge: BMI Calculator Solution:
 
 
