@@ -479,3 +479,10 @@ The code solution for the challenge will be included in the file for lesson 97 w
 ## 97. Challenge: BMI Calculator Solution:
 
 
+The challenge environment didn't appear to accept my use of the power operator (**) so I had to use h*h instead.
+But otherwise, I was able to easily complete this challenge.
+In the course, if you wanted to go the power route, needed to use the math.pow() function.
+    This function takes 2 values, first the number being raise and second the power you're raising it by.
+    For example:            Math.Pow(height, 2);
+After this lesson is a quiz and then a section closing video (number 98) which won't be included in these notes unless there's a note to be taken from the quiz follow this.
+See the solutions for the challenge in this lesson's associated js file.
