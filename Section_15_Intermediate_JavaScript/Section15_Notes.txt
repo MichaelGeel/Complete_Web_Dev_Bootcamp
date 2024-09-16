@@ -4,3 +4,37 @@
 ## 99. Random Number Generation in JavaScript: Building a Love Calculator:
 
 
+This section is going to be looking at some more advanced features in JavaScript, such as randomization and control flow.
+JavaScript has a way of generating random numbers using the Math.random() function.
+    It generates a 16 decimal place number between 0 and 0.9999...(16 9s).
+    For example: 0.7032882360745665
+The function never reaches 1.
+This is useful as it allows us to generate up to a billion random numbers.
+Note that a function always requires a set of brackets to be run, even if no input is required.
+Now if we wanted to use this function to simulate a dice roll, for example:
+    We could first multiply it by 6.
+    Then we can use Math.floor() on the number to turn it into a whole number to return to the user.
+Note that with math.Floor(), you need to add 1 to the result as the number range from 0 to 5 instead of 1 to 6.
+    Adding 1 to the result would fix the output range.
+The Math.random() function is called a "pseudo-random number generator".
+    It's called this because a computer is essentially a bunch of switches, and depending on whether a switch is on or off, you get 1s or 0s.
+    And through these switches the computer does all its computing.
+    But there's one thing it's not very good at, which is being random.
+Becuase a computer is an entirely deterministic process, it's not very easy to get a true random number.
+    So instead, people have created mathematical formulas designed to simulate this process instead.
+So we've mentioned how the Math.random() function returns a value between 0 and 0.9xe-16, but that return is not very useful to us until we scale it.
+    This is easily done by multiplying it by the max value of the range we want.
+    Then naturally manupulate the decimals to fit your needs and modify by the minimum value of the range (adding it.)
+The above process is a simple way to achieve any number range desired (provided the range is less than a billion values).
+    Granted you could raise the random number to itself to increase the possible output range.
+Lesson Challenge:
+    Get 2 prompts from the user for 2 names.
+    Then ignore the names and generate a random number between 0 and 100 (inclusive).
+    Return it to the user using an alert.
+See solution code in the associate notes file.
+Note that with the random function, if your range is from 0 - x, then multiply it by x+1 as the random numbers won't include the x+1 value.
+
+
+## 100. Control Statements: Using If-Else Conditionals & Logic:
+
+
