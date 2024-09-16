@@ -38,3 +38,25 @@ Note that with the random function, if your range is from 0 - x, then multiply i
 ## 100. Control Statements: Using If-Else Conditionals & Logic:
 
 
+Expanding on the previous lesson's work, we'd like to be able to give our user a custom message based on their love score.
+In order to do this, we need a way of checking what score the user got and responding differently based on that score.
+To do this, we need to make use of Conditionals.
+    The way these work is we can use the keyword "if" to evaluate a statement.
+        If the statement is true, a particular block of code will be executed,
+        If the statement is false, the code either gets skipped, or a different code block nested under an "else" gets executed.
+In programming, this is known as Control Flow.
+    Because we're essentially controlling the flow of the program.
+Looking at an example of an "if...else" conditional:
+            if (conditional statement){code};
+            else {code;}
+    We start with the conditional statement, followed by a pair of brackets containing the conditional statement.
+    Followed by the code that executes if the conditional statement is true.
+    Afterwards comes the option "else" statement, followed by the code that executes if the conditional is false.
+The above example is a compressed version for the syntax of an if/else statement, check the lesson notes.js file for the conventional if/else layout.
+We'll now use the conditionals to edit the code in the love calculator.
+    Simply testing for above a score of 70 and giving a special output, else it gives the old output.
+
+
+## 101. Comparators and Equality:
+
+
