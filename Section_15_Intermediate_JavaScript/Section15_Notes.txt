@@ -88,3 +88,16 @@ So while both signs check for equality, with ===, it checks that the data types 
 ## 102. Combining Comparators:
 
 
+We'll now be looking at how to combine comparatives.
+The 3 basic comparatives are:
+    && meaning AND  (meaning condition 1 and 2 must be true)
+    || meaning OR   (meaning condition 1 or 2 can be true)
+    ! meaning NOT   (meaning the opposite of the condition must be true)
+So going back to the love calculator, between the if and else statements, we'll add another if.
+    if (condition1 && condition2) {}
+Following this lesson is a coding exercise in the course, the solution for it will be added to this lessons code file.
+
+
+## 103. Introducing the Leap Year Code Challenge:
+
+
