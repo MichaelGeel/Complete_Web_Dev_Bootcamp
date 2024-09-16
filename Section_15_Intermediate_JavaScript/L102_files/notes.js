@@ -12,3 +12,18 @@ if (n > 30 && n <= 70){
 } else {
     window.alert("The love score between " + userName + " and " + crushName + " is: " + n + "%. You go together like oil and water");
 }
+
+// Code Challenge after lesson 102 solution:
+function bmiCalculator (weight, height) {
+    var bmiValue = Math.round(weight/(Math.pow(height, 2)));
+    if(bmiValue<18.5){
+        var interpretation = "Your BMI is " + bmiValue + ", so you are underweight.";
+    }
+    else {if (bmiValue >= 18.5 && bmiValue <24.9){
+            var interpretation = "Your BMI is " + bmiValue + ", so you have a normal weight.";
+        } else {
+            var interpretation = "Your BMI is " + bmiValue + ", so you are overweight.";
+        }
+    }
+    return interpretation;
+}
