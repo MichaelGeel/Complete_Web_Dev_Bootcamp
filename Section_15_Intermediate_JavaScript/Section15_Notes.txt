@@ -60,3 +60,31 @@ We'll now use the conditionals to edit the code in the love calculator.
 ## 101. Comparators and Equality:
 
 
+The symbols of comparison in the If statments, such as:
+    Greater than:   >
+    Lesser than:    <
+    Equal to:       ===
+These are known as Comparatives, because they allow us to compare two different values.
+Looking at the comparatives and their meanings:
+        ===:        Left side equal to right side.
+        !==:        Left side not equal to right side.
+        >:          Left greater than right.
+        <:          Left less than right.
+        >=:         Left greater than or equal to right.
+        <=:         Left lesser than or equal to right.
+These comparatives give our conditionals (such as the if/else statements) a lot more flexibility.
+Now sometimes, instead of using 3 equals signs (===) to measure equality, you see people using 2 equals signs (==).
+    There's a big difference between these 2 signs.
+Let's say we have 2 variables:
+        var a = 1;
+        var b = "1";
+    Note same number, different data types.
+Now if we test whether a === b in an if statement, we'll get False (they're not equal).
+But if we test whether a == b in an if statement, we'll get True (they're equal).
+So while both signs check for equality, with ===, it checks that the data types are matching.
+    And with ==, it ignores the data types.
+
+
+## 102. Combining Comparators:
+
+
