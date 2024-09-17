@@ -111,3 +111,19 @@ Can use draw.io to create a flowchart on how the leap logic should work.
 ## 104. Leap Year Solution:
 
 
+The challenge was completed successfully.
+    Start by check mod 4
+        If true, next check
+        If false, not leap.
+    Check 100
+        if true, next check
+        if false, leap.
+    Check 400:
+        if true, leap
+        if false, not leap.
+This solution logic takes the form of 3 nested if statements with the same logical outcomes mapped to the if/else code blocks.
+
+
+## 105. Collections: Working with JavaScript Arrays:
+
+
