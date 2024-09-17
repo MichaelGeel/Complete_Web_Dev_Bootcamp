@@ -101,3 +101,13 @@ Following this lesson is a coding exercise in the course, the solution for it wi
 ## 103. Introducing the Leap Year Code Challenge:
 
 
+This lesson is an introduction to another coding challenge that follows after this lesson.
+    Lesson 104 will be looking at the solution to the coding challenge so my solution to the challenge will be housed there as well.
+The instructions and criteria for a leap year are provided in the challenge instructions.
+    Examples are included as well.
+Can use draw.io to create a flowchart on how the leap logic should work.
+
+
+## 104. Leap Year Solution:
+
+
