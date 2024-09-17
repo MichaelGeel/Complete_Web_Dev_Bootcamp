@@ -127,3 +127,44 @@ This solution logic takes the form of 3 nested if statements with the same logic
 ## 105. Collections: Working with JavaScript Arrays:
 
 
+We've seen that you can store data in variables, but so far we've only been able to store a single piece of data in a variable.
+    Naturally we've also seen that you can store different data type as well.
+Now it's possible to also store a collection of related items in the same variable.
+    To do this, we create an "Array".
+An array is essentially a collection of items that are related, and they can be stored together into the same container or the same variable.
+To create an array:
+                var arrayItems = [item, item, item, item];
+    You create a variable and give it a name.
+    Then you set it equal a bunch of data enclosed in the square brackets, with a comma separating each data item.
+To retrieve a piece of data from the array, we simply reference the array variable name, followed by some square brackets with the index position of the piece of data we want in them.
+                arrayItems[0];
+    Remember the index of the data points in the array starts from 0.
+        This means the index of the last item in the array is always 1 less than the length of the array itself.
+There are a number of other things we can do with arrays:
+    We can access the length of the array using:
+                arrayItems.length;
+        This returns the number of items in the array as a number.
+Note that whenever you see square brackets, then its usually got something to do with a collection data type such as a array.
+    We use the square brackets both when creating arrays and when trying to retrieve items from arrays.
+If you try to print out the array itself using something like:
+                console.log(arrayItems);
+    It'll print out the entire array itself into the console.
+Another feature of arrays is the array.includes() function.
+    For example:           arrayItems.include(item2);
+    This function will take an input data item and then check if that same item already exists within the array.
+    If it finds the item, it'll return True, in it doesn't, it'll return False.
+Challenge:
+    Take guest list drawn up in course.
+    Prompt user for name.
+    Check if name in the guest list.
+    If user found, message welcoming them.
+    If not found, message telling to screw off.
+Solution simple:
+    Create array, get guest's name.
+    use if statement to check in user in array.
+    If they are, welcome message, else rejection message.
+
+
+## 106. Adding Elements and Intermediate Array Techniques:
+
+
