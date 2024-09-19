@@ -207,3 +207,11 @@ Between this lesson and lesson 107 is Coding exercise 6, the solution will be pa
 ## 107. Who's Buying Lunch Solution:
 
 
+Personal note: remember the behavior of the Math.random function here!
+    Between 0-0.9e10^-15, and have to multiply by the modifier to range desired.
+But otherwise, managed the solution just fine.
+
+
+## 108. Control Statements: While Loops:
+
+
