@@ -168,3 +168,42 @@ Solution simple:
 ## 106. Adding Elements and Intermediate Array Techniques:
 
 
+One of the most common questions encountered during any coding interview is a question called FizzBuss.
+    It's defined as:
+        Write a program that prints the numbers 1 to 100, but for multiples of 3, print "Fizz" instead of the number 
+        and for multiples of five, print "Buzz".
+        For multiples of both 3 and 5, print "FizzBuzz".
+For example:
+    4 = 4
+    3 = Fizz
+    5 = Buzz
+    15 = FizzBuzz
+We're going to use this interview question and make it even more difficult by using it to learn about arrays on a deeper level.
+Start by getting code to print out a sequence of numbers starting from 1.
+We can either add items into the array starting out, or we can use the array.push() function.
+        In this function, whatever is between the brackets after push gets added to the array.
+    Remember that push always places the item added to the array to the end of the array.
+A related function is array.pop();
+    This returns the last item in an array and then removes that last item from the array as well.
+The problem is we still would have to add each item to the array manually at this point.
+    So we'll create a function to handle this.
+Challenge 1:
+    Write a function that'll add the next number in the sequence to the array when you call it.
+See my solution and course solution in the code file for this lesson.
+So in the course, the solution is simpler, they simply declare a count variable that gets incremented in the function.
+    Note that it seems the console keeps track of the code state after running, so when count in incrememnted, the console maintains that increment.
+        This could be because the console is inside the browser and the browser is what's keeping track of the data.
+Now we need to get the code to put in fizz or buzz when the number is a multiple of 3 or 5.
+    For this, we'll use the modulo operation.
+        The modulo operation is great for checking if a number is divisible by another number.
+Challenge 2:
+    including logic tests to check if divisible by 3, 5 or both and pushing the appropriate data into the array.
+In if statements, you can create "else if" extentions to the if/else block without having to nest if statements inside the else block.
+Alternate solution:
+    Initially do a double check for both 3 and 5 before checking for 3 or 5 or just a number.
+Between this lesson and lesson 107 is Coding exercise 6, the solution will be pasted in lesson 107's code file.
+
+
+## 107. Who's Buying Lunch Solution:
+
+
