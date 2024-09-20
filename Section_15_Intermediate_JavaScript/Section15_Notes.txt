@@ -215,3 +215,27 @@ But otherwise, managed the solution just fine.
 ## 108. Control Statements: While Loops:
 
 
+Currently, function still very manual.
+If we wanted to run FizzBuzz up to 100, would have to run the function manually 100 times.
+To automate this, we'll now be using Loops.
+The simplest types of loops are "While Loops"
+                    while (condition is true) {
+                        //Code to be looped over
+                    }
+    Basically, while a given condition is true/met, run the code in the code block encapsulated by the curly brackets of the while loop.
+Once the condition of the while loop is no longer met, it skips the encapsulated code and continues to run the code after the while loop.
+If we wanted to modify the fizzbuzz function to now automatically run up to 100, then we can add a while loop to it.
+    See lesson code file for the new fizzbuzz function.
+Now whenever we call the fizzbuzz function, the function auto runs from 1 to 100 and does all the checks for fizz, buss or fizzbuzz and then prints the array.
+    Note that it's important to increment the count inside the while loop otherwise it'll run infinitely on the same number.
+The while with while loops is that they're quite error prone, for the exact reason above, leading to an infinite run.
+    If a while loop is running infinitely, the tab will likely crash as the program has run out of memory.
+Lesson challenge:
+    Use a while loop to print out the lyrics of the song 99 Bottles of Beer.
+    My solution will be in the linked code file and the course solution will be in the next lesson's file.
+
+
+## 109. Solution to the 99 Bottles Challenge:
+
+
+Note for my solution, the last 3 numbers, 2 bottles, 1 bottle and no more bottles were done individually as they had unqiue lyrics changes in them.
