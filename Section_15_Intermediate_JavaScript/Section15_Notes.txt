@@ -245,3 +245,31 @@ Note that I could likely have used an if statement to alter the word "bottles" d
 ## 110. Control Statements: For Loops:
 
 
+Another way we could have completed fizzbuzz is by using "For Loops"
+                    for (i=0; i<2; i++){
+                        //code to execute;
+                    }
+    In the set of brackets following the for keyword are 3 statements.
+        1) i=0: defining a starting point for the for loop.
+        2) i<2: defining the endpoint for the for loop.
+        3) i++: defining the change and direction of change after each iteration of the loop.
+    Note that the change happens at the end of every execution of the block of code encapsulated by the for loop.
+        Effectively, the change happens at the end of the curly brackets encapsulating the for loop code.
+Comparing to a while loop, a for loop is just a reshuffle of the various components of the while loop.
+    Though a for loop is more compact as many more components are within the condition brackets of the for loop itself instead of needing to be independently coded.
+For loops are what programmers call: "Syntactic Sugar"
+    It sweetens the syntax and makes it a little easier for developers to write.
+Note that in the for loop, we need to declare the variable itself as well.
+    for(var e=1; e<5; e++){}
+    Unless the var gets created outside the for loop, we need to ensure the for loop var is created inside the for loop.
+Now when deciding when to use a for loop or a while loop:
+    While is effectively checking for a state, so while something is true.
+        This means that while a part of the program is in a particular state, the while loop will continue running.
+        So when you're working with "State" in your code, use a while loop.
+    For is used to iterate.
+        You're trying to run a piece of code many times, and you're using the for loop to define the number of iterations.
+
+
+## 111. Introducing the Fibonacci Code Challenge:
+
+
