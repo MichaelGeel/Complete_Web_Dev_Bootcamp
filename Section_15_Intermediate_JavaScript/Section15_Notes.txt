@@ -239,3 +239,9 @@ Lesson challenge:
 
 
 Note for my solution, the last 3 numbers, 2 bottles, 1 bottle and no more bottles were done individually as they had unqiue lyrics changes in them.
+Note that I could likely have used an if statement to alter the word "bottles" depending on the count, as that would have been a more dynamic means of coding the solution.
+
+
+## 110. Control Statements: For Loops:
+
+
