@@ -1,0 +1,60 @@
+# Section 16: The Document Object Model (DOM)
+
+## 114. Adding JavaScript to Websites:
+
+
+Up until now, we've been learning about JavaScript and using it inside the CDT console.
+This is the purest form of JavaScript, seeing the code as it is and seeing what it does.
+    But it's no use learning about it if we're not going to apply it to our website.
+This lesson will now look at how we can incorporate JavaScript into our websites.
+For starters, we'll create a new folder and name it "DOM".
+    "DOM" stands for Document Object Model.
+    This will be covered in the coming lessons.
+We'll add in the html boilerplate, link it to a stylesheet that we'll create as well.
+    Both inside the DOM folder.
+Inside the HTML we'll add a heading.
+So what if we now wanted to insert some JavaScript?
+    Let's look at trying to get our website to load up a Javascript alert.
+Previously, we saw that there were 3 ways to inject CSS into our HTML document.
+    JavaScript works similarly to this.
+    We can add inline JavaScript by simply adding an attribute into the HTML tag.
+        For example, we can give our body the "onload" attribute.
+                <body onload="">
+        This attribute means that when the body of our HTML gets loaded up, whatever JavaScript we place in those quotation marks will be carried out.
+When trying to add the JavaScript code for the alert, we come into a problem though.
+    Namely that the JavaScript needs to be enclosed in quotation marks, but in our alert, we also require quotation marks around the string "Hello".
+    To solve this, we need to keep one set of quotation marks as doubles "", and the next set inside of the doubles as singles ''.
+Now when the body is loaded up, it'll look inside the quotation marks for the JavaScript code that needs to be carried out.
+    Note that this is only effective in the browser, the popup/Javascript won't activate using the preview extension in VS Code.
+Now inline JS has a lot of the same downsides as inline CSS.
+    Not very modular, difficult to debug and not good practice.
+The next way of incorporating JS is using internal JS.
+    This we can add by using a <script></script> tag, and everything between the opening and closing tags can be plain JavaScript code.
+    Note in the opening script tag, we need to include what is being written inside the script, so we add the attribute and value:
+        <script type="text/JavaScript">
+    When the page is loaded up, the browser will read through the website code line by line and once it hits the script tag, it'll carry out the JavaScript that's inside.
+Finally, we can also incorporate Javascript as an external file.
+    Instead of having a simple script tag like with internal, we now add the src attribute to the script tag as well, the value of the src attribute being the location of our Javascript file.
+    Then inside the JavaScript file we can add our Javascript code that'll then be run by the browser.
+Now inside the HTML document, WHERE we place the script tags matters GREATLY.
+    With CSS, we put the link in the head element so that it gets loaded up first before any of the content of the website (inside the body).
+        Now if we were to place the CSS at the end of the body, then the CSS styling the HTML document would only be applied AFTER all of the content of the HTML document has been created in the browser.
+        Meaning you'll first see the HTML with it's default settings and layout, then only later on would the CSS be applied.
+    But with JavaScript, it's the opposite.
+        This is because, inside our JavaScript, if we try to change an HTML element that does not yet exist, then it'll error out and fail.
+To demonstrate the above, we'll write the following line into our JavaScript file:
+        document.querySelector("h1").innerHTML = "Good Bye";
+        This simply changes the text of the h1 element from "Hello" to "Good Bye".
+    Now if we run the website again, when the page loads up, we first see the h1 element saying hello, then if we dismiss the alert, it changes to goodbye.
+But if we placed the script tag in the head of the HTML file:
+    We'd get the popup, then the h1 would only show "Hello".
+    If we open the CDT and check the console, we see it's throwing an Uncaught TypeError.
+        It gives this error because we're trying to access a property of a Null (because the h1 doesn't exist yet).
+This is why we always place the script tag at the bottom of the HTML body element.
+The added benefit of this is that if you have a lot of JavaScript code, which is usually a bit more time-consuming to run, then at least all of the content of the website will have been loaded up for the user to see.
+    The code will then run while the user is looking at the content of the website, and in this way it makes it look as if your website is loading faster.
+
+
+## 115. Introduction to the Document Object Model (DOM):
+
+
