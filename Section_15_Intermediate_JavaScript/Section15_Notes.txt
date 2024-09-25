@@ -273,3 +273,19 @@ Now when deciding when to use a for loop or a while loop:
 ## 111. Introducing the Fibonacci Code Challenge:
 
 
+After this lesson is a coding challenge.
+The idea of this coding challenge is for us to be able to replicate the fibonacci sequence.
+The premise of the Fibonacci Sequence is as follows:
+    It's comprised of a list of numbers.
+    The first 2 digits in this list are 1 and 0.
+    Every number after the first 2 digits, is made up of the sum of the previous 2 digits before that number.
+The coding challenge contains the instructions, and my solution will be pasted into the code file of lesson 112, where the solution is presented.
+You call the function, and pass it a number, whatever number you pass in, it should give you that many of the numbers in the sequence, starting from the beginning.
+The output needs to be an array containing the numbers.
+Some hints provided in the lesson now, going to first attempt the challenge without hints at this point.
+
+
+
+## 112. Fibonacci Solution:
+
+
