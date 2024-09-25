@@ -283,7 +283,9 @@ The coding challenge contains the instructions, and my solution will be pasted i
 You call the function, and pass it a number, whatever number you pass in, it should give you that many of the numbers in the sequence, starting from the beginning.
 The output needs to be an array containing the numbers.
 Some hints provided in the lesson now, going to first attempt the challenge without hints at this point.
-
+In completing the exercise, it appears that JavaScript does not have negative indexing, so had to make use of the length method of the array to retrieve the last 2 items in the array for the next one.
+Note that in future, it'll be a good idea to start creating a flowchart to create the flow of the application prior to coding the challenge.
+In my solution, could have alternatively checked the length of the array versus the number of items instead of decrementing the number of items in the inputted value.
 
 
 ## 112. Fibonacci Solution:
