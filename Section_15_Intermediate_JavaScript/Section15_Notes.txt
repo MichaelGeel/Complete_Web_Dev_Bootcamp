@@ -291,3 +291,6 @@ In my solution, could have alternatively checked the length of the array versus 
 ## 112. Fibonacci Solution:
 
 
+While the challenge was completed successfully, will be noting major deviations to my code solution here.
+Using output length to manage what items in the array are being added together.
+Lastly, we'll use a for loop that'll track the length of the array in a separate variable that increases as the array does.
