@@ -58,3 +58,93 @@ The added benefit of this is that if you have a lot of JavaScript code, which is
 ## 115. Introduction to the Document Object Model (DOM):
 
 
+Up until this point, our websites have been static.
+    We've planned what content our website should have and also the appearance of that content.
+    This in the form of the HTML and CSS.
+Now if we wanted our website to be interactive, then we need to be able to change parts of our website on the fly.
+    So if a user had to click on the a button, we'll need to respond to that by changing the content or appearance of our website.
+But once our website is live on the Internet, we can't sit there and wait for the user to click on things and update and reload the webpage.
+    This problem is what the Document Object Model (DOM) solves.
+The DOM basically catalogs the web page into individual objects that we can select and manipulate.
+Let's say we have a really basic website with a head, body, title and button.
+The task of converting an HTML file into the DOM is done by the browser when you load up the web page.
+    What it does, is it turns each of the elements and their associated data into a tree structure with a whole bunch of objects that you can select and manipulate.
+    The relationships between the objects are mapped out in the tree diagram.
+For example, using the above described HTML file:
+    The head and body sections are siblings, the title is a child/direct descendant of the head and similarly the button to the body.
+    Everything is contained inside your HTML document, is contained in an object called "The Document".
+So let's look at the DOM in action.
+    We have an HTML template (provided in the course resources).
+    And empty styles.css and index.js files.
+We can install an HTML Tree Visualizer as a Chrome plugin (free) which takes the HTML of a page, and turns it into a tree diagram to view what the browser does when it makes this change.
+Now we can actually tap into the DOM using JavaScript and navigate through the tree.
+    So we'll open this HTML file in the browser and open the CDT.
+We can see what the document looks like by printing it in the console by calling:
+        document;
+    If you expand what the console outputs, you see it has returned the entire HTML file that we've got open in the browser.
+Now if we wanted to navigate through this document object, we can go to the first element child:
+        document.firstElementChild;
+    This returns everything that's inside the HTML element.
+We can go a step further by looking for the first child of the first child of the document object:
+        document.firstElementChild.firstElementChild;
+    This returns everything inside the Head HTML element/object.
+If, instead of the head we wanted the body, we could use lastElementChild:
+        document.firstElementChild.lastElementChild;
+    This returns the body and everything inside of it.
+If you wanted to select the h1, which is the first element child of the body, you'd just add another layer.
+Once you've successfully selected the object you're interested in inside the DOM, then you can manipulate it.
+    We could start this by saving a particular object inside a variable.
+            var heading = document.firstElementChild.lastElementChild.firstElementChild;
+    Then if we entered "heading" into the console, we'd see it points to the h1 of our webpage.
+Then if we wanted to manipulate that h1 one, for example change the text, we could simply say:
+        heading.innerHTML = "Good Bye";
+    If we run this in the console, it then gets run and the web page in the browser changes to reflect this change in the h1.
+There are many different ways to manipulate the objects.
+    For example, we could change the colour of the h1 heading using:
+        heading.style.color = "red";
+We can also select elements and make them do things.
+    For example, we can select the input checkbox using:
+        document.querySelector("input").click();
+            The querySelector looks inside our entire document for the object that has the selector of "input"
+            Once we have that object, we'll call the .click() method on it, which simulates a mouse click.
+So we can see that our objects inside the DOM can have properties and methods.
+    Properties describe something about the object.
+    Methods are things that the object can do.
+Taking this and using a car as an example, a car also has properties and methods.
+    The car would have Properties like its Colour, Number of Seats, Number of Doors
+    And it would have Methods like brake, drive, park.
+So we can use JavaScript to manipulate our objects, and it's all done using the dot notation.
+    If our car was an object, we'd use the dot notation to get its colour like this:
+        car.colour;
+    And this would return the colour of the car.
+The above example (car.color;) is a Getter, because it gives us the current value of the car's colour property.
+With properties, we can also set it, for example we could say:
+            car.numberOfDoors = 0;
+    Which would set the numberOfDoors property to 0.
+    This is called Setting a property.
+For Methods, we also use the dot notation, but note that methods are like functions and require a set of brackets after them.
+    For example, if we were to call a drive method on the car:
+            car.drive();
+    This would in turn make the car start driving.
+    This is referred to as "Calling" a method on our object.
+The only difference between a method and a function, is that:
+    A Method is something that an object can do, so it has to be associated with an object.
+Now going back into the DOM of the HTML file we're working with.
+    If we were to select the button, then we're able to tap into some of its properties to get it and set it as well as use some of its methods to get it to do things.
+    The Properties of the button would be things like:
+        .innerHTML
+        .style
+        .firstElementChild
+    The Methods (which include the brackets) would be things like:
+        .click()
+        .appendChild()
+        .setAttribute()
+The presence of the brackets is the big teller on the difference between the Properties and Methods of an object.
+Lesson Challenge:
+    Select the third li element and change the text of to whatever you want using JavaScript in the console.
+    The solution will be detailed in the next lesson.
+
+
+## 116. Solution to the DOM Challenge:
+
+
