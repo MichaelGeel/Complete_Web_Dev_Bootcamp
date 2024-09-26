@@ -148,3 +148,10 @@ Lesson Challenge:
 ## 116. Solution to the DOM Challenge:
 
 
+Course solution to the Challenge at the end of lesson 115:
+document.firstElementChild.lastElementChild.querySelector("ul").lastElementChild.innerHTML = "Bob";
+
+
+## 117. Selecting HTML Elements with JavaScript:
+
+
