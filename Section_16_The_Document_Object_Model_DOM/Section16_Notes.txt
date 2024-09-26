@@ -207,3 +207,32 @@ Made use of querySelector to only get the singular item we're looking for to dir
 ## 118. Manipulating and Changing Styles of HTML Elements with JavaScript:
 
 
+Copied over the same files from the previous lesson once again.
+Having seen how to target elements using the DOM, let's look at how to use JavaScript to manipulate the elements that we've selected.
+As we've seen previously, we can change the CSS style dynamically using JavaScript by tapping into the style property of an element object.
+For example, if we wanted to change the text color of the h1 element:
+            document.querySelector("h1").style.color = "red";
+Every single CSS property can be changed in this way using JavaScript, but the property names may look different.
+We noted earlier that JavaScript names tend to be camelCased.
+    For example: querySelector.
+    This is standard for naming methods and properties in JavaScript.
+But because of this, when trying to change CSS styles, the property names don't look exactly the same as they would in CSS.
+    For example:
+        In CSS: font-size is the property.
+        In JavaScript: fontSize is the property.
+The names for these properties in JavaScript can be found in W3schools under the DOM style object documentation.
+    As a rule of thumb, they're exactly the same, unless the property would break camelCasing convention in JavaScript.
+We also need to note that whatever value you're setting a property to in JavaScript has to be represented as a string.
+    For example:
+        In CSS: padding: 7%
+        In JS: padding = "7%";
+    Even what is normally a number in CSS has to be represented inside a string in JavaScript.
+Lesson Challenge:
+    Using only JavaScript, change the background color of the button to yellow.
+    See solution in the lesson's index.js file
+Simply using the backgroundColor property in JavaScript (as the name is slightly different to CSS).
+
+
+## 119. The Separation of Concerns: Structure vs Style vs Behavior:
+
+
