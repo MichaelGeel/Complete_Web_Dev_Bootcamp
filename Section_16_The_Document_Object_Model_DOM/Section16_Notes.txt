@@ -155,3 +155,55 @@ document.firstElementChild.lastElementChild.querySelector("ul").lastElementChild
 ## 117. Selecting HTML Elements with JavaScript:
 
 
+In the previous lesson we saw we could use the querySelector() method to select HTML elements.
+    But there are many other ways of selecting HTML elements.
+For this lesson, we're copying over the same files as in 115, except we've added in some IDs and Classes to try out alternative ways of selecting elements.
+The first one we'll look at is:
+            document.getElementsByTagName("li")
+    This method looks through the web page for an element with a particular tag name.
+    So we can search for a particular element by the tag of that element, such as "li", or "h1" etc.
+        If we search this document for the "li" tagname, we'll get an array containing all 3 of our list items.
+        If we expand the array and then expand one of those list items, we can see a whole collection of properties that can be manipulated.
+    It's important to note that this method differs from querySelector in that it fetches ALL elements on the web page with a particular tag name.
+        That's why the method name is getElementS (plural on elements)
+    This is important because when you try to manipulate one of the elements selected by this method, if we use the previous method to change the color for example:
+            document.getElementsByTagName("li").style.color = "purple";
+        This'll throw an error because we're trying to set the color purple to an array, not the list items.
+        So instead we'd have to select the item in the array that we want to change.
+            document.getElementsByTagName("li")[2].style.color = "purple";
+    In addition to being able to tap into a particular element inside the array of items returned, we can also work with the array like any other normal array.
+        We could find out how many "li" elements there are using the .length; property of the array.
+The next method for getting elements is:
+            document.getElementsByClassName("classname");
+    This allows you to select elements based on the name of a class.
+        Once again, this method will also return all elements in the form of an array with a particular class name.
+    Even if one or no elements are found, it'll still return them in the form of an array.
+The last of the methods in the "getElementsBy..." lot is:
+            document.getElementById("title");
+    Note that this one is singular, as an ID for an element should be unique, so it'll only ever be a single element.
+    This only returns the element object, no array format or anything.
+        So we can directly assign property values or call methods on the object selected in this manner (no indexing required).
+We could also use the querySelector method we've already seen to select a single element.
+    This method only returns a single item, but it works differently.
+    This string we put inside the brackets for this method is a CSS Selector.
+    But whatever selector you put inside the brackets for this selector, it'll only return the first element that matches the selector criteria.
+        For example, in a series of li elements inside the ul, only the first li will be returned.
+    However, we're also able to combine selectors in this method to increase our selector specificity.
+    You can use this for any valid CSS selector, but you'll only get the first element for whatever selector.
+Now if you wanted to get all elements that match the criteria of your querySelector, then you'd have to use:
+            document.querySelectorAll("li.item");
+    This again returns an array containing all elements in the HTML document that satisfies the selector.
+        Once again, if we wanted to manipulate one of the elements, we'd have to select a specific one using an index.
+Now given all these different selector methods, which one should we use?
+    So querySelector and querySelectorAll allow for more complex queries, give us more direct element selection.
+        This is more precise so these methods are the most commonly used for query selection.
+    The other methods are more broad and not as commonly used/useful.
+Lesson challenge:
+    We need to change the text colour of the Google link in the list element to red.
+    See my solution in the index.js file for this lesson.
+Made use of querySelector to only get the singular item we're looking for to directly be able to manipulate it.
+
+
+## 118. Manipulating and Changing Styles of HTML Elements with JavaScript:
+
+
