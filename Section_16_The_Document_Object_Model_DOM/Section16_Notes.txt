@@ -309,3 +309,20 @@ Remember, when working with the innerHTML property, any HTML tags also have to g
 
 
 Again, using copies of the same files for this lesson.
+The last thing to look at is how to manipulate the attributes of any element.
+    For example, the href of an anchor tag, the src of an img, even the classes of elements are attributes.
+We can get a list of the attributes attached to a selected html element:
+                document.querySelector("a").attributes;
+    Note this only returns an array of the attribute names attached to the element.
+From there, we can retrieve the current values of a given attribute using:
+                document.querySelector("a").getAttribute("href");
+    Notice the method is singular, and it also only returns the value of a single attribute, which we specify.
+If we wanted to change the value of an attribute attached to an HTML element:
+                document.querySelector("a").setAttribute("href", "https://www.bing.com");
+    Notice that this method takes 2 parameters:
+        One is the name of the attribute we want to set.
+        The other is the value we want to set the attribute to.
+    For this method, the attribute doesn't already have to be attached to the element for us to be able to set it on that element.
+
+
+# End of Section 16.
