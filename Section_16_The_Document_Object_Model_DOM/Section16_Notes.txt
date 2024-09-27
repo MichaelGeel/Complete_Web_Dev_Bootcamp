@@ -286,3 +286,26 @@ Note that when adding a class to an element in JavaScript, we don't include the 
 
 
 Files copied over into lesson folder again for this lesson.
+We've seen that we can change the text inside a selected HTML element usign the innerHTML property.
+But there's another property that we can use to achieve the same result, called "textContent"
+    For example:
+                document.querySelector("h1").textContent = "Good Bye";
+It may look like they do exactly the same things, but they don't.
+The innerHTML property, gives you exactly what's between the HTML tags of the selected element.
+    For example, if we had to get the innerHTML of the ul element:
+                document.querySelector("ul").innerHTML;
+        This would return all the HTML code between the tags of the unordered list.
+        This includes the li items and their content as well.
+But with the textContent property, it only gives you the text between the tags of a given element:
+                document.querySelector("button").textContent;
+    Note that if we got the textContent on the ul element, it would return ALL text content, include the text content of the descendant HTML elements nested inside it.
+Note however, with the innerHTML property, it does also mean that we can add HTML code in on the fly.
+    For example, setting the h1 innerHTML to be an emphasised (<em>) good bye:
+                document.querySelector("h1").innerHTML = "<em>Good Bye</em>";
+Remember, when working with the innerHTML property, any HTML tags also have to go into the quotation marks.
+
+
+## 121. Manipulating HTML Element Attributes:
+
+
+Again, using copies of the same files for this lesson.
