@@ -4,3 +4,16 @@
 ## 123. Challenge: The Dicee Challenge:
 
 
+We're creating a Dice Game for this Section as a challenge.
+We have a Page, with an h1 saying "Refresh Me".
+Then it has 2 h3's saying "Player 1" and "Player 2" and a dice icon underneath each player.
+whenever we refresh the website, the dice get thrown randomly, and whoever has the higher dice value wins.
+    If even, then it's a draw.
+    The h1 text changes in order to output the result.
+The next lesson contains the skeleton files for this project in order to focus on the actual JavaScript.
+    Alternatively, can build this entire project on own from scratch.
+
+
+## 124. Dicee Challenge Step 0 - Download the Skeleton Project:
+
+
