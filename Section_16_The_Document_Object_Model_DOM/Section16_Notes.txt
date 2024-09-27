@@ -236,3 +236,53 @@ Simply using the backgroundColor property in JavaScript (as the name is slightly
 ## 119. The Separation of Concerns: Structure vs Style vs Behavior:
 
 
+For this lesson, we've once again copied over the same 3 files as with the previous lessons and reference them further in the lesson.
+When we're writing code for websites, in order to keep our code tidy and easy to debug, we have to keep in mind the idea of the separation of concerns at all times.
+What this means is that:
+    Your HTML is for content only.
+    You CSS is for styling your website.
+    Your JavaScript is there for the behavior of your website.
+Thus far we haven't exactly followed this rule while we've been learning JavaScript.
+    For example, changing the color of the h1 element using JavaScript isn't good practice and doesn't follow this rule.
+    Ideally, these kinds of styles should be inside of our CSS.
+The problem is that if we wanted our styling to change dynamcially, then we'd need to make those changes using JavaScript.
+    For example, if a user clicks on a button and the colour of the background changes.
+But there is another way to solve the above issue, other than simply using the style property.
+    We can tap into something called a "classList", which is a property of every DOM object.
+    For example, if we ran a get on the classList property of the button on our page:
+            document.querySelector("button").classList;
+    We'll see that we get an array of classes that are attached to this element that we found.
+        In this case, we did it on the button and we can also see it only has a single class of "btn".
+Once we have the list of classes, then we can use methods, such as .add, and we can add classes to the class list.
+            document.querySelector("button").classList.add("invisible");
+    If we run this code and fetch the array of classes for the button again, we'll see it now has 2 classes instead of one.
+What we can now do is go to the stylesheet and create a separate class with styling for an element.
+    Then when we add that class to the element, it'll add all the styling for the class to the element, which saves on us needing to add all the styling individually.
+This allows us to keep all our styling inside the CSS stylesheet, but turn it on and off using JavaScript by manipulating the classes applied to the elements.
+In addition to add, we can also remove classes from an element's classlist.
+            document.querySelector("button").classList.remove("invisible");
+    This removes the class from the button element in the DOM.
+    Upon removing the class, all styles that are a part of that class in the CSS also no longer apply to the element.
+The last method that's useful is "toggle".
+            document.querySelector("button").classList.toggle("invisible");
+    Basically what toggle does is:
+        If the class is applied, then remove it, else if the class is removed, apply it.
+    It's a shorthand for applying both add and remove to a single action without any state-checking.
+    Note that toggle also returns either true or false.
+        It returns true if it added the class to the element.
+        It returns false if it removed the class from the element.
+Using this class manipulation on the elements, we're adhering to the rule of Separation of Concerns.
+    This means, when we need to debug our code, it's much easier, because if an element doesn't look how we want it to, then we can simply dig into the stylesheet and change it.
+    But if it's not behaving the way we want it to, then we can go into the JavaScript and dig into the code there.
+Lesson Challenge:
+    Create a class in the stylesheet called "huge" which sets font-size to 10rem.
+    Any element this class is applied to has it's font-size changed to 10rem.
+    Then apply it to the h1.
+Note that when adding a class to an element in JavaScript, we don't include the "." before it like we would in CSS.
+    We type the class, enclosed in a string, as we would in HTML.
+
+
+## 120. Text Manipulation and the Text Content Property:
+
+
+Files copied over into lesson folder again for this lesson.
