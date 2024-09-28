@@ -17,3 +17,11 @@ The next lesson contains the skeleton files for this project in order to focus o
 ## 124. Dicee Challenge Step 0 - Download the Skeleton Project:
 
 
+This lesson contains the starting code for the Dicee Game Challenge.
+    Opting to not start from scratch for this particular project.
+The challenge will first be completed on my own before going any further in this section.
+
+
+## 125. Dicee Challenge Step 1 - Create an External JavaScript File:
+
+
