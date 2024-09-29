@@ -67,3 +67,15 @@ Completed succesfully using querySelector and textContent as well as if statemen
 ## 131. The Solution to the Dicee Challenge:
 
 
+This lesson is a solution walkthrough for the Dicee Challenge.
+Since the challenge has been completed already, will simply be noting changes and behaviors that are different to my solution.
+When adding a JS file, ideal to use an alert that appears on page load to confirm the file is successfully linked.
+If not sure about code outputs, be sure to isolate it in order to test the output to understand the behavior.
+For independant projects in future, be sure to use string concatenation as done in this project to leverage being able to change images quickly and on the fly.
+May be more code, but depending on how often the DOM search is done, remember can save a DOM object to a variable.
+Could have used getElementsByClassName as an improvement for getting the img elements in the DOM.
+
+
+## 132. Donload the Completed Website:
+
+
