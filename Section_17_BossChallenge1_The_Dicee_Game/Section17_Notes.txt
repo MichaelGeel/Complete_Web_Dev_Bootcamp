@@ -25,3 +25,10 @@ The challenge will first be completed on my own before going any further in this
 ## 125. Dicee Challenge Step 1 - Create an External JavaScript File:
 
 
+This step just to create the index.js file for the dynamic logic.
+Correctly completed prior.
+
+
+## 126. Dicee Challenge Step 2 - Add Dice Images:
+
+
