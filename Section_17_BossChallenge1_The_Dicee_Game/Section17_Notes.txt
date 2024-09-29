@@ -32,3 +32,10 @@ Correctly completed prior.
 ## 126. Dicee Challenge Step 2 - Add Dice Images:
 
 
+This step was to simply link the 2 img elements directly to a default dice value up front.
+This step was correctly completed, img6 linked as default to both img elements.
+
+
+## 127. Dicee Challenge Step 3 - Create a Random Number:
+
+
