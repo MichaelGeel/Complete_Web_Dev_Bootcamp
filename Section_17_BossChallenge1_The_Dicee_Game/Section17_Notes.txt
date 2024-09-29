@@ -53,3 +53,10 @@ Completed successfully using .setAttribute and string concatenation to reference
 ## 129. Dicee Challenge Step 5 - Change both <img> Elements:
 
 
+This step is to repeat the steps of lesson 127 and 128 for the second players dice.
+Completed successfully, originally done at exact same time as the first players dice.
+
+
+## 130. Dicee Challenge Step 6 - Change the Title to Display a Winner:
+
+
