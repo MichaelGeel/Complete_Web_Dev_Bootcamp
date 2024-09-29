@@ -60,3 +60,10 @@ Completed successfully, originally done at exact same time as the first players 
 ## 130. Dicee Challenge Step 6 - Change the Title to Display a Winner:
 
 
+This step was to alter the h1 element to output the result of the dice rolls.
+Completed succesfully using querySelector and textContent as well as if statements.
+
+
+## 131. The Solution to the Dicee Challenge:
+
+
