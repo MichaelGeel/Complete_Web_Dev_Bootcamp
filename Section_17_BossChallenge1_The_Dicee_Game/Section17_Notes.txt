@@ -39,3 +39,10 @@ This step was correctly completed, img6 linked as default to both img elements.
 ## 127. Dicee Challenge Step 3 - Create a Random Number:
 
 
+This step covers the random number generation and multiplying it by 6 and flooring it to simulate a dice roll.
+Step completed correctly, was implemented as a function in the js file.
+
+
+## 128. Dicee Challenge Step 4 - Change the <img> to a Random Dice:
+
+
