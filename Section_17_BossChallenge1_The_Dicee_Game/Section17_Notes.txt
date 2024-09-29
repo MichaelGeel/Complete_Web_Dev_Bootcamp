@@ -46,3 +46,10 @@ Step completed correctly, was implemented as a function in the js file.
 ## 128. Dicee Challenge Step 4 - Change the <img> to a Random Dice:
 
 
+This step covers using the DOM to set the dice img used in the img element to match the dice number generated.
+Completed successfully using .setAttribute and string concatenation to reference the correct img.
+
+
+## 129. Dicee Challenge Step 5 - Change both <img> Elements:
+
+
