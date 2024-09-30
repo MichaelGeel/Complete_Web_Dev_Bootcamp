@@ -22,3 +22,49 @@ Went ahead and re-typed the HTML and CSS to get a look at the inner workings of 
 ## 136. Adding Event LIsteners to a Button:
 
 
+With all 3 files for this project open, we first need to link the js file to the html file.
+    Remember that script uses a source, not an href.
+Currently, even though we have all these buttons on the page, nothing happens when we click any of them.
+    To start registering the button clicks, we need to add what we call an Event Listener to it.
+    With that set up, the buttons will then tell us when a user clicks on one of them.
+Before setting the listeners up, let's first create a function in the js file to be executed when the button gets clicked.
+    The idea being for this function to be called whenever a button gets clicked.
+In order to do this, we have to select the button in the HTML and add an event listener to it.
+    We'll add an event listener with the following code:
+                document.querySelector("button").addEventListener()
+    For now, we're only targeting the first button to see how this works.
+If we at the documentation for this event listener method, we'll see that this method sets up a function to be called whenever the 
+    specified event is delivered to the target.
+    I.e: A set function is called when a configured event occurs on the object in question.
+The event listener method has 2 parameters:
+    The first one being the type, which is a case-sensitive string representing the event type to listen to.
+    The second one being the listener, which is usually a JS function that's called when the event gets detected.
+Adding these parameters to the code:
+                document.querySelector("button").addEventListener("click", handleClick);
+    So now the first button (the W button) listens for whenever it gets clicked, and then the function gets called.
+Now, once the button is clicked, we'll get an alert notifying us of this (because it's just an alert set up in the button right now.)
+Now an important note here is that the function call in the event listener doesn't have the brackets anymore.
+    Now if we included the set of brackets like a normal call, the function would run on its own on page reload every time.
+    Without clicking the button.
+This problem happens because as the code is all running, when it hits the event listener line, if the brakcets are there, it's considered an immediate function call when adding the event listener.
+    This isn't the behavior we want, we want it to trigger on-click.
+So instead of calling our function, we're just passing the name of the function as an input.
+    This means we wait for the click event to happen before the function ever does get called.
+This passing of a function as an input is common in JavaScript and will see it regularly.
+There are other ways that we'll see this function passing being done.
+    The most common one being, instead of writing a function name here that calls the function later on, 
+    people simply write the code as an anonymous function.
+Anonymous functions look just like normal functions, but they're just anonymous.
+    They don't have a name and would look like this:
+                    document.querySelector("button").addEventListener("click", function() {
+                        window.alert("A button was clicked.");
+                    });
+Lesson challenge: figure out the efficient way of adding an event listener to each of the buttons.
+Solution: using a loop to allow us to fetch a list of all buttons using querySelectorAll, and looping through each button to add a listener.
+    Note this is risky because if we added another button later on, the button would catch that too.
+    So ideally, we'd use the .drum class applied to all the drum buttons.
+
+
+## 137. Higher Order Functions and Passing Functions as Arguments:
+
+
