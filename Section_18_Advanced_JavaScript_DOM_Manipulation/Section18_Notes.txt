@@ -4,3 +4,12 @@
 ## 134. What We'll Make: Drum Kit:
 
 
+In order to learn about some of the more intermediate/advanced parts of the Document Object Model, we'll be building a DrumKit website.
+By the end of this module, we'll learn how to add event listeners to buttons and keystrokes to know when a user is typing on their keyboard or 
+clicking on a particular button on your website and you can respond to it.
+The website basically is a number of buttons that are linked to various drum sounds that can either be clicked or are also linked to certain keyboard key presses.
+
+
+## 135. Download the Starting Files:
+
+
