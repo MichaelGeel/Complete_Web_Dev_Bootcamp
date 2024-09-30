@@ -76,6 +76,10 @@ May be more code, but depending on how often the DOM search is done, remember ca
 Could have used getElementsByClassName as an improvement for getting the img elements in the DOM.
 
 
-## 132. Donload the Completed Website:
+## 132. Download the Completed Website:
 
 
+This lesson is simply a link to the complete code as Angela did it for this section.
+
+
+## End of Section 17.
