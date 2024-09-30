@@ -68,3 +68,75 @@ Solution: using a loop to allow us to fetch a list of all buttons using querySel
 ## 137. Higher Order Functions and Passing Functions as Arguments:
 
 
+Let's have a look at how this addEventListener method works.
+If we open up a page, for example, the JavaScript wiki page, select the title and inspect it, we'll see there that the h1 can be accessed in the console using a value "$0".
+    And if we go into the console and enter this value, we see we get the h1 element returned to us in the console.
+    Meaning the $0 value is bound to the h1 value.
+Currently, the h1 is not bound to anything.
+    But let's try to add an event listener to this h1:
+            $0.addEventListener("click", function(){
+                console.log("I got clicked");
+            });
+    Now the h1 has an event listener that outputs the anonymous function every time we click it.
+So we've seen we can either use an anonymmous function or specify a named function as the 2nd value for the addEventListener method.
+Now from what we've seen, the addEventListener method is different from all other functions that we've seen so far because instead of just passing simple data types,
+    we're passing in a function as an input.
+Now we can't look at the code that Chrome uses to implement addEventListener because we didn't write that method.
+So instead, let's try and create both sides of the coin and in the process we can better understand how addEventListener works.
+Let's say we want to create a calculator:
+            function calculator(num1, num2) {
+                return num1 + num2;
+            }
+    If we wanted to call the function we'd do it like this:
+            calculator(2, 3); //output 5
+If we wanted to change the calculator, so instead of adding, we want to multiply.
+    We'd have to change the function to make that change.
+This is painful and we'd want to be able to specify on the fly what operation we want to execute without needing to manually change it each time.
+    What if we created a function that was called add, that took 2 inputs and added them.
+            function add(num1, num2) {
+                return num1 + num2;
+            }
+    Then we create another for multiply:
+            function multiply(num1, num2) {
+                return num1 * num2;
+            }
+Now with these 2 functions, we want to create a function called calculator that allows us to choose which function we want to run.
+    This is a case where being able to pass in a function as an input to another function becomes really handy.
+So say we create the calculator function again, but now it takes the 2 numbers, as well as an operator input:
+            function calculator(num1, num2, operator){
+                return operator(num1, num2);
+            }
+    This operator input can be changed on the fly when calling this calculator function.
+    Then when the function is called, we call the operator function and pass in the 2 numbers and return that function's output.
+Now to call this function:
+            calculator(4, 5, add);
+    Now the third input we need to give this function is the name of another function as we can see that it calls this function inside.
+This way, whether add or multiply, we simply provide the name of the function and it'll call the appropriate funciton provided by the user on the fly to get the correct answer.
+Once the code gets into the body of the function, it's going ot output whichever function was passed in as the operator input.
+    Then it calls that function and passes in the 2 numbers provided and returns that function output.
+An available feature in the CDT is called the Debugger.
+    If you type into the console:
+            debugger;
+    And then hold shift+Enter (new line without code execute), then call the function that you want to debug.
+    Then run the code, we then enter debug mode.
+What you can do in debug mode, is you can step through all of the steps that the browser goes through to give you your final output.
+Normally this is used when you're trying to figure out what's going wrong in your code, because instead of playing computer in your head, it's better to actually look at what's happening.
+On the right side on the screen is a number of symbols, and the down arrow let's you go to the next step in the code.
+    This allows you to do a step-by-step run of the code to see what the browser is doing.
+Note that when an input is a function, it's denoted by:
+            "inputName = f funcName(input1, input 2)"
+    Note that this is not a function call or declaration, it simply equals or points to the existing, declared function.
+Now these functions like the one we created, that can take other functiosn as inputs are called:
+            "Higher Order Functions"
+    This feature is availble in a number of modern languages, but it's not available in all languages.
+But it is something we're going to heavily rely on in JS as we learn to manipulate the DOM and give our websites more and more behavior.
+Lesson Challenge:
+    Create a full set of operators for the calculator.
+    That includes +, -, /, *.
+    Use the existing calculator function.
+    So just need a - and / funciton.
+
+
+## 138. Higher Order Function Challenge Solution:
+
+
