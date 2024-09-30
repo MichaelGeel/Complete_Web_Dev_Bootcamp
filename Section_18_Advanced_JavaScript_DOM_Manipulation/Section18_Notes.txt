@@ -13,3 +13,12 @@ The website basically is a number of buttons that are linked to various drum sou
 ## 135. Download the Starting Files:
 
 
+This lesson contains the starting files for getting this program running.
+HTML and CSS completed, but empty JS file.
+Went ahead and re-typed the HTML and CSS to get a look at the inner workings of this project.
+    Made a few custom changes based on personal taste.
+
+
+## 136. Adding Event LIsteners to a Button:
+
+
