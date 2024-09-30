@@ -140,3 +140,10 @@ Lesson Challenge:
 ## 138. Higher Order Function Challenge Solution:
 
 
+This lesson provides the solution code to the lesson challenge at the end of lesson 137.
+The challenge was completed successfully.
+
+
+## 139. How to Play Sounds on a Website:
+
+
