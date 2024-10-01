@@ -147,3 +147,45 @@ The challenge was completed successfully.
 ## 139. How to Play Sounds on a Website:
 
 
+In this lesson, we're going to expand on the previous lesson, and play the sound of a drum instead of giving an alert on a click event.
+If we google it and look at the first StackOverflow answer, we get the following:
+                var audio = new Audio('audio_file.mp3');
+                audio.play();
+    Which is to create a new Audio object, providing the audio file you want to play.
+    Then you use the play method of that audio object you created.
+So let's test it out now.
+    We'll delete the alert to start.
+    Then note all sounds are in the assets/sounds folder path.
+Lesson Challenge 1:
+    Implement the above code in the function linked to the click event for each button.
+    Completed easily.
+Now we'll often come across helpful code snippets provided by other programmers in StackOverflow.
+    But it's important that you fully understand the code if you're going to implement it in your own code.
+So searching for the new Audio Javascrip code will give us a result for the HTMLMediaElement.
+    The code we're writing effectively creates this element behind the scenes.
+    This element has a large number of properties, but the object has a number of methods as well.
+        One of which is the play() method, which plays back the media.
+Currently, all buttons link to the same sound, but in the sounds and images files, there are a number of corresponding sounds and images.
+Challenge 2:
+    Inside the styles.css file, used the images to set a background-image for each of the buttons.
+    Completed using background-image and background-size properties to set image and fit it to size.
+Note that background-image requires the url() as we're setting it to the image relative path url.
+Now the next challenge is on how to get each button to have it's own unique sound.
+    Naturally, we know that we can fetch the textContent of any of the buttons, and each has a different letter associated with it.
+    So we could use that to differentiate the buttons, so when the user presses a button, we get the character the button contains, and 
+    then use that to determine which sound we're going to play.
+Now in the anonymous function, we need to know which button got clicked so that we can play the right sound.
+    Meaning we just need to know which button triggered the event.
+    We can do this using the keyword "this"
+        The "this" keyword, basically refers to the identity of the button that triggered the event listener.
+    If we console.log(this); on the event, we'll see the button element in question being returned.
+With access to this object, we can now use the other properties such as textContent to see which button it is we're working with.
+We can use this identity to change the style of the button as well.
+Lesson Challenge 3:
+    On click, change the text colour of the clicked button to white.
+    Done via: this.style.color = 'white';
+
+
+## 140. How to Use Switch Elements in JavaScript:
+
+
