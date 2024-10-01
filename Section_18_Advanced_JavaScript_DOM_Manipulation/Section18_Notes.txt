@@ -189,3 +189,35 @@ Lesson Challenge 3:
 ## 140. How to Use Switch Elements in JavaScript:
 
 
+Now that we're able to tell which key was presed and how we can get its textContent, we need to think about how to play a different sound based on the key.
+Now first thought would be for if-else statements, but there are 7 keys/sounds in total.
+In scenarios like this, what would be easier would be a "switch statement".
+    In these statements, different code gets executed depending on the value of a variable.
+Looking at the skeleton of a switch statement:
+                switch (expression) {
+                    case expression:
+
+                        break;
+                    default:
+
+                }
+    It starts with the switch keyword that initializes the switch statement.
+    After is a set of brackets that'll contain an expression, the thing that we're switching on.
+        In our case, it'll be the letter in the textContent of the button.
+            Which we'll store in a variable
+    Next is the case and it's expression that the switch expression must equal for it to do something in that case.
+    After the first case is done, it's followed by a "break;" statement, which tells the code to exit the switch.
+    If the first case isn't triggered, then it'll move on to check against the next case.
+Note that instead of the curly brackets, the switch case code blocks are denoted by a : and a break;
+    The functionality is fundamentally the same as a set of curly brackets however.
+Finally in the case, is the default case.
+    It's like the else statement at the end of an if.
+    It covers all other scenarios not not specified in the cases.
+        This is when the default will trigger.
+    It'll more than likely never trigger, but it's good practice to include it.
+With this switch implemented, each button now maps to a different sound.
+
+
+## 141. A Deeper Understanding of JavaScript Objects:
+
+
