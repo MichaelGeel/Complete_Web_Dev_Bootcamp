@@ -275,3 +275,53 @@ Lesson Challenge 2:
 ## 142. Objects, their Methods and the Dot Notation:
 
 
+Now what about the methods of objects.
+Let's say that our person can do something like this:
+                function moveSuitcase {
+                    window.alert("May I take your suitcase?");
+                    pickUpSuitcase();
+                    move();
+                }
+    Currently, as it's not attached to an object, it's considered a function.
+But in our previous object, if we wanted to include this function as a method of the object then we'd do it like this:
+                var person1 = {
+                    name: "Timmy",
+                    age: 19,
+                    hasWorkPermit: true,
+                    languages: ["French", "English"],
+                    moveSuitcase: function() {
+                    window.alert("May I take your suitcase?");
+                    pickUpSuitcase();
+                    move();
+                    }
+                }
+    We give the name of the function as a new parameter and then effectively assign to that parameter an anonymous function.
+Now we can call the method:
+                    person1.moveSuitcase();
+So with getting both properties and methods of objects, we use dot notation.
+If we wanted to include a function as a method inside a constructor function:
+                    function Person (name, age, hasWorkPermit, languages) {
+                        this.name = name;
+                        this.age = age;
+                        this.hasWorkPermit = hasWorkPermit;
+                        this.languages = languages;
+                        this.moveSuitcase = function() {
+                            window.alert("May I take your suitcase?");
+                            pickUpSuitcase();
+                            move();
+                        }
+                    }
+    Same as with a free-standing object, assign a new variable namespace and assign it to the anonymous function to turn it into a method for the objects.
+Now with the Constructor Function, any objects created using that function will now also be able to use the method we've included in it.
+Lesson Challenge 1:
+    Add a method to the HouseKeeper Constructor function that just throws an alert saying "Cleaning in progress..."
+Notice that creating an object and calling an object method looks just like the code we used to create a new audio and play the audio file using the play method.
+    Though we can't see the source code of this constructor function, we can guess what it looks like.
+    Naturally, we create an audio object, pass it the file location for the audio file as a property, and we can access the play() method on that object to play the file sound.
+A lot of the code that'll be written in JavaScript involves using these properties and methods associated with the objects on your website.
+    Occasionally, you'll need to create objects of your own as well in order to get some custom behavior on your websites.
+
+
+## 143. A Quick Note about the Next Lesson:
+
+
