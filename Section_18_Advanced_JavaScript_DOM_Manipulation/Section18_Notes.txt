@@ -332,3 +332,35 @@ The next lesson covers this.
 ## 144. Using Keyboard Event Listeners to Check for Key Presses:
 
 
+We want our website to not just detect button presses, but also to detect keyboard key presses to activate the associated drum.
+Instead of added an event listener to listen for clicks, we can listen to a keypress (keydown) event instead.
+    We do this like this:
+            document.addEventListener("keydown", function(){
+                window.alert("A key was pressed");
+            });
+But what do we add this event listener to?
+    Previously, we added our event listener to the buttons, but in this case, we're waiting for the keyboard keys.
+    You can add an event listener to the entire document, so that the entire web page listens for keyboard strokes.
+The next problem is figuring out which key was pressed.
+    When adding an event listener to an element, once the event happens, the element will trigger the function in the second parameter.
+    In this case, when a keypress is detected, it will trigger the function that tells the browser to show an alert.
+    When that function gets triggered, there's an option to pass in a parameter, which we call event or e.
+This parameter allows us to access the event that triggered the listener.
+    If we were to print out the event on a keypress:
+            document.addEventListener("keydown", function(event){
+                console.log(event);
+            });
+    We see that what gets printed is the keyboard event that triggered the listener.
+        Expanding it, we can see a whole list of properties detailing the event.
+One of the parameters is the key value that triggered the event, denoted by the "key" property.
+    This is what we need to figure out what sound to play.
+Lesson Challenge 1:
+    Create a function that takes a character and checks it against the switch statement in order to play the correct sound.
+    Then call that function inside the keydown event listener and button press event listener.
+Note: had to revert all the lettering to lowercase as the uppercase letters weren't triggering on the keypresses.
+    Code for this challenge in index.js file.
+
+
+## 145. Understanding Callbacks and How to Respond to Events:
+
+
