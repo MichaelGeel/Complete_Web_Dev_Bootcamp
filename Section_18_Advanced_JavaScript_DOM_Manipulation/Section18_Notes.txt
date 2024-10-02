@@ -325,3 +325,10 @@ A lot of the code that'll be written in JavaScript involves using these properti
 ## 143. A Quick Note about the Next Lesson:
 
 
+Note that the "keypress" event listener is deprecated and should be replaced by the "keydown" event listener.
+The next lesson covers this.
+
+
+## 144. Using Keyboard Event Listeners to Check for Key Presses:
+
+
