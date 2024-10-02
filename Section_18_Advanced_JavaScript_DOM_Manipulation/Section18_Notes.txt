@@ -221,3 +221,57 @@ With this switch implemented, each button now maps to a different sound.
 ## 141. A Deeper Understanding of JavaScript Objects:
 
 
+Let's take a good look at what objects really are, and how we can use them.
+Say we have a person who gives us a bunch of information.
+    We can capture all this information in variables.
+We can also have the person greet others with an alert.
+But now say that another person comes along who gives us the same information and can also greet others.
+    So we'd now have to recreate and re-write the same variables for this next person again as well.
+    This would take too long.
+If real life, this information may be better represented in a table, because we need the same properties for each person.
+In JS, we can create something very similar to this, by creating an object.
+    We'd create a variable called Person1 that would have a number of properties that we'll assign values to.
+    All these properties are enclosed inside a set of curly brackets:
+                var person1 = {
+                    name: "Timmy",
+                    age: 19;
+                    hasWorkPermit: true,
+                    languages: ["French", "English"]
+                }
+To access any of these properties, we'd use the dot notation.
+                window.alert("Hello, my name is " + person1.name);
+This gives our data a lot more structure and makes it much less likely to make an error when assigning names and ages etc to new object instances.
+    This is effectively, the creation of a JavaScript object.
+Now if you were to create an object for something else, say a bear, the properties would be rather different.
+    Different objects have different properties depending on what's relevant to that object.
+Lesson Challenge 1:
+    Create a houseKeeper1 object, and give this object the relevant properties.
+Note that the properties are assigned with a colon, not an equals sign.
+    The properties can be assigned any data type value you'd like.
+Running the code defining the object, we can then tap into the object using dot notation as we've previously seen.
+But now to have to manually recreate the object each time is still too time consuming.
+    And notice that for each object we'd have all the exact same properties.
+So we can create a blueprint for a type of object:
+                function Person (name, age, hasWorkPermit, languages) {
+                    this.name = name;
+                    this.age = age;
+                    this.hasWorkPermit = hasWorkPermit;
+                    this.lagnauges = languages;
+                }
+    We'd create what's called a "Constructor Function"
+What's special about constructor functions is that the name has to Capitalized (first word capitalized instead of camel casing.)
+    This signifies a constructor function.
+    It also takes a number of inputs, which are what we provide when we create new objects from this constructor function.
+Inside the constructor, we match the input parameters to property names for the objects.
+    Also, note the this referring to the new object that the properties will belong to.
+Initializing an object with a constructor function:
+                var person1 = new Person("Timmy", 19, true, ["French", "English"]);
+    Naturally declaring the new variable containing the object, then calling the constructor with "new Person"
+The "new" keyword signifies the creation of a new object using the constructor.
+Lesson Challenge 2:
+    Create a constructor function for the object created in challenge 1.
+
+
+## 142. Objects, their Methods and the Dot Notation:
+
+
