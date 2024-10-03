@@ -407,3 +407,27 @@ Now if we did this using the debugger we'd see:
 ## 146. Adding Animation to Websites:
 
 
+We want the user to know they've pressed the right key and they're getting the right sounds.
+    So it would be ideal for the buttons to flash whenever the user does so.
+Given that we want the button to flash when both a key or the button gets pressed, then we'd likely want to create a function.
+    So we'll create a function called buttonAnimation(){}
+Note that the code with be in the project js file.
+The function we're creating will be called wherever we call the sound function.
+    Whenever we want to make sound, we want to also generate the button animation.
+In the animation function, we input the key of the button, then we use that key to get the element itself.
+We'll save this button to a variable as it's the button who's style we want to change.
+We want to change the style of the button by applying the existing .pressed class to it.
+Lesson Challenge:
+        Add the .pressed class to the pressed button .
+        Use .classList.add("pressed");
+Though currently, the pressed class styling doesn't go away.
+We want it to revert after 0.1 seconds.
+    For this, we want to use the setTimeout() function.
+                    setTimeout(function(), millseconds);
+    The first parameter is the callback function that will be executed after some time has passed.
+    The second parameter is how long to wait before running the function in milliseconds.
+Note that the second parameter is measured in milliseconds, meaning a 1second wait is 1000ms.
+
+
+## 147. Download the Completed Website:
+

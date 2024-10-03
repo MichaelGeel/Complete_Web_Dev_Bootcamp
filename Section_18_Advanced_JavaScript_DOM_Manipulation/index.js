@@ -54,9 +54,19 @@ for(var i = 0; i < document.querySelectorAll("button").length; i++){
         
         var buttonText = this.textContent;
         keySwitch(buttonText);
+        buttonAnimation(buttonText);
     });
 }
 
 document.addEventListener("keydown", function(event){
     keySwitch(event.key);
+    buttonAnimation(event.key);
 });
+
+function buttonAnimation(currentKey){
+    var activeButton = document.getElementsByClassName(currentKey)[0];
+    activeButton.classList.add("pressed");
+    setTimeout(function(){
+        activeButton.classList.remove("pressed");
+    }, 100);
+}
