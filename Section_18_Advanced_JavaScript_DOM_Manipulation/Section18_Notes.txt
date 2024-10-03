@@ -431,3 +431,8 @@ Note that the second parameter is measured in milliseconds, meaning a 1second wa
 
 ## 147. Download the Completed Website:
 
+
+This lesson contains a completed, downloadable version of the project we created in this section.
+
+
+## End of Section 18.
