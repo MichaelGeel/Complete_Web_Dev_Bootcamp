@@ -4,3 +4,32 @@
 ## 149. What is jQuery:
 
 
+jQuery is considered the most popular JavaScript library.
+There are 1000s of JavaScript libraries out there, and more will be looked at later on.
+    But none have been used or downloaded as often as jQuery.
+If we look at some of the code from the previous section:
+                for (i = 0; i<document.querySelectorAll("button").length; i++) {
+                    document.querySelectorAll("button")[i].addEventListener("click", function() {
+                        document.querySelector("h1").style.color = "red";
+                    });
+                }
+    This is a lot of JavaScript for a relatively simple task.
+jQuery makes it possible to shorten JavaScript code significantly so the above function becomes this:
+                $("button").click(function() {
+                    $("h1").css("color", "red");
+                })
+jQuery is a library, which is a bunch of code somebody else wrote that you can incorporate into your own projects and use to improve your own projects or make your life a lot easier.
+Bootstrap was also a library.
+What jQuery allows you to do is take a line of code:
+                document.querySelector("h1");
+    This looks through the DOM, selecting the document and querying for the h1.
+    And with jQuery, we can instead simply say:
+                jQuery("h1");
+To be even shorter, the shorthand for "jQuery" is the "$".
+                $("h1");
+This is visibly shorter, makes our JS code easier to read, easier to debug and faster to debug.
+
+
+## 150. How to Incorporate jQuery into Websites:
+
+
