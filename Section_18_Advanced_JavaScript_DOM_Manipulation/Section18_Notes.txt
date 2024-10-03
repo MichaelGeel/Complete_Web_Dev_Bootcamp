@@ -364,3 +364,46 @@ Note: had to revert all the lettering to lowercase as the uppercase letters were
 ## 145. Understanding Callbacks and How to Respond to Events:
 
 
+We've seen how JavaScript allows us to create Higher Order Functions.
+    Which are functions that can take functions as inputs.
+But what about the function that gets passed in as an input.
+    This is called a "CallBack Function" because it allows us to wait for something to finish happening, 
+    and then the callback function gets called back and executed.
+Using the drumkit project as reference:
+    When the document/webpage detects a kepress, then it will call this function called respondToKey()
+    When this happens, we can get it to send us some information that it'll only know once the event happens.
+        In this case, which button was clicked, or which keyboard key was pressed.
+What we've done is a very simple form of the event listener.
+    But as we've seen, we can also get the event that triggered this function, and pass it back through the callback function.
+    This in turn allows us to work with the data of the triggered event in the callback function.
+When creating the anonymous function, you can call the event parameter anything you want.
+    Commonly seen as e, evt or event.
+Say we created another function, and we give this function a parameter that it then uses in its output.
+    Whatever name you give the input parameter inside the function, doesn't matter, you'd call the function in the same way.
+    This is why it doesn't matter what name you give the event parameter that's being passed into the anonymous function.
+What's interesting to note, is that the callback function is not called by us, but it's called by the object that experienced the event.
+    And from there we can get it to send us some information that it'll only know once the event has happened.
+Looking at the behavior of the addEventListener method:
+    It takes the event type to detect and the callback function to call.
+    When the event does happen, itll create an event object.
+    This event object will capture a number of things about the event.
+        Such as event type, what generated the event, duration of event etc.
+    Then this object can be passed through into the callback funciton that the programmer could then use to get information about the event in question.
+    Naturally we know that the callback doesn't get called for every event type, so the listener might check if the event that happened is equal to the type of event the programmer set it to execute on.
+        Only then would the callback be triggered.
+Based on this, what we actually see an write on this addEventListener method, is just calling it and passing inputs.
+    And from there we'd be able to access the event object created on the event that triggered the listener.
+Now if we did this using the debugger we'd see:
+    Calling the eventListener and passing the parameters.
+    Then it goes into the eventListener.
+    It waits to detect an event.
+    When it does, it creates an event object regarding the event.
+    It then checks to see if the event that happened is of the type of event we provided in the input parameters.
+    If so, it then triggers the callback function, which we gave as an input parameter, and provides the event object as an input to the callback function.
+    And then it runs the callback function, which does whatever using the callback function.
+    Then it completes the callback function and the event execution ends.
+
+
+## 146. Adding Animation to Websites:
+
+
