@@ -33,3 +33,39 @@ This is visibly shorter, makes our JS code easier to read, easier to debug and f
 ## 150. How to Incorporate jQuery into Websites:
 
 
+To get jQuery, we get over to the jQuery website and download all the jQuery code files through their download page, or can simply use a CDN.
+    We'd previously seen that CDNs are Content Delivery Networks are.
+    Check it out in the Bootstrap lessons.
+The most popular option across the web is to use Google's CDN.
+    As mentioned before, the greatness of using a popular CDN is that if a user has been to another website that uses the same CDN to fetch the jQuery library,
+    then they'll likely already have it caches and saved in their browser.
+    This means when they want to load up your website they won't have to fetch a fresh copy of jQuery, they've already got it loaded and ready to go.
+    This in turn gives your website a much faster load rate.
+We're going to be using the latest version of jQuery, (in the course: 3.3.1) which is 3.3.7.
+    Copy the script tag from the Google CDN for the latest version of jQuery.
+We're going to create a new project and are going to create a new project.
+    Then linked the css and js files.
+        Naturally test the links as well.
+Now we adding a number of elements into the HTML
+    See the files for these additions.
+Now we'll write some jQuery code to change the colour of our h1 to red.
+                    $("h1").css("color", "red");
+    So if we haven't copied the jQuery cdn link into the HTML file, it won't do anything.
+    Checking the console, we'd see that it's thrown an error as it doesn't know what "$" is.
+So we'll copy the Google Hosted Libraries CDN link for jQuery over and paste it ABOVE the js file link.
+    Now we'll see that the jQuery code will work just fine.
+Where you place the jQuery script tag is really important.
+    If we pasted it below the js file script tags link, it wouldn't work again.
+        This is because the browser reads the code from top to bottom, and the first thing it'll try to process is our js file.
+        Which contains the jQuery code that it'll try to execute, but it hasn't got the jQuery library yet, so it doesn't recognize the code.
+    The other way it might mess up is that if you had both of the script tags inside the head section.
+        Again it wouldn't work and wouldn't even provide an error.
+        Need to be very careful about including the CDN script for jQuery in the head section, because what might happen is that before we've actually finished loading up the entire jQuery library,
+            our index.js might already be trying to access it.
+        A way to safeguard against this is to check whether our jQuery library is ready.
+        We do this by running the following code:
+                    $(document).ready(function (){
+                        #("h1").css("color", "red");
+                    });
+            Here code will only be run once the document is ready.
+                The code is housed inside of a callback function as this forces the browser to wait for the jQuery library to load completed before running any further code.
