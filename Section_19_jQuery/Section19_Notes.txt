@@ -68,4 +68,13 @@ Where you place the jQuery script tag is really important.
                         #("h1").css("color", "red");
                     });
             Here code will only be run once the document is ready.
-                The code is housed inside of a callback function as this forces the browser to wait for the jQuery library to load completed before running any further code.
+                The code is housed inside of a callback function as this forces the browser to wait for the html document and the jQuery library to be ready before running anything.
+When coming across websites, will often see the above line of code that waits for the document to be ready before loading it.
+    An alternative of doing this exact same thing, is to include our scripts at the end of the website.
+        Just above the closing body tag.
+        This does exactly the same thing as the above line of code.
+
+
+## 151. How Minification Works to Reduce File Size:
+
+
