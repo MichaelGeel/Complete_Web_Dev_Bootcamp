@@ -120,3 +120,31 @@ It'll select all elements matching the selector on screen and there's no differe
 ## 153. Manipulating Styles with jQuery:
 
 
+We've previously seen that we can manipulate the CSS style of a selected element by simply using the .css method from jQuery.
+                            $("h1").css("color", "green");
+    This method takes 2 input parameters, the property to change and what to change it to.
+This method is really flexible, if we were to omit the second parameter, we'd instead get the current value of the property.
+                            $("h1").css("color"); // outputs the rbg colour of the element.
+So in effect, providing 1 input parameter to the .css() method means it works like a getter, return the value of the property provided.
+    Providing 2 input parameters to the method means it works like a setter, setting the value of the property to the value provided.
+But as we've covered previously, changing the style inside our JS code is not great.
+    We need to ensure that our concerns remain separated, keep only behavior within our JavaScript.
+So instead of adding the css directly, let's use a class inside the style sheet to add the styling, and add the class to elements in JavaScript instead.
+    To do this, we'd write:
+                            $("h1").addClass("big-title");
+    Add then we'll see all the styles of the class applied to the element the class got added to.
+Similarly, we can remove class as well:
+                            $("h1").removeClass("big-title");
+    Add we'll now see all the styling associated with the class no longer in effect on the element.
+Now if you wanted to add/remove multiple classes:
+                            $("h1").addClass("big-title margin-50");
+                            $("h1").removeClass("big-title margin-50");
+    Notice the classes are all inside one set of quotation marks and separated by a space.
+Another useful method in jQuery is one we can use to see if a particular element has a class:
+                            $("h1").hasClass("margin-50");
+    It returns a true/false boolean based on the presence of the class in the element.
+
+
+## 154. Manipulating Text with jQuery:
+
+
