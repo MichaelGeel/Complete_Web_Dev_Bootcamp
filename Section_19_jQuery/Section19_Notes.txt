@@ -148,3 +148,22 @@ Another useful method in jQuery is one we can use to see if a particular element
 ## 154. Manipulating Text with jQuery:
 
 
+In order to change the text of a selected element using jQuery, there's two ways of going about this.
+1) You can simply say:
+                $("h1").text("Good Bye");
+    Now as mentioned before, when using jQuery to select an HTML element, it selects all of the elements that match that selector.
+    So if there are multiple elements matching your selector, each one of the matching elements will have their text updated.
+2) Now when we learnt how to do this using vanilla JS, we had the innerHTML method that allowed us to modify HTML as well as text.
+    But with jQuery it's much shorter and can be written as:
+                $("h1").html("<em>Hello Again</em>");
+        Notice the HTML tags that are considered by the browser as HTML in this scenario.
+Notice that most of the things done in jQuery are implemented using methods, which we're accessing through the dot notation.
+    When we learnt about methods and functions, we used it a lot to shorten our code and reduce repetition.
+    This is effectively how jQuery works.
+If you look at the library then you'll notice that jQuery is completely written in JavaScript, but it has all these methods that shorten the code that we need to write and 
+    makes working with JavaScript to create our websites much quicker and easier.
+
+
+## 155. Manipulating Attributes with jQuery:
+
+

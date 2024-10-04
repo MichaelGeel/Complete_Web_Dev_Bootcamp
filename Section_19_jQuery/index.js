@@ -21,4 +21,8 @@ $("h1").removeClass("big-title margin-50");
 // Checking for a class on an elemetn:
 $("h1").hasClass("margin-50"); // returns a boolean true/false
 
-// 
+// Method 1 of changing text in an HTML element (text-only):
+$("h1").text("Good Bye");
+
+// Method 2 of changing text in an HTML elemetn (text and HTML editable):
+$("h1").html("<em>Hello Again</em>");
