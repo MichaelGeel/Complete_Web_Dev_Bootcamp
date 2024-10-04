@@ -3,5 +3,5 @@
 
 // Checking if the jQuery library is loaded and ready before executing a callback function containing the code to run:
 $(document).ready(function(){
-    $("h1").css("color", "red");
+    $("h1#header").css("color", "red");
 });

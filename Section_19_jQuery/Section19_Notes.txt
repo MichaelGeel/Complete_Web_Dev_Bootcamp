@@ -78,3 +78,45 @@ When coming across websites, will often see the above line of code that waits fo
 ## 151. How Minification Works to Reduce File Size:
 
 
+Now if we were to copy the link in the script that houses the jQuery library and load it in the browser, we'd get a bunch of spam.
+    What this actually is, is a minified version of the jQuery library, and it looks very similar to the Bootstrap CDN we used previously.
+Now if we took a section of the code and pasted it into a textfile where we could edit it, we'd see it's still the same code.
+    CSS in Bootstrap, JS is jQuery.
+What's happening essentially, is all of the spaces, the new lines, the comments, have been removed from the file to try and reduce its size.
+    If we were to space out the lines, we'd see it's plain code.
+We code go over to minify.org, where you could convert your CSS or JS code to a minified version.
+    If we have to take some file and run it through this to minify it, we'd even see how big the file was originally and how big the minified version is, along with the storage savings in the minified version.
+The reason to make the file smaller is so that it's quicker for the users to load.
+    It always has to be loaded up by your users' browser, which you want to optimize as much as you can.
+    Naturally internet speed affects this, but the browser doesn't care about tabs, indents, spaces etc.
+    So it's okay to remove all of that and no point in having the user load all of that up.
+If you were to download the jQuery library and open it, you'd see a standard version that is human readable.
+    And there'll also be a minified version intended for the browser.
+    This is to allow you to customize the code yourself and then minify it.
+    Or if you don't want ot do any customization, then simply to just drop the jQuery file into your project.
+
+
+## 152. Selecting Elements with jQuery:
+
+
+The most basic thing we need to do when we're creating our websites is to select the elements in our web page in order to manipulate it at a later date.
+    We'd already seen how to do this in vanilla JavaScript.
+                        document.querySelector("h1");
+    But if we were to do this in jQuery, we'd be able to remove a majority of this code and reduce it to:
+                        $("h1");
+        What we're now doing is using a jQuery method to select our h1, and we can see just how much shorter that is.
+The functionality of the above jQuery code is very similar to querySelector in the sense that inside the brackets we're specifying the CSS selector that we would use if we wree to select our elements in CSS.
+    This is becuase it's the most flexible, adaptable and also can be very specific.
+        For example, it allows us to say things like:
+                        $("h1#header");
+        Where we select an h1 with an id of "header"
+But what the jQuery selector allows us to do is when we're trying to select all of our buttons, if you remember from previously, we had to use code along the lines:
+        document.querySelectorAll("button");
+    But with jQuery the $ again replaces all of the code to:
+                        $("button");
+It'll select all elements matching the selector on screen and there's no difference between selecting one or selecting many.
+
+
+## 153. Manipulating Styles with jQuery:
+
+
