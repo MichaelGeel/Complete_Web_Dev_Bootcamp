@@ -26,3 +26,43 @@ $("h1").text("Good Bye");
 
 // Method 2 of changing text in an HTML elemetn (text and HTML editable):
 $("h1").html("<em>Hello Again</em>");
+
+// Getting the value of the src attribute of an img element:
+$("img").attr("src");
+
+// Setting the valu of the src attribute of an img element:
+$("img").attr("src", "./assets/images/image2.png");
+
+// Adding a click event listener to the h1 element:
+$("h1").click(function() {
+    $("h1").css("color", "purple");
+});
+
+// Adding a click event to all elements matching a selector using jQuery:
+$("button").click(function() {
+    $("h1").css("color", "purple");
+});
+
+// Adding a keypress event listener and passing the event to the function:
+$("input").keypress(function(event) {
+    console.log(event.key);
+});
+
+// The 2 ways of adding a keypress event listener to the body:
+$(document).keypress(function(event) {
+    console.log(event.key);
+});
+$("body").keypress(function(event) {
+    console.log(event.key);
+});
+
+// Lesson 156 Challenge:
+$(document).keypress(function(event) {
+    $("h1").text(event.key);
+});
+
+// Using the .on method to add an event listener to an element/s:
+$("h1").on("mouseover", function() {
+    $("h1").css("color", "purple");
+});
+

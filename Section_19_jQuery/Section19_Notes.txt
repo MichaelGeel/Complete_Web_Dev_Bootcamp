@@ -167,3 +167,56 @@ If you look at the library then you'll notice that jQuery is completely written 
 ## 155. Manipulating Attributes with jQuery:
 
 
+Let's take a look at how we can use jQuery to manipulate attributes of HTML elements.
+    Attributes are naturally things like the src and alt of an img element.
+So if we wanted to get/set the attributes of an element using JS & jQuery:
+                    $("img").attr("src");
+    And if we wanted to set the value of the attribute:
+                    $("img").attr("src", "./assets/images/image2.png");
+    The only difference here is the presence of a second input parameter which the src attribute will now be set to.
+Remember that class is also an html attribute.
+    So if we were to get the class attribute of an element that has multiple classes, then they'll all be printed out in a string format.
+
+
+## 156. Adding Event Listeners with jQuery:
+
+
+Looking at how to event listeners to HTML elements using jQuery.
+To add an event listener:
+                    $("h1").click(function() {
+                        $("h1").css("color", "purple");
+                    });
+Previously, if we wanted to add an event listener to all buttons in the page, we'd have to write a loop to go through them 1 by 1.
+    But with jQuery, we simply need to write:
+                    $("button").click(function() {
+                        $("h1").css("color", "purple");
+                    });
+    jQuery goes ahead and selects all elements matching the query selector we input.
+        So it'll add the click event listener to all the elements without the need of a loop at all.
+We can also bind a keypress event listener to all the elements in jQuery using:
+                    $("input").keypress(function(event) {
+                        console.log(event.key);
+                    });
+    Notice here that we're capturing the event itself as well and outputting that in the function.
+If we wanted to add the keypress event to the document itself, we can use either:
+                    $("body").keypress(function(event) {
+                        console.log(event.key);
+                    });
+    or we can use:
+                    $(document).keypress(function(event) {
+                        console.log(event.key);
+                    });
+Lesson challenge:
+    Add an event listener to the body that changes the text of the h1 to whatever key was pressed.
+There's an even more flexible way of adding an event listener to an element:
+                    $("h1").on("mouseover", function() {
+                        $("h1").css("color", "purple");
+                    });
+    This .on() method takes 2 parameters.
+        The first is any of the events that you could be looking for, with it's name in a string.
+        The second is the callback function that it should execute.
+
+
+## 157. Adding and Removing Elements with jQuery:
+
+
