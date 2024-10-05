@@ -66,3 +66,17 @@ $("h1").on("mouseover", function() {
     $("h1").css("color", "purple");
 });
 
+// Adding a button element before the h1 element using jQuery:
+$("h1").before("<button>New before</button>");
+
+// Adding a button element after the h1 element using jQuery:
+$("h1").after("<button>New after</button>");
+
+// Prepending a button element:
+$("h1").prepend("<button>New</button>");
+
+// Appending a button element:
+$("h1").append("<button>New</button>");
+
+// Removing elements:
+$("button").remove();

@@ -220,3 +220,26 @@ There's an even more flexible way of adding an event listener to an element:
 ## 157. Adding and Removing Elements with jQuery:
 
 
+While our website is live and running, we can actually use jQuery to add elements on the fly.
+For example, if we selected the h1 and decided to add a new button BEFORE the h1, then we simply use:
+                $("h1").before("<button>New</button>");
+    In the brackets, we pass in the element we want to add as a text input parameter to the before method.
+Vice versa to before, we can also create and insert an element AFTER an element:
+                $("h1").after("<button>New</button>");
+Then we also have prepend() and append().
+Looking at prepend:
+                $("h1").prepend("<button>New</button>");
+    The difference between prepend and before is that prepend inserts the new element into the element you selected,
+        just before the opening tag.
+    So the button inserted here is inside the h1 element.
+Looking at append:
+                $("h1").append("<button>New</button>");
+    Similarly, the append method inserts the button to just before the closing tag of the selected element, inside of it.
+If you wanted to remove elements:
+                $("button").remove();
+    This removes everything that matches the query selector provided.
+
+
+## 158. Website Animations with jQuery:
+
+
