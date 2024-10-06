@@ -243,3 +243,42 @@ If you wanted to remove elements:
 ## 158. Website Animations with jQuery:
 
 
+jQuery also makes it really easy to implement some common animations that you might want to do when creating your website.
+So we could use the following to apply an animation that'll hide a selected element:
+                $("h1").hide();
+    You could like this to an event listener to hide the element on a button click.
+If you wanted to show the element again, you'd use:
+                $("h1").show();
+And if we only wanted to toggle the hide/show of the element (switch it on/off with each call):
+                $("h1").toggle();
+Hiding is a very sudden event, it disappears, the element gets removed from the flow of our HTML, so everything else moves up.
+    If we wanted it to be a little bit more progressive, then we can use something called fadeOut instead:
+                $("h1").fadeOut();
+    This causes the element's opacity to gradually reduce and then be hidden.
+Then there's the opposite to fade out, fade in:
+                $("h1").fadeIn();
+The fade animations also come with a toggle, that fades the element out/in on each call.
+                $("h1").fadeToggle();
+There's also the slide up/down animations, the collapses and un-collapses the element:
+                $("h1").slideUp();
+Naturally there's a toggle varient of slide as well:
+                $("h1").slideToggle();
+    This is great for a drop down menu for example.
+If you want more fine-tuned control over your animations, then instead of using the pre-built ones,
+    you can use .animate, which let's you define some custom CSS that you want to gradually animate towards.
+    Inside the brackets, you can add some {} which contains the css rules you want to slowly apply.
+                $("h1").animate({opacity: 0.5});
+    It's important to not that for the animate rule, you can only add CSS values that have a numeric value.
+        You can't animate color, font-family etc.
+        This is just between it's very difficult to create that kind of tween animation that gradually progresses 
+        from one style to another using animate.
+        But if you want to use percentages for the number value properties, you can pass the value as a string.
+If you wanted to have more than one animation happening, you can chain them together.
+    What this means is using dot notation to call one method after another:
+                $("h1").slideUp().fadeOut().slideDown().fadeIn();
+        This can be used with any of the jQuery animations.
+    Remember, these chained animations down happen at the same time as conflicting animations like slide up and down can't be done at the same time.
+        Instead, the animation methods are called in the order that they're called.
+
+
+## End of Section 19.

@@ -79,4 +79,37 @@ $("h1").prepend("<button>New</button>");
 $("h1").append("<button>New</button>");
 
 // Removing elements:
-$("button").remove();
+// $("button").remove();
+
+// Hiding an element using jQuery:
+$("h1").hide();
+
+// Showing an element using jQuery:
+$("h1").show();
+
+//Toggles the show of the element:
+// $("h1").toggle();
+
+// Setting the element to slowly fadeOut:
+$("h1").fadeOut();
+
+// Fading the element back in:
+// $("h1").fadeIn();
+
+// Toggling the fade:
+$("h1").fadeToggle();
+
+// Collapsing the element:
+$("h1").slideUp();
+
+// Expanding the element:
+// $("h1").slideDown();
+
+// Toggling the slide animation:
+$("h1").slideToggle();
+
+// Manually animating some custom CSS: 
+$("h1").animate({opacity: 0.5});
+
+// Chaining jQuery animations together:
+$("h1").slideUp().fadeOut().slideDown().fadeIn();
