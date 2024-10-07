@@ -1,7 +1,6 @@
 html {
     box-sizing: border-box;
     margin: 0;
-    background-color: red;
 }
 
 body {
@@ -18,17 +17,36 @@ h1 {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 50%;
+    max-width: 800px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .box {
-    height: 200px;
-    width: 200px;
-    border: 10px solid black;
-    border-radius: 30px;
+    height: 250px;
+    width: 250px;
+    border: 15px solid black;
+    border-radius: 20%;
     margin: 25px;
+    flex: 0 0 auto;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
 }
