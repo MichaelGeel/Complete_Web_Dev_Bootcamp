@@ -23,3 +23,12 @@ This lesson simply provides the link to play the game and try it out:
 ## 162. Step 0 - Download the Starting Files:
 
 
+This lesson contains the starting files for this challenge.
+However, for practice I'll be attempting to code this app from the start.
+The starting files contain the html, css and sounds for the project.
+Prior to going any further into the lesson, I'll be completing the project first.
+
+
+## 163. Step 1 - Add JavaScript and jQuery:
+
+
