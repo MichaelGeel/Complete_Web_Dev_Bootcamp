@@ -16,3 +16,10 @@ The way the browser game works is:
 ## 161. Play the Game:
 
 
+This lesson simply provides the link to play the game and try it out:
+            https://londonappbrewery.github.io/Simon-Game/
+
+
+## 162. Step 0 - Download the Starting Files:
+
+
