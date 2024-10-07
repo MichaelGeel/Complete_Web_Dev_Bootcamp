@@ -4,3 +4,15 @@
 ## 160. What You'll Make: The Simon Game:
 
 
+This challenge section is to build a game that is modelled off the game "Simon".
+The way the browser game works is:
+        You can press any key to start.
+        It'll then show you a tile that you have to click on.
+        As you go from level to level, the patterns get more and more complicated.
+        At some point, you're going to get it wrong.
+        When you do, it'll tell you that you got it wrong and you can press any key to restart the game.
+
+
+## 161. Play the Game:
+
+
