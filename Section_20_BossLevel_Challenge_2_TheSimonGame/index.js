@@ -1,15 +1,20 @@
-function createSequence(length){ // Verified
+function createSequence(length){ // Verified with unit testing.
     var blockSequence = [];
     for(var i=0; i<length;i++){
         blockSequence.push(Math.floor((Math.random()*4)+1));
     }
+    console.log(blockSequence);
     return blockSequence;
 }
 
-function buttonToggle(btnColor){
-    setTimeout(function(color){
-        $("."+color).addClass("pressed")
-    })
+function buttonToggle(btnColor){  // Verified with unit testing.
+    setTimeout(function(){
+        $(btnColor).addClass("pressed");
+    }, 500);
+    setTimeout(function(){
+
+        $(btnColor).removeClass("pressed");
+    }, 1000);
 }
 
 function showSequence(blockSeq){
@@ -23,8 +28,10 @@ function gameOn(){
     var gameOver = false;
     // while(!gameOver) {
     sequence = createSequence(levelCount);
+    levelCount++;
+    sequence = createSequence(levelCount);
     // }
 }
 
 // This starts the game.
-$(document).keypress(gameOn);
+$(document).keypress(gameOn); // Verified with testing.
