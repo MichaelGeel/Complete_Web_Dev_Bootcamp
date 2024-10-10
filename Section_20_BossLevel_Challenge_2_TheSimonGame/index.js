@@ -16,7 +16,7 @@ function gameOver(){
 }
 
 function checkInput(){
-    if(userList[userList.length-1]!==generatedList[userList.length-1]){
+    if(userList[userList.length-1]!==generatedList[userList.length-1]){ //&& generatedList>0){
         gameOver();
     }
 }
