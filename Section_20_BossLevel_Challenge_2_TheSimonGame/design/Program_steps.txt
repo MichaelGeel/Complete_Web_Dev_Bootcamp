@@ -1,0 +1,30 @@
+The buttons:
+
+Can be pressed any time.
+Even if game not started, they run a check and show game over.
+This means the user input array and generated array are global variables.
+
+On keypress, game start.
+Starts on level 1 (likely a global variable)
+Randomly selects a colour and adds to list.
+Flashes the square to the user. (This flash is different to the user press flash see below.)
+Waits for user to input as many squares as the level (ie same number of square as sequence.)
+
+If wrong:
+
+game over.
+(Generated sequence and level reset here).
+
+If right:
+
+User input list reset.
+Level goes up.
+Another square selected and flashed.
+The square is appended to the list (new square added each level increase).
+Waits for user input again.
+
+Flash differences:
+
+User flash: toggling pressed class on and off.
+Show next in sequence flash: fadeIn - fadeOut toggle.
+
