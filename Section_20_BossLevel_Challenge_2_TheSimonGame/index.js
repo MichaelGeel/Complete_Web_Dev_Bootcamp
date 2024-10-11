@@ -15,10 +15,48 @@ function gameOver(){
     level = 1;
 }
 
+function flashButton(color){
+    $("."+color).fadeOut(duration=100);
+    setTimeout(function(){
+        $("."+color).fadeIn(100);
+    }, 100);
+}
+
+function generatePattern(){
+    var randomButton = (Math.floor((Math.random()*4)))+1;
+    switch(randomButton){
+        case 1:
+            generatedList.push("green");
+            flashButton("green");
+            break;
+        case 2: 
+            generatedList.push("red");
+            flashButton("red");
+            break;
+        case 3:
+            generatedList.push("yellow");
+            flashButton("yellow");
+            break;
+        case 4:
+            generatedList.push("blue");
+            flashButton("blue");
+            break;
+        default:
+            console.log("randomButton is no longer confined to numbers 1 to 4");
+            break;
+    }
+}
+
+function nextLevel(){
+    level++;
+    generatePattern();
+    userList = [];
+}
+
 function checkInput(){
     if(userList[userList.length-1]!==generatedList[userList.length-1]){ //&& generatedList>0){
         gameOver();
-    } elif (userList.length === generatedList.length){
+    } else if (userList.length === generatedList.length){
         nextLevel();
     }
 }
@@ -53,5 +91,4 @@ $(".btn").click(function(event){
 // }
 
 // // This starts the game.
-// $(document).keypress(gameOn); // Verified with testing.
-// buttonToggle("green");
+$(document).keypress(generatePattern);

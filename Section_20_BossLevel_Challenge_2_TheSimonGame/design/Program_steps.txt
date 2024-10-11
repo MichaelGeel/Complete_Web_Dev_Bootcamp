@@ -30,3 +30,5 @@ Show next in sequence flash: fadeIn - fadeOut toggle.
 
 Note: for the waiting for user input, we remove loops.
 So we have individual functions that are called as the game progresses and the individual steps are taken.
+
+Once the game has started, the click event on the document is removed until game over.
