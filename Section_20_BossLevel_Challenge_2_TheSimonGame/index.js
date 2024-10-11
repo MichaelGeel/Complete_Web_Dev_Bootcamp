@@ -13,6 +13,7 @@ function gameOver(){
     generatedList = [];
     userList = [];
     level = 1;
+    $(document).keypress(generatePattern);
 }
 
 function flashButton(color){
@@ -24,6 +25,7 @@ function flashButton(color){
 
 function generatePattern(){
     var randomButton = (Math.floor((Math.random()*4)))+1;
+    $("h1").text("Level "+level);
     switch(randomButton){
         case 1:
             generatedList.push("green");
@@ -80,15 +82,10 @@ $(".btn").click(function(event){
 //     return blockSequence;
 // }
 
-// function gameOn(){
-//     var levelCount = 1;
-//     var gameOver = false;
-//     // while(!gameOver) {
-//     levelCount++;
-//     sequence = createSequence(levelCount);
-//     showSequence(sequence);
-//     // }
-// }
+function gameOn(){
+    $(document).off("keypress");
+    generatePattern();
+}
 
 // // This starts the game.
-$(document).keypress(generatePattern);
+$(document).keypress(gameOn);
