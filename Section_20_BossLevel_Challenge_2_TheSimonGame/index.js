@@ -18,6 +18,8 @@ function gameOver(){
 function checkInput(){
     if(userList[userList.length-1]!==generatedList[userList.length-1]){ //&& generatedList>0){
         gameOver();
+    } elif (userList.length === generatedList.length){
+        nextLevel();
     }
 }
 

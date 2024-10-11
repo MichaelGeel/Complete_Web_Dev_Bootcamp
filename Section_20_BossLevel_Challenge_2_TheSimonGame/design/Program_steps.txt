@@ -28,3 +28,5 @@ Flash differences:
 User flash: toggling pressed class on and off.
 Show next in sequence flash: fadeIn - fadeOut toggle.
 
+Note: for the waiting for user input, we remove loops.
+So we have individual functions that are called as the game progresses and the individual steps are taken.
