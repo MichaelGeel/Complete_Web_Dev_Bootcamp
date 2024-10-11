@@ -27,6 +27,8 @@ This lesson contains the starting files for this challenge.
 However, for practice I'll be attempting to code this app from the start.
 The starting files contain the html, css and sounds for the project.
 Prior to going any further into the lesson, I'll be completing the project first.
+The project has been completed successfully, only required playing the game to analyse the mechanics in place.
+Could have improved functionality and prevented a keypress event duplication bug by preventing checks from occuring if a button was pressed while the game was not active.
 
 
 ## 163. Step 1 - Add JavaScript and jQuery:

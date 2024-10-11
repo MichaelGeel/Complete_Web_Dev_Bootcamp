@@ -75,15 +75,6 @@ $(".btn").click(function(event){
     checkInput();
 });
 
-// function createSequence(length){ // Verified with unit testing.
-//     var blockSequence = [];
-//     for(var i=0; i<length;i++){
-//         blockSequence.push(Math.floor((Math.random()*4)+1));
-//     }
-//     console.log(blockSequence);
-//     return blockSequence;
-// }
-
 function gameOn(){
     $(document).off("keypress");
     generatePattern();
