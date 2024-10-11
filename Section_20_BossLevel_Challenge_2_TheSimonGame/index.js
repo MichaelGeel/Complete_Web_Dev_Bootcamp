@@ -13,7 +13,9 @@ function gameOver(){
     generatedList = [];
     userList = [];
     level = 1;
-    $(document).keypress(generatePattern);
+    if ($._data(document, "events") == null){
+        $(document).keypress(gameOn);
+    }
 }
 
 function flashButton(color){
