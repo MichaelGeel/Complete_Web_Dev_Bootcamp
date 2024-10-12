@@ -47,3 +47,13 @@ This lesson simply contains the code file updated with the solution for Step 1.
 ## 165. Step 2 - Create A New Pattern:
 
 
+This lesson details creating a new pattern for the simon game.
+We first generate a random number between 0 and 3 (1-4) and store it in a variable. (Do this as a function)
+We then create an array that houses the 4 colours in a set order (red, blue, green yellow).
+Using the generated number as the indexer, we map our random number to one of the 4 colours.
+Then we create a global array variable that houses the randomly generated colours, and add the randomly chosen colour to it.
+
+
+## 166. Step 2 - Answer:
+
+
