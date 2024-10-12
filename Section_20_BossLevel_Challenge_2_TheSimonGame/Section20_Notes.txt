@@ -63,3 +63,13 @@ This lesson just contains the updated code base with the solution code for this 
 ## 167. Step 3 - Show the Sequence to the User with Animations and Sounds:
 
 
+We'll start this by using jQuery to select the button with the same id as the chosen colour (or class).
+Need to then google how to animate a flash to the button selected in step 1.
+Need to also then google how to play the sound for the chosen button as well (note each button has a unique sound)
+The hint for the flash of the button links to this:https://stackoverflow.com/questions/275931/how-do-you-make-an-element-flash-in-jquery
+        Which provides some alternative solutions however it was successfully solved.
+
+
+## 168. Step 3 - Answer:
+
+
