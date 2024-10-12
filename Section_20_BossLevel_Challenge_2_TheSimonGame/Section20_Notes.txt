@@ -41,3 +41,9 @@ We also add in the link to load jQuery and test whether it has loaded correctly 
 ## 164. Step 1 - Answer:
 
 
+This lesson simply contains the code file updated with the solution for Step 1.
+
+
+## 165. Step 2 - Create A New Pattern:
+
+
