@@ -34,3 +34,10 @@ Could have improved functionality and prevented a keypress event duplication bug
 ## 163. Step 1 - Add JavaScript and jQuery:
 
 
+This step covers creating the external JS file, linked it and doing a hello world to confirm it's correctly linked.
+We also add in the link to load jQuery and test whether it has loaded correctly as well.
+
+
+## 164. Step 1 - Answer:
+
+
