@@ -17,7 +17,7 @@ The way the browser game works is:
 
 
 This lesson simply provides the link to play the game and try it out:
-            https://londonappbrewery.github.io/Simon-Game/
+        https://londonappbrewery.github.io/Simon-Game/
 
 
 ## 162. Step 0 - Download the Starting Files:
@@ -77,5 +77,18 @@ Updated code base files with solution for Step 3.
 
 
 ## 169. Step 4 - Check Which Button is Pressed:
+
+
+Notes from 168 solution:
+        Remember can use string concatenation for file access to not need to switch for each case.
+        And can also use an array to store values instead of switching between cases based on a number.
+                Just keep the range 0-x and then use that as an index.
+Add click events to each of the buttons to detect when they're pressed.
+The function each button triggers will use the event data to store the id of the clicked button, providing the colour.
+We also create a global user click array that stores the sequence of user button clicks.
+Then when a button is pressed, the colour of the button is added to the user click array.
+
+
+## 170. Step 4 - Answer:
 
 
