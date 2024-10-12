@@ -57,3 +57,9 @@ Then we create a global array variable that houses the randomly generated colour
 ## 166. Step 2 - Answer:
 
 
+This lesson just contains the updated code base with the solution code for this particular step.
+
+
+## 167. Step 3 - Show the Sequence to the User with Animations and Sounds:
+
+
