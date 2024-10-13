@@ -126,3 +126,13 @@ This lesson contains the answer code to Step 6.
 ## 175. Step 7 - Start the Game:
 
 
+Add a keypress event to the document, which calls the function to generate a random button.
+Add a level variable that tracks the user's level.
+Alter the h1 to show what level you're on. 
+Include functionality to increment the level.
+Ensure to update the h1 on level increase.
+
+
+## 176. Step 7 - Answer:
+
+
