@@ -136,3 +136,9 @@ Ensure to update the h1 on level increase.
 ## 176. Step 7 - Answer:
 
 
+This lesson contains the answers to Step 7, lesson 175.
+
+
+## 177. Step 8 - Check the User's Answer Against the Game Sequence:
+
+
