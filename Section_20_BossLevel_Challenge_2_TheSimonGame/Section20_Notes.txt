@@ -142,3 +142,15 @@ This lesson contains the answers to Step 7, lesson 175.
 ## 177. Step 8 - Check the User's Answer Against the Game Sequence:
 
 
+Create a checkAnswer function that receives one input
+Call this function whenever a user clicks a button, and pass the index of the last user answer to the function (ie the user press list length -1)
+        Also technically the button the user pressed last.
+Then compare the user input to the button generation for that same index.
+If right, then check if they've finished the sequence.
+        If yes, then begin the next sequence level.
+        And reset the user input array.
+
+
+## 178. Step 8 - Answer:
+
+
