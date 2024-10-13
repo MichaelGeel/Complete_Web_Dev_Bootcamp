@@ -154,3 +154,9 @@ If right, then check if they've finished the sequence.
 ## 178. Step 8 - Answer:
 
 
+This lesson contains the answer code to step 8, lesson 177.
+
+
+## 179. Step 9 - Game Over:
+
+
