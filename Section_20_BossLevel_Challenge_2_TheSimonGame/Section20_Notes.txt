@@ -98,3 +98,11 @@ Updated code files with the solution for Step 4 included.
 ## 171. Step 5 - Add sounds to Button Clicks:
 
 
+Now we need to add sounds for when a user clikcs on a button.
+        Using the corresponding sound for the colour in question.
+We'll create a playSound function that takes in a parameter that is the button's colour and it calls the correct sound.
+
+
+## 172. Answer:
+
+
