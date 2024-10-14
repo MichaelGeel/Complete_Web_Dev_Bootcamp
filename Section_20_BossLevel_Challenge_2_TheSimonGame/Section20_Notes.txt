@@ -160,3 +160,10 @@ This lesson contains the answer code to step 8, lesson 177.
 ## 179. Step 9 - Game Over:
 
 
+Play the wrong.mp3 sound if the user gets an answer wrong.
+Apply the game-over class to the body and remove again after 200ms if user gets answer wrong.
+Change h1 text to reflect game over text.
+
+
+## 180. Step 9 - Answer:
+
