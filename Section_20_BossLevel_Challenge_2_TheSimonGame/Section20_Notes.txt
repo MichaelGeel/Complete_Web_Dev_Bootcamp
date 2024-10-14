@@ -167,3 +167,10 @@ Change h1 text to reflect game over text.
 
 ## 180. Step 9 - Answer:
 
+
+This lesson contains the answers to step 9, lesson 179.
+
+
+## 181. Step 10 - Restart the Game:
+
+
