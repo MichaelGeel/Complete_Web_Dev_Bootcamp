@@ -185,7 +185,7 @@ In this function, reset the values of level, gamePattern and started variables.
 This lesson contains the updated code base with the answers to step 10, lesson 181.
 
 
-## 183. Donload the Completed Project Code.
+## 183. Download the Completed Project Code.
 
 
 This lesson contains a link for the code of the completed project.
