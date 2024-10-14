@@ -174,3 +174,11 @@ This lesson contains the answers to step 9, lesson 179.
 ## 181. Step 10 - Restart the Game:
 
 
+Create a new function called startOver()
+Call this function if the user gets the sequence wrong.
+In this function, reset the values of level, gamePattern and started variables.
+
+
+## 182. Step 10 - Answer:
+
+
