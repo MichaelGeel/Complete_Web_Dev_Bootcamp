@@ -1,0 +1,25 @@
+# Section 21: The Unix Command Line:
+
+
+## 185. Install Git Bash on Windows:
+
+
+Note Macs come with Git Back pre-installed.
+This course has a link to download Git SCM for windows.
+Then run the installer.
+    Ensure Git Bash Here is checked in the installer.
+Leave the folder as Git and leave everything else as default all the way until you can install Git.
+Then to check that it works, open up a new terminal in VS Code.
+In the new terminal, click the dropdown button, next to "powershell" in the top right corner of the terminal.
+    This should have our cursor on a newline next to a $ symbol in the terminal.
+To configure VS Code to make Git Bash the defualt shell, we need to go to the command palette.
+    Can be found at View -> Command Palette
+    Then we'll search for "Terminal: Select Default Profile"
+    After selecting that, we select Git Bash.
+Now every time a new terminal is openeing, we're working with Git Bash.
+And now Git Bash has been set up.
+
+
+## 186. Understanding the Command Line. Long Live the Command Line!
+
+
