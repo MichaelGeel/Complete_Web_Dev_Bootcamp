@@ -23,3 +23,40 @@ And now Git Bash has been set up.
 ## 186. Understanding the Command Line. Long Live the Command Line!
 
 
+The Command Line is an incredibly useful tool no matter the genre of development you're persuing.
+To know what the Bash shell is, we first need to know what a shell is.
+    If you think about your operating system as a Peanut...
+    Then the Kernel is the actual nut.
+In computing, the Kernel refers to the actual programthat interfaces with the hardware.
+    It's the core of your operating system.
+The Shell refers to the user interface for you as a human to be able to interact with the kernel and in turn with the hardware of your computer.
+There are 2 variants to the shell.
+    There are Graphical User Interface (GUI) shells 
+        such as using Windows Explorer to browse your files using folders and icons
+    Then there's also the Command Line Interface (CLI)
+        Which is what we're focusing on here.
+This CLI is an alternative way of interfacing with the kernel.
+BASH in Bash Shell is an acronym that stands for:
+    "Bourne Again Shell"
+    Named after a Mr. Bourne.
+The BASH shell is a CLI (Command Line Interpreter) for the Unix system.
+    You find Unix-based systems or Unix-like systems all over the place.
+For example, Linux is a Unix-like system and a lot of servers will run on Unix and even Mac OS runs on a Unix-like OS.
+    This is a completely different family from the Windows side of things, which uses DOS and Windows.
+A lot of things that you can do with the command line can be done using the GUI.
+So the reason we still use the CLI or Command Line is because we get greater control from using it.
+In your journey of becoming a better developer, you will need to understand and exert more power over your tools (the computer hardware.)
+On a more day to day basis, you'll find that if you're a regular command line user, that it's actually easier and faster to do a lot of really common things.
+    For example, to make a music folder, you simply go to the directory you want it in, and then run the command:
+            "mkdir Music"
+    Whereas in the GUI, you have to go to the explorer, nav through your GUI to the directory then right click new folder and name it, which is more effort.
+So using the CLI is mainly about speed and control.
+But another aspect is that the CLI tries to hide a lot of the complicated and unnecessary stuff (like configuration files) from the common user.
+    The idea is that, unless you know how to deal with it, then you probably shouldn't be dealing with it.
+You can also make secret files and folders that wouldn't normally be visible to the common user either.
+Later on when we learn git and version control, we'll be using the command line heavily to show you the easiest and probably the most popular way amongst developers of using git and version control.
+
+
+## 187. Command Line Techniques and Directory Navigation:
+
+
