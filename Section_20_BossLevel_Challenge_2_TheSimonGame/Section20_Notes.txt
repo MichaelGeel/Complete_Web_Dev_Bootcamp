@@ -182,3 +182,9 @@ In this function, reset the values of level, gamePattern and started variables.
 ## 182. Step 10 - Answer:
 
 
+This lesson contains the updated code base with the answers to step 10, lesson 181.
+
+
+## 183. Donload the Completed Project Code.
+
+
