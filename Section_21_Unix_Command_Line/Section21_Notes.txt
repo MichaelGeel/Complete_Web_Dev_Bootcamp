@@ -60,3 +60,58 @@ Later on when we learn git and version control, we'll be using the command line 
 ## 187. Command Line Techniques and Directory Navigation:
 
 
+The first command to look at today is:
+                "ls"
+    Which stands for LiSt files and directories.
+    It lists all the items inside a particular directory.
+    Whatever appears before the tilde (~) in bash shows you what directory you're currently sitting in.
+        The ~ only appears if you're in the root directory.
+    Running ls returns all the folders and files in the directory you're currently in.
+Now if you wanted to go into a different directory/folder, you'd use the command:
+                "cd"
+    Which stands for Change Directory.
+    This lets you navigate into/out of folders in the directory.
+    Now there's an auto-complete feature in the terminal as well.
+        Say we wanted to navigate into the Documents folder.
+        We could write "cd Documents"
+        But with the autocomplete, we could just write "cd Doc" and hit tab and it'll autocomplete the rest of the folder name for you.
+        But you need enough letters for it to understand.
+            For example, "Do" could lead to Documents or Downloads, so it wouldn't know which to autocomplete to.
+    But once running the cd command, it takes us into the folder we commanded the terminal to open (ie inside the documents folder)
+    We can also jump levels, if we knew the entire path.
+        So we could use cd ~ to return to the root directory.
+        So from root, if we wanted to go to the Documents - Learn - Languages folder we could use the command:
+                "cd Documents/Learn/Languages"
+        And this would take us all the way into the Languages folder.
+            This is much quicker than navigating through the folders one by one.
+Another great feature of the terminal is the up and down arrows.
+    If you wanted to use the last command that you typed, all you have to do is just hit the up button and the previous command will repopulat in your terminal.
+    Naturally, if you go too far up and past the command you're looking for, the down arrow key allows you to cycle down to it again.
+If you're in a given directory, if you want to go backwards in the path to the parent folder, use the command:
+                "cd .."
+    The .. means to go up a level in the file path.
+    And if you want to go up multiple levels you can add more ".." separated by / for each level:
+                "cd ../.."
+        This goes up 2 folder levels.
+Now naturally typing out entire file-paths can become quite the chore, so if you're going deep into a directory there's a shortcut you can use if you have the Finder/Explorer open.
+    The shortcut is to drag the file/folder icon from the explorer/finder into the terminal and the path to that folder/file gets auto-populated into the terminal.
+        So you could type "cd " and then drag the folder directory you want to go into to get the full path and you'd be able to then immediately navigate to that directory.
+This is useful because you can't navigate to a different directory that's outside of the one you're currently in.
+    Anything directory name you type in will be searched for within the directory that you're currently inside of.
+    So if you wanted to go backwards in the directory, you'd have to specify the entire file path to go backwards, and can only specify the file name if you're going forwards.
+Now if you wanted to edit from the middle of a command (say you misspelled something in the middle of the command)
+    The terminal doesn't allow you to click and move your cursor to the spot you want to correct or change.
+    Now you can naturally use the left arrow to move left and right arrow to move right character by character.
+        But that takes forever.
+    A trick for this is to hold the Option (mac) or Alt (windows) button and that turns your cursor into a plus symbol and you can click somewhere in the command and your cursor will be moved to that point.
+Now if you're aiming to never have to touch the mouse, that is possible.
+    For example, holding CTRL + A takes you to the beginning of your command line.
+        And holding CTRL + E takes you to the end of your command line.
+If you wanted to clear a command currently typed out without executing it, you'd press:
+                "CTRL + U"
+    This clears the entire line and allows you to start over in typing it out.
+
+
+## 188. Creating, Opening, and Removing Files through the Command Line:
+
+
