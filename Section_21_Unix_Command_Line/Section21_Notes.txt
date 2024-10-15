@@ -115,3 +115,44 @@ If you wanted to clear a command currently typed out without executing it, you'd
 ## 188. Creating, Opening, and Removing Files through the Command Line:
 
 
+If we want to create a new folder in our directory using the command line, we'd run the command"
+                "mkdir <directory name>"
+    mkdir stands for MaKe DIRectory.
+    And naturally it is followed by a name for that folder.
+If we navigate into the folder, and run ls, we'll see, like any new folder, that it's completely empty.
+Now if we wanted to create a new file inside this directory, then we'd run the command:
+                "touch <filename>.<extension>"
+    And this creates a new file with the given extension inside of the working directory.
+If we wanted to open the file from the command line we'd run:
+                "open <filename>.<extension>" (This command is for mac users)
+                "start <filename>.<extension>" (This command is for windows users.)
+    And this will open the file using the default application for the file type.
+You can specify what application you want to use to open the file as well.
+    To do this, we'd instead run:
+                "open -a <application executable path> <filename>.<extension>" (For mac users)
+                "code <filename>.<extension>" (For windows users)
+    Note the code command is unique to opening the file in VS Code and for the mac version you'd provide the file directory to the VS Code executable.
+Now if we wanted to delete files in the command line, we'd run the command:
+                "rm <filename>.<extension>"
+    rm stands for ReMove file.
+    And that deletes the file you specified.
+If we wanted to remove ALL the files inside a working directory, we'd run the command:
+                "rm *"
+    Note you need to be INSIDE the directory you want to remove all the files from.
+        To check this, you can use the following command:
+                "pwd"
+            Which stands for "Print Working Directory"
+            And it returns the path of the directory that you're working in.
+    The * is a wildcard that matches to everything in the working directory.
+Note that in using the CLI, the GUI isn't there to protect you anymore.
+    So for example, if you were not inside the directory you wanted to delete from, say you were inside the root directory, you'd delete your everything.
+    Which is a bad time.
+        So it's a good idea to DOUBLE and TRIPLE check before doing a destructive command of any kind.
+To remove folders or directories, there a different command, which is:
+                "rm -r <directory name>
+    The flat rm command doesn't work on it's own, which is why we have to add the "-r" flag to allow it to remove a directory.
+    Note that this deletes the directory, along with all files and folders that were within that folder.
+To expand further on the Command Line, check out this course: https://www.learnenough.com/command-line
+
+
+## End of Section 21
