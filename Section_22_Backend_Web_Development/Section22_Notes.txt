@@ -69,3 +69,29 @@ It's summed in:
 ## 191. Backend Tool and Technologies - Which one to Learn?
 
 
+Note that the Frontend is referred to as "Client-side" and Backend is referred to as "Server-side"
+    And by extension, Server refers to backend and Client the fronent.
+    The Database layer remains the Database.
+So looking at the technologies used for these varies aspects of web development:
+    The programming languages used on the Frontend are pretty fixed.
+        It pretty much has to be HTML, CSS and JavaScript.
+        This is because these are the only things that the browser can work with.
+        Even though we've seen and worked with the some frameworks on the frontend, some common ones of which are React, Angular and Vue.
+            These are just JavaScript frameworks that allows client interction.
+    As for the Backend, we can use pretty much any programming language.
+        Some of the most popular ones include:
+            Java, Ruby, PHP, C#, Python and JavaScript
+        The reason why the backend language doesn't really matter is because as long as you're able to use something to generate the HTML, CSS and JS files to send back to the Frontend.
+            Then it doesn't really matter what language you use to do that.
+        Some of the most common Backend frameworks that you might come across are:
+            Ruby on Rails, Java Spring framework, C$ ASP.Net, Laravel with PHP, Flask and Django for Python and lastly, Node.js with JavaScript.
+Node.js is the framework we'll be learning and using for the backend.
+    The main reason is because it is a JavaScript backend framework.
+        Having invested so much time learning JavaScript as is already on the Frontend with React and Vanilla JavaScript.
+        Now we want to be able to reuse that knowledge of JavaScript to work with it on the backend using Node.js
+    But that's not the only reason, Node.js is also the number one used Framework by Professional Developers in the industry.
+        This most there will also be the most documentation, the most resources, the most help online in turn for this framework since it's the most popular.
+        Naturally, as the most popular framework, majority of jobs will have a requirement for knowledge of this framework as well.
+
+
+## End of Section 23.
