@@ -4,3 +4,68 @@
 ## 190. Backend Web Development Explained:
 
 
+Backend Web Development is all the code that handles the behind the scenes functionality.
+Now it's becoming popular for companies to look for what is known as a "Full-Stack Web Developer"
+    Full-Stack is the combination of:
+        Knowing how to work with the Frontend, which is the client-facing side.
+        As well as the Backend, which is the side invisible to the user, but contains all the logic that makes a web application work.
+The user never interacts with, touches or sees the backend.
+The Backend consists of 3 main components:
+    The Server
+        Basically a computer
+        A server for a live website should be on 24/7 so that it can listen for incoming requests for browsers all over the world.
+        Traditionally, servers are made and optimized for this particular purpose, but at the end of the day, any computer connected to the network can act as a server.
+        When we build websites locally, we use what is called "localhost"
+            Which is using our own computer as the server in order to serve the websites we create.
+            This isn't premanently up, but regardless we only need it active while we're testing it.
+    The Application
+        All the logic that enables to web app to function.
+        This logic runs on the computer/server.
+        It determines how to respond to a request from the browser.
+        Depending on the request.
+            The application knows what to return based on a given request.
+                For example a given HTML page.
+        Sometimes the application responds with things other than HTML.
+            It could send data or a status code (such as a 404: Not Found)
+                Note: 404 means the request isn't valid or the application doesn't know what to do with the request.
+    The Database
+        Where you can store a retrieve user data.
+        This is not a requirement of web applications.
+            But usually, as the web application gets larger, it's going to need to start to store user data and that is what databases are for.
+        Storing data onto a hard drive is like saving a word document.
+            If the power had to suddenly go it, you wouldn't lose the data.
+        And this is the importance of a database in regards to storing data.
+            It provides us a way to persist information incase the server goes does, so that all our data isn't lost.
+        You can view the database as a form of permanent storage for your web application.
+Now we've been mentioned web applications.
+    So far, the websites we've been building that only have a front-end are essentially web pages, they're bits of HTML that gets requested from the browser to the server.
+        The server then returns that HTML to be rendered on the browser.
+        This would include the HTML, CSS and JS
+    This is why we've been able to also use GitHub pages to serve these static web pages, because all we needed to do was store these files somewhere and when the user requests it by going to a given URL.
+        Then the server, which was GitHub pages, then returns these files back to the browser and gets rendered for the user to see.
+But when we're talking about a Web Application (Web App) then in this case it should be able to do something beyond just allowing users to view web pages.
+    Looking at a really simple web app functionality: Allowing users to log in.
+        Let's say the user goes to our website, the web app, and enters their email and their password to try and log in.
+        These 2 pieces of information are passed to our server in a Request.
+        Because the server is on and listening for requests, it's able to find the application that knows how to handle the login.
+            Such as a login.js file
+        And in this file, there will be some logic that knows how to log a user in and that logic is usually pretty simple.
+            We look in the database for a particular email, get hold of the password for that email, compare it to the email the user entered in the frontend.
+            If the data matches, we can send back, via the server, a response in the form of the home page.
+        But if the passwords didn't match, then the response would send them back to the login page with an error code asking them to try again.
+    Looking at this entire flow for just loggin in, it's vastly more complex than just the frontend.
+The reason it's more complex is because we now have a web app with logic and a front and back end.
+    And the above login process is, on a high level, how the entire web page process works.
+It's summed in: 
+    The user interacts with the Frontend to perform an action.
+    The Frontend sends that action as a request to the backend.
+    The Backend receives the requests and evaluates it.
+    If the Backend sees data is needed, it fetches the data from the Database.
+    The Backend then handles the data and formulates a response.
+    The Backend sends that response back to the Frontend.
+    And the Frontend changes in accordance with the response it receives.
+
+
+## 191. Backend Tool and Technologies - Which one to Learn?
+
+
