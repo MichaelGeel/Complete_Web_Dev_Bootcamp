@@ -67,3 +67,42 @@ This lesson provides a guide on how to install Node.js on a Windows pc.
 ## 195. Using Node.js:
 
 
+With Node successfully installed, let's look at how we can use it to start creating applications.
+We can check the version of Node that we're running by typing "node -v" into our terminal.
+    Note that we're working with a more recent version of Node here.
+Now we need to learn to use the Node REPL.
+    Which stands for: "Node Read Eval Print Loop"
+    This is not unique to Node.
+    The REPL "is a computer environment where user inputs are read and evaluated, and then the results are returned to the user."
+        These users inputs we put in are in the form of code, and what we write is read by the computer and evaluated line by line, and then it prints out the result back to us in the command line or in the console.
+To initiate the Node REPL, all we have to do is type the command "node".
+    Running this command in the terminal, we'll get a "Welcome to Node" greeting, and the symbol before the cursor will change to a ">"
+    This symbol tells you that you've successfully entered the node repl.
+In the Node REPL, what we're going to do is type commands such as .help
+    This gives you some of the other commands that you can use.
+    The most important one, because often the hardest thing with REPLs is how to exit them, is the ".exit" command to exit the REPL.
+Running ".exit", we'll symbol changes back from the ">" again to whatever other symbol was previously in the terminal.
+    Alternatively, you can press "CTRL + C" twice to exit the REPL as well.
+CTRL + C is usually the way to get out of anything in the command line.
+Now inside the REPL, let's try to do a Read Eval Print Loop.
+We'll write a simply "5 + 8" and run it.
+    It Read the code, Evaluated the Code, Printed the output, and Looped back to a new line for the next command.
+Remember that Node is a JavaScript runtime, so you can write anything that is JavaScript.
+    For example: "let a = 3" then "a + 12"
+Let's look at how we can write a JavaScript file and use Node to run the entire file.
+    Because as useful as a REPL is in the command line, what we actually need to do is to write full code files and to use node as the runtime environment.
+So we'll create the file, enter a basic line of code that prints to the terminal and save it.
+    Next we want to first navigate to the folder that our file is in, in the terminal.
+        Note in VS code we can drag a folder into the terminal to generate the absolute file path for that folder in the terminal.
+    Now that we're in the file's directory, we'll type in the "node" command.
+        But this time, we'll also type in the name of the file.
+        So the command will look like this:
+                    "node index.js"
+Something a lot of developers do when they are trying to access different files etc is use the tab key to autofill the rest of the file name in the terminal.
+    This saves time and also confirms you're in the right directory when trying to run the file.
+    Now when we run the above command, we'll see that Node found the file and used the Node runtime to run the code inside index.js.
+
+
+## 196. How to Use the Native Node Modules:
+
+
