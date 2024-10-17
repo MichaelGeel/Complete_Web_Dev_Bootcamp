@@ -55,3 +55,9 @@ Node.js also allows for easy Scaling of applications, making it really good for 
 ## 193. Install Node.js on Mac:
 
 
+This lesson provides a guide on how to install Node.js on a Mac computer.
+
+
+## 194. Install Node.js on Windows:
+
+
