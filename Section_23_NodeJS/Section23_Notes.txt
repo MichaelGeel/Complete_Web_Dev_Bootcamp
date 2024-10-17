@@ -4,3 +4,54 @@
 ## 192. What is Node.js?
 
 
+So we know from the previous section that we can use lots of different languages to write the backend of our web application.
+    And similarly, depending on the language we select, we can find a compatible framework to go along with it.
+But why do we need and use Frameworks, why can't you just write all the code from scratch using the chosen programming language and create your web server that way.
+    It's true, you could write all of your own code from the backend instead of using a framework.
+    BUT, because it's such a commonly used functionality, you might as well use the framework.
+In that way, a Web-framework provides pre-built components and structures that can be used to build an application without the need for us to write every single line of code from scratch.
+But looking at Node.js, it's actually not exactly a framework.
+    It's " An asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications."
+        This quote according to Node.js itself/themselves.
+Breaking down the above quote:
+    It's a JavaScript runtime:
+        But what is a runtime environment?
+            It's important to remember here that when JavaScript was first created, it was designed to run in the browser.
+            Meaning it was impossible to use JavaScript to write any kind of program that's not a website,
+            But Node uses the V8 engine, which comes from Chromium, is written in C and C++.
+                It's incredibly fast and powers the Chrome browser.
+            We know that we can write JavaScript code to run in the browser and to provide functionality our websites,
+                but in many ways, the JS code that we have is locked in the browser.
+            But when Node came along, it free the language out of the browser-lock and allowed us to use it to write any sort of application, desktop or server side.
+                Whether it's desktop or server-side.
+            And this is in the form of the JavaScript runtime environment.
+        Now that Node provides us with this JavaScript runtime so that we can run JavaScript on a machine such the local computer.
+            It means we can use JavaScript to accomplish anything that other server-side languages like Ruby, PHP, Python etc can do.
+            But also maintaining our full JavaScript stack from frontend to backend.
+    It's Asynchronous and Event-driven:
+        Asynchronous means that your JavaScript code doesn't have to do everything sequentially.
+            Looking back to the scripts that we've written before, our code kind of runs from top to bottom.
+                We can have some functions, but essentially everthing is going to happen from beginning to end in a synchronous way.
+            Synchronousity effectively means that your computers resources are tied up until some sort of event resolves.
+                All the scripts we've previously written thus far have effectively been scynchronous.
+        Node is Asynchronous and Event-driven.
+            Meaning the resources that would normally be tied up waiting for an event, are instead now freed up to do something else until the event resolves.
+            Only then would it run the next blocks of code.
+        Effectively, we can parcel up these bits of code into an event so that we know that our code can be triggered when the event happens.
+In summary, the reason why we need Node is becuase it allows us to build an application on a computer using JavaScript.
+    As we saw earlier, the application is a key aspect of our backend.
+This application will be running on our server, and that server, is just a computer, not a browser, and Node.js is what allows this to happen.
+Using Node.js also means that both our frontend and backend will comprised of JavaScript (save for the HTML and CSS).
+    Meaning we're using JavaScript everywhere inside our web application across the entire stack.
+It also means we only need to be familiar with one language and then code can be shared between the client and server side.
+Node.js also allows for easy Scaling of applications, making it really good for large-scale professional projects.
+    It's fast and non-blocking.
+        Because of the asynchronous and event-driven nature of Node, it can be really fast and efficient instead of having to wait for things to happen or blocking the resources.
+    It's got a huge ecosystem.
+        It's got a really vibrant community and people have contributed thousands of open-source modules and packages to the Node Package Manager, which allows us to easily add functionality to our own applications.
+        But it also means there's a lot of resources out there in terms of documentation, tutorials, help, people on StackOverflow to answer questions etc.
+
+
+## 193. Install Node.js on Mac:
+
+
