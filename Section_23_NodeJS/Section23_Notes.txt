@@ -106,3 +106,55 @@ Something a lot of developers do when they are trying to access different files 
 ## 196. How to Use the Native Node Modules:
 
 
+In this lesson, we're going to look at how to use Native Node Modules that will allow us to leverage existing code that's been built into Node that makes it way more powerful than just what you can do with JavaScript.
+The Native Node Modules are like a starting tool set.
+    We've mentioned that Node has a whole bunch of features built into ti just so that it was able just so that it was able to make it easier for you to create applications, especially on the server side.
+        And the code that was written in order to amke this easier inludes things such as a File Access.
+            So reading and writing into the local filesystem.
+            That could be local on your computer or in the case of your web application, it will be onto server computer.
+        It also has things such as Networking in order to reach across the internet and carry out certain bits of functionality that's important for the backend of a web app.
+    Essentially, you can think of these native modules as kind of like that games that come pre-bundled with your operating system.
+In the course resources, is a link to the Node.js documentation: https://nodejs.org/docs/latest-v18.x/api/index.html
+    This linked page documents all of the native modules.
+    We'll be using some of these modules in the future, but otherwise would have to explore this in your own time.
+The one we'll be looking at now is one of the most important and basic features of Node, and it's the File System.
+    With native JavaScript run in a browser, you can't access a user's files on their computer, it would be chaos.
+    But in the case of Node.js, because it liberates JavaScript out of the browser, we're able to use it to access, to read and write to files on the server, or in this case, to our local computer.
+Looking at the File System, it's a native Node moduel that allows us to access the local storage.
+    And in order to start using it, we need to either import the code from the file system module, or we can "require" the bits of code that we need from this module.
+For now, we'll use the CJS (CommonJS) pattern in order to get hold of the methods that we need from this File System module.
+    There's also the ESM pattern, but that will be looked at in a lesson that's to come.
+We'll need to download the starting files for this module, and it will be saved into the associated lesson files folder.
+Now the index.js file is a blank JavaScript file, but it's in here that we're going to get ahold of the File System module.
+    So in this file we'll create a constant called "fs" and set it to the function require().
+    This function will take the module we need as a string parameter.
+                        const fs = require("fs")
+        Each module has a predefined name for the string that will come up in the autocomplete.
+        We're looking for 'fs', short for File System.
+Now that we've gotten hold of this module, we're going to use one of the methods in that module.
+    We're looking for fs.writeFile(), because this lets up take a message from the user/website and write it into a file to be saved onto the computer.
+    This method takes a number of parameters.
+        The file that we want to create.
+        The data that we want to put in that file.
+        The callback to handle any errors or any issues.
+In our file, we can type:
+                        fs.writeFile("message.txt", "Hello from Node.js", (err) => {
+                            if (err) throw err;
+                            console.log("The file has been saved!");
+                        });
+Note that with this method, if we don't provide any pathing and just the filename, it'll be saved into the same parent folder as the JavaScript file the code is being run from.
+For the callback, we could just copy what's in the documentation for the method example.
+    Remember the callback is simply the callback function here.
+Now if we hit save and cd over into the folder and run the index.js file in Node, we should get a message in the console that the file has been saved.
+    And then in the same directory, we'll see the file has been created and has the text data saved inside of it as well.
+Lesson Challenge:
+    Instead of just writing from a file, you can also read from a file.
+    So we'll need to use the readFile method to read the content of the message.txt file and print it to the console.
+    Simply, same structure as the writeFile method, but this time the callback has 2 parameters, error and the data read from the file.
+        Need to also provide the file's encoding so that the data can be correctly read.
+    It seems the scope of variables didn't work as couldn't extract the data out of the block using a pre-defined variable.
+
+
+## 197. The NPM Package Manager and Installing External Node Modules:
+
+
