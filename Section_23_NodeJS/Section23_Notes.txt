@@ -158,3 +158,108 @@ Lesson Challenge:
 ## 197. The NPM Package Manager and Installing External Node Modules:
 
 
+We'll now be looking at the Node Package Manager (aka NPM) in order to get access to the world of open source node packages.
+The Node Package Manager is basically a place that collects modules that people have built for Node and it's created by the GitHub organization.
+    It's a great place to find code that other people have written with utilities and tools to help you with writing your Node applications.
+If we think of the Native Node modules as the toolbox at home, then NPM is the place to find all the exotic tools you didn't realize you need until you do.
+NPM is like a community tool library.
+    It's open source and you can search to find all the packages that other developers have created.
+    Tools they've written the code for that they think might be useful in the future, so that you don't have to duplicate the work and write everything from scratch.
+NPM comes pre-bundled with Node, so if you have Node installed, you will also have NPM installed.
+Let's look at initializing our first project and see how we can configure our project.
+    Need to download the course resources for this lesson and they're loaded into the associated lesson folder.
+First, we're going to initialize NPM.
+    To do that, we first cd into the folder the file is in.
+    Then we run the command:
+                    "npm init"
+    Running this command brings up the initialization utility, which is going to help create our configuration file, called "package.json"
+    It'll ask a number of questions and we simply need to type the answers.
+        First it asks for a package name (in this lesson: learning-npm)
+        Then it asks us for the version, which we'll leave as 1.0.0
+        Next is asks for a description (this lesson: Learning about NPM)
+        Entry Point, we'll leave as index.js
+        Test command: leave empty
+        git repo: empty 
+        keywords: empty
+        author: Michael Geel
+        license: default
+    Once the questions are done, it'll show the generated json configuration file for the project.
+        It'll ask us if the json is okay, we type Y for yes.
+Now we'll see a new file has been created in our folder, called the package.json.
+    JSON is a way of representing our data.
+    JSON stands for "JavaScript Object Notation"
+    Can see it's very similar to the way JS objects are structured and it's just key/value pairs describing all of the info that we've entered just now.
+To install an NPM package, we run the following command in the terminal:
+                    "npm install <packageName>"
+    These packages can be found by going over to npmjs.com where you can search through all available packages.
+    You need to know what it is that you want to do when searching for packages.
+Looking at a package called "sillyname".
+    Just a random name generator.
+    This package will be used to learn important concepts like:
+        How to find a package
+        How to install the package
+        How to use the installed package.
+To install any of the npm packages, you'll find the command in the package page in npmjs.com
+    For the above package, it would be:
+                    "npm i sillyname"
+    Once the command is pasted in, you'll see it's actually a shorthand.
+        "npm i" is short for "npm install"
+    Becuase you'll be using this command very frequently when using Node, it makes it easier to use this shorthand.
+In this case, we're only installing a single package.
+    But if you wanted to install multiple packages, you could list them all out with a space between each one.
+Once the package is installed, we can check the package.json file and we'll see a new section has been added called "dependencies"
+    It's saying our project now depends on this npm package.
+    In addition, we've got a folder called "node_module" that's downloaded all of this code from the npm repositories for the package.
+    And if we look inside the folder containing the package code, at the index.js file for the package, we can see all of the code the package creator wrote so that we can use this functionality in our project without having to write all of this code.
+Going back to the package home page in npmjs, we can see some examples of how you can use the package.
+    The first thing you can do is require that package.
+                    let generateName = require("sillyname");
+    Then you can call the method that comes from the module.
+                    let sillyName = generateName();
+    Then we just console.log the sillyName to see what it generated.
+JavaScript has what's called "String Interpolation"
+    This allows us to insert variables directly into strings.
+    To achieve this, we use back-ticks (``) instead of quotation marks.
+    Then wherever we want to insert a variable, we encase the variable with: ${}
+    For example:    console.log(`My name is ${sillyName});
+There is a concept to look at now called ECMAScript Modules.
+    In the previous lesson, we looked at the native node modules.
+    When we looked at how to get ahold of the File system package, specifically the example code, we saw a toggle.
+    The toggle was between "CJS" and "ESM"
+        CJS stands for CommonJS, which was the method using require that we've used thus far to get ahold of Node modules, Native Node Modules or even NPM Modules.
+    However, since version 12 of Node, we've moved on from this and Node is now enabled to use ECMAScript modules.
+        So instead of using require, we can use the "import" keyword.
+        Note the ESM stands for "ECMAScript Modules"
+    This basically provides a standardized way of using JavaScript to be consistent on the front-end and the back-end.
+        It also improves things through tree shaking and a whole unch of crazy things behind the scenes.
+To be able to upgrade our project to be able to use ESM with Node, we need to go into the package.json.
+    Remember this file acts as a configuration file for our project.
+    What we can do is find a location, ideally right under the "main": "index.js" parameter.
+        Here we'll add in a string called "type" and the type of project we're going to use is going to module-based so that we can use our imports and use ESM instead of the default.
+        And the default is the CJS 
+    To make the change, add:
+                    "type": "module",
+Now we can convert the require line into the new import format:
+                    import <method/object to import> from <"package/module of origin">
+    So it's the import keyword, followed by the methods and objects we want to import.
+    Followed by the from keyword and then the package/module it comes from, in string format.
+    For example:
+                    import generateName from "sillyname";
+A trick to the import line is to leave out the method or object, write the rest as:
+                    "import  from "sillyname"
+    Because by doing this, when you go back to write the name of what you want to import, you get autocomplete support from VS Code.
+    If you write it normally, you don't get autocomplete because vs code won't actually know what you're looking for.
+Lesson challenge:
+    Find an npm package called "superheroes"
+    This package lets us generate a random superhero name.
+    The challenge is to install the package into the same project and file.
+    Then console.log the superhero name generated with the package.
+Note: when importing things from a package/module be sure to encase the imports in {}:
+                    import {} from "superheroes";
+    If this isn't done, then the function isn't recognized when running the code.    
+Note, the code package has changed since the creation and update of the course, so the solution differs to what is shown in the course.
+
+
+## 198. [Project] QR Code Generator:
+
+
