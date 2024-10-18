@@ -263,3 +263,29 @@ Note, the code package has changed since the creation and update of the course, 
 ## 198. [Project] QR Code Generator:
 
 
+This lesson is going to be all about building a QR Code generator.
+The files for this lesson will be located in the associated lesson folder.
+We'll be using Node.js packages to generate QR codes form any URL that we can come up with.
+To create this project, we'll be using 2 packages from npm.
+    One is called "Inquirer"
+        This will allow us to get inputs from the user.
+    Two is called "qr-image"
+        It'll generate images as a png for us to save into our local file-system.
+Inside the index.js starting file are the steps to complete this project.
+The goal of the project is to receive a URL as input, and generate a QR Code for that url.
+    The URL will be saved to a text file and the QR Code as an image in the same folder.
+Project successfully completed as required by the file instructions.
+Note that while we only installed 2 packages for this project ourself, the packages we installed have what are called "Cross-dependencies"
+    This means that in order for the package we installed to work, other packages had to be installed alongside it.
+These dependencies are very lightweight and small in file size (despite being large in file quantity).
+Note that for a given project, if you've already begun working on it and forgotten to run your npm init, you can do it later on.
+    You can run "npm init -y" and it'll go ahead and say yes to every single question and create the package.json file.
+Note that the code for this lesson has differed greatly as the inquirer package has deprecated and updated to a different package that changes the functionality.
+When you want to import multiple things from a package, you can list them, seperated by a comma in the {} in the import statement.
+When importing packages using npm and node, we cannot mix ESM and CJS import styles, we can only use one or the other (depending on what's defined in the package.json config file)
+When importing, we can import entire packages using the package name as the import:
+                import fs from "node:fs";
+    Though this means we'll have to tried the import as an object with all it's functions as methods to be able to call them.
+
+
+## End of Section 23.
