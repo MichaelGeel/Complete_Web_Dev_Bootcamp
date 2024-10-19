@@ -4,3 +4,32 @@
 ## 200. What is Express?
 
 
+The Express framework is built ontop of Node and is going to help create our backends.
+    Looking at all frameworks in existence, Express ranks #4.
+Now while the backend framework that JavaScript uses is considered to be Node, it's not actually a framework.
+    Instead, Node is a runtime environment.
+    And runtime environments simply enable us to use JavaScript on the computer and not exclusively within the browser.
+But Express, is a JavaScript framework that allows us to create backends for our websites.
+    Node and Express combined is how most professional developers create their backends.
+We need Express because Node is too powerful and all encompassing.
+    You can use Node to do a lot of things because all it does is allow us to run JavaScript on any computer, meaning it can be used to do many things.
+    You can use Node for your backend, but you can also use it for coding IoT devices and desktop apps (such as VS Code).
+When we have a tool or language that allows us to do many things, it's generally not very specialized for doing one thing.
+    And right now, the only thing we want to do is create a website backend.
+That's where Express comes in.
+    It allows us to use JavaScript and Node to create our website backend, but it is much better and makes it much quicker and easier.
+Looking at an example:
+    Using Node to create very simply website, takes about 21 lines of code with just Node.
+        The code is complicated, busy and hard to understand.
+    Now achieving the exact same end result using Express and Node, we now only need 14 lines of code.
+        Not to mention the code is much sparser, leaner and easier to understand.
+For backend purposes, using just Node to create a website is borderline pointless.
+    In almost all the cases, when we're creating a backend using node, we're going to be using Express becuase of all the advantages we get:
+        Readability
+        Less code to write
+        Add middleware (explained later)
+
+
+## 201. Creating Our First Server with Express:
+
+
