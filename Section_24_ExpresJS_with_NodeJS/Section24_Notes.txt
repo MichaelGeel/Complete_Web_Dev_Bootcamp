@@ -33,3 +33,98 @@ For backend purposes, using just Node to create a website is borderline pointles
 ## 201. Creating Our First Server with Express:
 
 
+Remember the backend of a website is simply a big, powerful computer that's on 24/7 and it's always listening for any requests, looking for a particular resource.
+    Resources such as the HTML, CSS, JS etc.
+The backend also consists of an application writting in some sort of code, running on the server computer.
+    This could just be an index.js file that is on this server computer.
+The backend usually also has a database, but this is usually in the case where you have a more complex backend, a more complexd website where you have user or company data etc.
+A very simply backend can just be an application running on a server computer.
+When a client, which in most cases will just be a user trying to access your website, will go via the internet to reach your server and make a request for the website they want to look at.
+    Then the request goes through the internet to the servers somewhere in the world, and on this server, there's an application that's running and listening for this particular request.
+    Once it finds what the request is looking for, it'll send back the response to the request to the client.
+In most cases, you'll hear people refer to the Client-Side as the Front-End facing side.
+    The side users are going to access and interact with.
+And the Server-Side, refers to the Back-End.
+    Sometimes, people will refer to the computer, application and database collectively as the server.
+We're going to try and build our server using Express.js.
+    That means we're going to be creating an application in JavaScript using Express and Node.
+    Express will use Node so we don't have to interact with the code inside Node.
+We'll be using our local computer as our server.
+    And the "server" will only be up and running when we want to test and make requests to the server side to retrieve website data.
+There are 6 steps to creating an Express server:
+    Create a directory.
+        A folder that will house all our project files.
+    Create the index.js file.
+    Initialize NPM
+    Install the Express package.
+    Write Server application in index.js
+    Start server.
+Looking through these steps one at a time:
+    Directory folder for this lesson will be in the associate lesson folder.
+        We'll then navigate to that directory in the command line.
+    Next we'll create our index.js file in the directory.
+    Now we need to initialize NPM.
+        Ensure you're in the correct directory when running this command.
+        It's important to have the "main" key here be set to index.js and that your js file matches that name.
+    On to installing Express.js 
+        It's a good idea to go to the express.js website to have a look at their documentation for the package there.
+        This can be done with the command "npm i express"
+        Once it's done, will see the node_module folder along with a number of dependency packages installed.
+        And inside package.json, express will show up as a dependency.
+            While checking this, we'll also upgrade our project ot change the type of project to module.
+            This will enable it to use the ES6 latest syntax.
+    Now we can open our index.js file and write our server application.
+        The starting code for creating our first server is:
+                        "import {express} from "express";
+                        const app = express();
+
+                        app.listen(3000, () => {
+                        console.log("Server running on port 3000.");
+                        });
+                        "
+        So we're importing express from the express module.
+        Then we're creating an app using the express object we imported.
+        Once the app is created, it has a method called "listen" which takes 2 parameters:
+            Fist, the port, which is the location on our server where we're going to be listening for requests from the client.
+            Second, the Callback Function that will be triggered when our server is set up.
+                As soon as our app is listening on port 3000 and everything is done, it's going to trigger this callback function.
+        In the above code, we can hard code the port number (3000) into app.listen.
+            But another format, which is better practice is to create a constant the we assign the port number to, and instead reference that constant in the app.list()
+        All this code is doing right now, is setting up a server using express, and that server is going to listen on our port, which is 3000
+            Once the server is set up, we'll notify ourselves in the console that it is running.
+        The only remaining step is to go ahead and start the server.
+            Which we can do with the node index.js command.
+            Even though we don't see any node in the code, we are creating a node server, and that's because Express is doing all the heavy-lifting and simplifying things for us.
+When we run the index.js file, we'll see in our terminal a message saying "Server running on port 3000"
+Now to reach our server, in our browser, we can enter the URL:
+                        "localhost:3000"
+    And this is the location of our server.
+When the page loads up, we can see we got a response back from the server.
+Now let's understand what localhost is.
+    It's simply when we don't have a server on the internet, and instead want to host the server locally.
+    Making our own computer the server of our website's backend, which is where the local part of "localhost" comes from.
+    In the full url:    "https://localhost:3000", the 3000 is the port we're trying to reach our computer on, and
+        https://localhost is the computer itself.
+The port is equivalent to a door on the server computer.
+    There are thousands of doors you can create to access your computer.
+    In the case of our server that we've set up, we specified that the door/port we want to be listening on is 3000.
+    Once we've set up our server to be listening on that particular door, then when we try to access localhost:3000, then it's going to look on our computer to find that port.
+        Through that door, it can reach into our computer and find the application listening for a request.
+The reason why there are many ports on the computer, is because it has to be able to listen for different incoming requests.
+    Becuase each port is identified by a unique number, then different services or applications can tap into a partiuclar port.
+    This way we can have multiple services running through the same computer without them interfering with each other.
+We can check which ports on our computer are listening for interactions from the outside.
+    On windows, we type the command: netstat -ano | findstr "LISTENING"
+    On Mac/Linux: sudo lsof -i -P -n | grep LISTEN
+Going back to VS Code, looking at the terminal, we can see it doesn't have the usual prompt, just an empty line with the cursor in it.
+    This is becuase the server is currently running and occupying the terminal.
+    If we want to stop the server and exit the process then we can press CTRL + C.
+If you don't want to exit the server but need access to the terminal, then you can simply create a second terminal instance to use.
+    So if we leave the server running and then run the above command to search for all listening ports, we can see our port 3000 open and listening.
+Though currently, if we load the server in our browser, we'll see we're getting an error of "Cannot GET /"
+    This means it can't get our index page/home page.
+
+
+## 202. HTTP Requests:
+
+
