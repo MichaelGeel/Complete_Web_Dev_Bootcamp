@@ -128,3 +128,94 @@ Though currently, if we load the server in our browser, we'll see we're getting 
 ## 202. HTTP Requests:
 
 
+HTTP stands for HyperText Transfer Protocol
+    Transfer Protocol describes this is a language that allows computers to talk to eachother across the internet.
+When computers want to talk to talk to eachother, they need HTTP to understand each other.
+Looking at some basic vocabularity in HTTP so that we what's going in.
+When we make these HTTP requests, there are 5 main words that we'll come across:
+    GET, POST, PUT, PATCH, DELETE
+GET:
+    This is when you want to request a resource from the server.
+    It could be an HTML website, some text or data.
+    You are "getting" something from the server.
+POST:
+    You are sending a resource to the server.
+    This could be information, such as a form.
+    On the server, you can take the information and process it or save it etc.
+PUT/PATCH:
+    These are somewhat related.
+    They're both update methods.
+    But they differ slightly.
+        Put is for replacing a resource with whatever it is you're sending over.
+            You want to update by replacing completely.
+        Patch is to patch-up a resource.
+            You want to update only parts of the resource.
+DELETE:
+    Straightforward.
+    Deletes a resource from the server/database, in the request format.
+These 5 terms should be enough to be able to navigate the world of HTTP requests for now.
+If we begin with the same server using express and node as in the previous lesson.
+    But when we run this code and try to load up the website at that location.
+    We get an error saying "Cannot GET"
+It's telling us that the we, the client, are trying to get a resource that does not exist on the server.
+To fix this we need to add the following code to say what should happen when a user is trying to get at the home page:
+                    "
+                    app.get("/", (req, res) => {
+                        res.send("Hello, World!");
+                    });
+                    "
+    The forward slash in the app.get goes at the end of the localhost:  localhost:3000/, which is the home page.
+        The forward slash can be omitted in the case of the home page and it'll still send the request to the home page.
+    In this case, we've added the Express method .get() so now our server knows know to do when the get request comes in.
+    And then we provide the callback function that runs when the server receives the get request and how the server responds to that request.
+Now if we want and reloaded the localhost:3000, we won't see the error anymore, and instead we'll see the "Hello World" text.
+Note the plain "/" is the path/endpoint we're calling when we load the page up and it's known as the root path.
+Then in the anonymous function, we can tap into the request and response in the anonymous function for the endpoint.
+    By convention, they're written as req and res.
+In this endpoint, let's console.log the req parameter to see what the req looks like.
+Whenever we make a change to our file in the index.js, we have to stop and start the server again for the changes to reflect.
+A common mistake that happens is when you have a server open in the terminal, then in another terminal, you open another project and attempt to run it.
+    You'll get an error stating that the address is already in use.
+        It'll also tell you what port is the one that's already in use.
+    You can solve this in 2 ways.
+        You can exit the first server and then run the second one again.
+    OR, you can kill that port using a terminal command: kill PID
+        Where PID is Port ID.
+Looking at the printed out request, it's a massive amount of information.
+    So we can narrow the information down by instead just print the req.rawHeaders.
+    These are basically a list of key:value pairs that come from where the req originated.
+Running again, we now can see all the raw headers.
+    It tells us where the website is being accessed from, the domain the website is being accessed at, what system you're running etc.
+    And that's effectively what the request is.
+More importantly, we want to be able to send back a response.
+    Which we can do using "res.send()"
+    And as a parameter we pass the content we want to send back as the respond to the request.
+So when we request the home page at that particular path and hit enter to load it, the browser sends the request to the server.
+    Because the server is running and listening and knows how to handle the request, it sends the response back which we then see in the browser.
+But thus far, having to stop and restart the server every time we make a change is a pain.
+    There's a tool called "Nodemon"
+    What it does is automatically restarts the Node application whenever it detects filechanges.
+    Meaning you don't have to manually stop and restart the server whenever you make a change.
+To use it is as simple as replacing the "node" keyword with "nodemon" whenever we want to run the application.
+                        "nodemon index.js"
+    It'll then automatically do the monitoring magic behind the scenes.
+Now in our get request, instead of sending plain text in the response, we could also send fully formatted HTML:
+                        "res.send("<h1>Hello!</h1>");
+But before running and testing this out, we'll install nodemon:
+                        "npm i -g nodemon"
+    The -g flag means nodemon is going to be globally installed onto our computer becuase we don't want it to work for just this one project.
+    This flag installs it for use on any project.
+Now any time we save changes to the files, Nodemon will pick it up and auto restart the server to reflect the changes.
+Thus far, we've been only handling the endpoint that is just the "/".
+Looking at endpoints:
+    The endpoint in HTTP is /<destination>.
+    We've seen we can get ahold of the root by targeting the "/" enpoint.
+    If we wanted to add other endpoints to our code so that we can handle more situations, then we simply just need to add another route to our app.
+    For example:        "/about"
+    And this would call a different endpoint route that is defined in our code.
+        And the url with localhost would be: localhost:3000/about
+
+
+## 203. Postman:
+
+
