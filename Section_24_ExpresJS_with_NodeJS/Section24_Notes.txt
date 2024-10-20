@@ -270,3 +270,36 @@ And the DELETE naturally deletes data, and POST submits data for saving.
 ## 204. Introduction to Middlewares:
 
 
+This lesson is going to cover Express Middleware, something we'll see a lot of in Node and Express-based applications.
+A middleware is something that sits between the raw requests that comes in to the server.
+    Before the request gets processed by the route handlers in the application on the server.
+    There's something between the client and the server, the Middleware, that can work with these requests before they getprocessed and reach their final destination.
+Middleware can:
+    Pre-process a request.
+        When we know that a request is going to go to multiple handlers, maybe processed by GET, POST or PUT requests.
+            The intermediate stage at the middlewar can go ahead and change aspects of the request, or perform functions on the request before it goes to its final routing.
+    Log Requests
+        Log information like how long it took the request to come through?
+            What type of request.
+            The status of the request being handled.
+    Authentication.
+        Before it gets released to the backend, we check if it came from an authorized client/user.
+    Process errors in the request.
+        Identify and handle the errors before they go to the routes.
+A commonly used Middleware in Node and Express back-end engineering is something called Body Parser.
+    It's a body-parsing middlewar.
+    It can look at request bodies before the handlers access them.
+    This gives our request a new property called the body property, which is commonly used to handle form data.
+When you create an HTML form, such as a log in form that takes a username and password.
+    When you press the login button, to get access to the data inputted by the user, you'd use something like Body Parser to parse the body of the request.
+In the lesson folder, some starting files were provided and the html file has an example of what a form looks like.
+    In the form tag, the "action" will usually refer to the route that you want to handle the request with on the server.
+    With the action, is a "method" attribute that described what type of request you're making.
+The rest of the form are labels and input elements.
+    Labels are for telling the user what to write/enter into the input element.
+    Input elements have a type attribute that identifies what kind of input it is.
+        And the other is a name attribute, which labels the data that gets entered into the input.
+        It's key of a key:value pair and the value is the content entered by the user.
+    There's a required attribute for inputs as well, which means the form cannot be submitted until that input has been filled in.
+There's a special submit type for inputs, which is a button that submits the form data to the backend when it is pressed.
+Continue at 6:15
