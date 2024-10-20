@@ -219,3 +219,54 @@ Looking at endpoints:
 ## 203. Postman:
 
 
+We already know that the purpose of HTTP is for client computers to communicate with our server-side.
+    As previously explain, the Client-Side could be anything a user uses to access the website.
+    The Server-side consists of everything from the computer running the server code, the application and the database.
+To communicate between client and server side, we make HTTP requests.
+    And then return an HTTP response back to the client.
+Our responses can be anything from text, to HTML, to coded responses.
+    For example: the 404 code.
+This 404 code is an HTTP Standard Status Response Code.
+    These response codes are normally grouped into five categories.
+    100 to 199 are usually informational.
+    200 to 299 are telling you something went successfully.
+    300 to 399 are normally redirects.
+    400 to 499 are normally client error responses.
+    500 to 599 are normally server error responses.
+    The MDN web docs give a good detailed breakdown of each of these codes.
+The most common one we're going to be sending and using is the 200 OK response.
+    This means everything went just fine.
+The meaning and interpretation of each code changes depending on the type of request made.
+    But some CODES are specific to certain kinds of requests as well.
+Previously, we learned about the HTTP request methods nad we learned about how to use the GET request to start fetching from our server, to handle multiple endpoints, to send back different response content.
+A POST request is usually made from some form of HTML form.
+    These forms includes things like a sign-up page.
+        Where you need to enter name, username, email address etc.
+    The form submit goes to the server via a POST request, and the form data is sent along with that request.
+    Hopefully the server will do something with that request, such as validating or saving to a database.
+    Then it ideally will send back a 200 or 201 response.
+If you don't want to create a front-end for the POST, PUT, PATH and DELETE, which we often don't have the time to do when creating APIs.
+In the cases where we don't have the time to create the frontend, there's a great tool that professionals love to use.
+    That tool is Postman.
+With Postman, you can target a specific URL or an endpoint and you can also specify the type of request you want to make.
+You can also add values to the body.
+    This is important for making POST requests as you'd need to provide the additional required data for the POST request to be successful.
+This enables us to test the endpoints without having a front-end up and running.
+In express, there's a method equivalent to each request method type for making those requests.
+    Then for our responses, we can use the res.sendStatus to send back a status code.
+But with the example code we're using, only the get request will actually show us anything.
+    This is why it's best to test inside of Postman
+    And because we're using Postman, we can even get away with only returning the status code.
+Remember, whenever you download node projects from the internet, they generally won't have their packages with them.
+    Because there's dependencies for dependencies for dependencies and it swells the file size really quickly.
+So what you can do, is instead use the command "npm install".
+    What this command does is look at the listed dependencies in the package.json file and download and install all the installations based on that list.
+Whenever we test an endpoint in Postman, we can view the status code of the response to see if the request was successful and we got a response from the server.
+Note, with the PUT request, you'd be updating ALL of the data, so you'd need to get everything for that user first and then send back all the values and completely replace that resource.
+But with PATCH, we only update the few things that we send to the server and the rest of the data stays as is and in tact.
+And the DELETE naturally deletes data, and POST submits data for saving.
+
+
+## 204. Introduction to Middlewares:
+
+
