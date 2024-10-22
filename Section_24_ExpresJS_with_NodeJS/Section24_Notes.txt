@@ -302,4 +302,39 @@ The rest of the form are labels and input elements.
         It's key of a key:value pair and the value is the content entered by the user.
     There's a required attribute for inputs as well, which means the form cannot be submitted until that input has been filled in.
 There's a special submit type for inputs, which is a button that submits the form data to the backend when it is pressed.
-Continue at 6:15
+What's important is knowing how to incorporate the form into the backend.
+This lesson's resources has a number of different files, but we'll first install the dependencies.
+In this folder, we also have a public folder for our static files, which contains an index.html
+    We're going to try and render the index.html as the thing that we're going to return from the server.
+Looking at index1.js:
+    We'd previously seen res.send, but in this case, we're actually using a different Express method: res.sendFile()
+    This method requires an exact filepath in order to know what to send back.
+    Now the file we want to send back in the index.html.
+        In order to get the full path of the HTMl file, we need to do a bit more than just the relative file path.
+        When your server is hosted on a cloud computer and not locally hosted, to figure out the directory name we need the following:
+                    "
+                    import { dirname } from "path";
+                    import { fileURLToPath } from "url";
+                    const __dirname = dirname(fileURLToPath(import.meta.url));
+                    "
+            We do some conversion and eventually end up with the path up to the current location of the file that the code is being run in.
+        This is great because it means we don't have to type out the exact path of the file we want to send in question.
+            It's also dynamic and means we don't need to make any changes between local development and cloud hosting.
+The goal now is to use Body Parser to "parse" the information that's coming in through the form on our website.
+    Currently, when we press submit on the form in the html document, it's going to make a POST request to the /submit route.
+    What we need to do is have a route handler that's able to handle requests to that particular path.
+    Then we're going to use the body-parser as a piece of middleware in order to parse the information from the HTML form.
+    Then we'll add that data to the request object so that we can actually console.log it under req.body.
+The app.use method gets called before any route handlers.
+    Which is where we add our middleware function (bodyParser)
+    In order to use the bodyParser, we need to tell it what kind of data we want to parse.
+    In this case, because we're dealing with an html form, we'll use the urlencoded method.
+        This method has 1 required attribute "extended" which determines what's being used behind the scenes to parse the incoming data (set to true/false)
+        Pretty much all the time it'll be true.
+This body parser now gives every single request object a body, which wouldn't be defined without it.
+In Postman, when making requests, there's a section under the URL called 'body' which is where we can simulate a form's data inputs.
+
+
+## 205. Custom Middlewares:
+
+
