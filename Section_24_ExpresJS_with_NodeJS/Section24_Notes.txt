@@ -338,3 +338,47 @@ In Postman, when making requests, there's a section under the URL called 'body' 
 ## 205. Custom Middlewares:
 
 
+This lesson is going to cover another type of middleware called Morgan and creating our own custom middlewar.
+We've mentioned there are various types of middleware:
+    Pre-processing
+    Authentication
+    Error handling
+    Logging
+Body-Parser belongs to the Pre-processing category
+Morgan, on the other hand, belongs to the Logging category, and is one of the most commonly used.
+It's used to log requests that come into your server.
+To use it, simply install, import and then use it.
+Morgan has a number of options to determine how detailed we want the logging to be.
+    Essentially, what happens when we use the Morgan middleware, is when we send a request to our server, the middleware function gives an output that has:
+        Request date and time,
+        Request type, 
+        Request URL target
+        Request status code
+        Where the request originated from, what browser etc.
+On sending a request with Morgon middleware implemented, we see every request that comes in to the server get logged now.
+    And even if we send a request to a non-existent handler, it will still be logged before the error is thrown since it's middleware that logs it before the error gets thrown by the server.
+Essentially, what happens in all these middlewares is that we use the app.use() method to specify a middlewareto use when a request comes in.
+    Inside there, we can pass in a function that has a req object, res object and a next method.
+Because there can be multiple middlewares, and because they sit in the middle between the server and the client, the next function determines when we should move on from the middleware and continue in the flow of the server handlers.
+And the middleware we put in the app.use method can be created from scratch.
+    It's useful to see this, to get a rough idea of what's going on behind the scenes.
+    For example, we could tap into the method of the req object to implement our own simple logging by simple saying:
+                    "console.log("Request method: " + req.method);"
+With the next function, it highlights the importance of the order in which we write our middleware.
+    For example, if we want our requests authenticated first, then we have to write that middleware first and then any others after.
+    Once all the middleware are done and run, then the next method tells it to go on to the actual event handlers themselves.
+Note that if we forget the next method, the request will hang infinitely, because it never moves past the middleware and gets stuck there.
+Lesson Challenge:
+    Inside index4.js, need to:
+        Serve the html website when the get request is made.
+        Get middleware up and running to parse information from the html form.
+        Then send back result of the combined word.
+When accessing particular items in the form, can extend req.body to req.body.<key> where key is the key in the html of the form information you want to access.
+While the band name could be created in the route itself, it could also be done in a custom middleware function that declares a variable, accesses the req body and creates the band name there.
+    The route can then reference that variable and return it to the user there.
+    But to be able to achieve this, the body needs to be parsed by body-parser first.
+
+
+## 206. Secrets Access Project:
+
+
