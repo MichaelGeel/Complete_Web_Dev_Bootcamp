@@ -382,3 +382,22 @@ While the band name could be created in the route itself, it could also be done 
 ## 206. Secrets Access Project:
 
 
+Project code is in the associated lesson folder.
+All HTML code is pre-built in the public folder.
+    Pay attention to form endpoints.
+User types in a password, and when they type in the correct password, we disply the secret.html page.
+Need to use the password "ILoveProgramming" for this project.
+If password right, loads secret.html, if not, then loads the index.html.
+Successfully completed the project.
+Will make solution walkthrough notes to the project here:
+    Note: the idea here was to authorize the user in the Middleware, not directly check the password in the route function.
+        Will be making this amendment now.
+        Need to remember that can do checks in the middleware instead of within the route itself.
+        Especially if you're doing authorizing work such as here.
+    While it hasn't been learnt yet, could have alternatively redirected the user back to the home page if they failed the auth using:
+                res.redirect("/");
+    body-parser has been integrated into express, so don't need to import body-parser, can instead use:
+        express.urlencoded({ extended: true });
+    
+
+## End of Section 24.
