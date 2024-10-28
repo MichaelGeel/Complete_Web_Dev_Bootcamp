@@ -4,3 +4,53 @@
 ## 208. What is EJS?
 
 
+EJS stands for Embedded JavaScript.
+Previously, we saw that if we have an HTML website where we have a form with an input, if we want to type something into that input, then it can be received in our index.js via the POST route and we can use body-parser to tap into what was entered into that input.
+    You type something into the form and hit Submit, it then hits up our POST route in our server and we receive that value via the request.body.
+    Now somehow, we want to be able to send this information to an HTML file and insert it in there.
+    Once we've inserted that into the HTML file, then we can render the entire file in our browser and it should display the updated information.
+This describes the entire process.
+    But the part where we send it into the html file is the unknown at the moment.
+    Specifically described: We need to be able to pass something from our server to be rendered in an HTML file.
+This is done using templating.
+    Inserting it into the HTML directly like previously done works in principle, but the moment your HTML file becomes even the slightest bit large, the file is going to become incredibly large.
+    It also does not follow the separation of concerns.
+To do this, we need to use what's called a "Templating Language"
+    There are many available: handlebars, pug, twig, Jinja, EJS.
+    Some of these are for different languages.
+The most commonly used templating language for JavaScript is EJS.
+EJS is essentially like having a little JavaScript module that can run JavaScript code inside an HTMl file.
+    The file ends with the .ejs file extension.
+    It's basically just HTML with bits of JS code enclosed inside special syntax.
+    For example:
+                    <% for(let i=9; i<items.length; i++) { %>
+                        <li>
+                            <%= items[i] %>
+                        </li>
+                    <% } %>
+        This is a for loop that loops over a bunch of items that generates a list item for each item in the list.
+This means that data can be sent from the server-side, to our ejs file and then rendered on the screen accordingly.
+Note that when it comes to implementation of this, we can't use res.sendFile in Express, because it is STRICTLY for static files.
+Instead, we use a different method called:
+                    res.render("index.ejs",
+                    { name: req.body["name"] }
+                    );
+    What this allows us to do, is specify the file we want to render on screen, and then add a JS object that allows us to pass over some properties.
+    The JS object is in the form of key/value pairs.
+Then in the EJS file, we can insert the properties in the JS object that was passed over by referencing it's key.
+    Note that we encase a property/variable in <%= %> when we want to reference and insert it.
+Before we can start trying out EJS, we need to install something called the EJS language support plugin into VS Code, which will allow VS Code to do syntax highlighting with EJS and also have correct auto-suggestion.
+We'll be building a basic website from scratch now that detects whether it's a weekday or weekend and displays an appropriate message alongside it.
+    Need the JS getDay() function, returns number from 0-6, 0 = Sunday, 6 = Saturday.
+Completed the project successfully using the Date object and the getDay() method along with a switch to detect the case of the date.
+    Then proceeded to load up and render the EJS template with the dynamic content provided to it.
+Note*** was supposed to start from scratch using npm init to build the entire project up from scratch instead of using the provided package.json file to download the packages.
+When using the command line, can stack commands next to eachother like this:
+                    "mkdir views; touch index.js views/index.ejs"
+An alternative to the switch case would be to simply only specify minority cases, and let the majority case be the default, insted of casing for each of the the 5 days that would be a weekday.
+    Similarly, could also just use an if statement to test for the weekend here as it's a single minority case.
+
+
+## 209. EJS Tags:
+
+
