@@ -54,3 +54,69 @@ An alternative to the switch case would be to simply only specify minority cases
 ## 209. EJS Tags:
 
 
+Let's dive depper into EJS syntax and see ho we can use the different EJS tags to achieve what we want using this templating tool.
+There are a number of EJS tags, and these are the ones we'll see more commonly:
+        <%= %>
+        <% %>
+        <%- %>
+        <%% %%>
+        <%# %>
+        <%- include("<FILE NAME>") %>
+The structure of an EJS tag no matter the type is pretty simple.
+    It always starts with an <% and generally always ends with a %>
+    The part that's different is usually in the opening tag, as seen above.
+Looking at these individually:
+    <%= %>
+        This says that whatever goes inbetween the open and closing parts of the EJS tag will be interpreted as JavaScript, but in addition, there will be an output that's going to be put into that HTML/EJS file.
+        For example, we can insert a variable that could be a name or something else.
+        Then when this EJS tag is rendered in the browser, we'll see the variable's value show on the website.
+    <% %>
+        This denotes executable JavaScript code.
+        You could write any sort of JavaScript code and it will be treated just like JavaScript code.
+        But this does not give an output, the code will be evaluated, but nothing will show up in the browser.
+    <%- %>
+        Whatever is passed in here, should be interpreted as HTML.
+        Meaning we can write/send HTML to the EJS that will be rendered and interpreted as HTML.
+    <%% %%>
+        This is an escape EJS tag.
+        We add the extra % sign either at the start or end tag and this allows us to actually show the EJS tags instead of them being considered code.
+    <%# %>
+        This is how to write EJS comments.
+        Everything in here won't be executed or rendered and will be considered a comment.
+    <%- include("<FILE NAME>") %>
+        Inside the ("") we add the name of an EJS file.
+        This allows us to insert another EJS file into the EJS file that this tag is currently in.
+        This tag enables us to create a website page with the same header and footer that'll be the same across the entire website and the body content will be changed for each page.
+            And this include tag allows us to just insert a header and footer ejs and then hand-code the body.
+Looking at an example of implementing this EJS tags:
+            <% for(let i=0; i<fruits.length; i++) { %>
+            <li>
+                <%= fuits[i] %>
+            </li>
+            <% } %>
+    This loops over this items and outputs each item into a list element in order.
+Lesson Exercise:
+    We have an index.js with and Express app set up.
+    Inside the app.get, is a data object we send to our EJS file.
+    We also have a footer.ejs with a basic footer in it.
+    We need to modify the index.ejs file to achieve one of 2 outputs (depending on the seconds):
+        A title displayed in h1, the current seconds displayed in a paragraph element.
+        If the current seconds are odd, then show no items.
+        But if even, then display items in the list.
+    Then render the html as html and lastly pull in the footer from the footer.ejs file.
+Note: when assigned a JS object and feeding that into the EJS file, you don't reference the object variable name, just directly call the properties of the object.
+Successfully completed the challenge, minus the above note regarding feeding data into the ejs file.
+Note that each and every single portion of JavaScript code needs to be encased in EJS tags, even lone brackets.
+    Every line needs a dedicated EJS opening and closing tags around them.
+An alternative to the for loop we used:
+    Call the forEach() method on our Array:
+                    arrayVar.forEach((item) => {
+                        console.log(item);
+                    });
+        This runs through the anonymous function for each item in the array and passes that item into the anonymous function.
+Remember that when referencing another EJS file, it should also be inside the views folder as well.
+
+
+## 210. Passing Data to EJS Templates:
+
+
