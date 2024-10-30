@@ -120,3 +120,49 @@ Remember that when referencing another EJS file, it should also be inside the vi
 ## 210. Passing Data to EJS Templates:
 
 
+Let's take a deeper look into passing data in EJS from server to client-side and from client to server-side.
+We've already seen passing data from the server to client side in EJS using the res.render method, passing the EJS file to render and whatever data it needs.
+    The data has a property key/value pair that the EJS tags can then work with accordingly.
+Similarly, we looked at how to pass over an array that we've passed to the EJS file.
+Now, if there is no data being passed from the server but that the EJS is expecting, it'll crash the application.
+    This can happen if there's a bug in the code or if the data gets corrupted.
+This is because EJS doesn't scope variables.
+    This means that EJS doesn't check whether a variable exists or not before using it.
+    Instead, it tries to use it, doesn't find anything, and then crashes the entire app.
+This is a caveat to be aware of in EJS.
+Now to get around the above issue, we can surround any block of EJS code in an if statement that'll check for the presence of a variable, but we need to make use of a variable called "locals"
+    For example:
+                            <% if (locals.fruits) { %>
+                                remaining ejs code in if statement
+                            <% } %>
+    res.locals is basically a way to access all of the variables that are sent over with res.render.
+    You can also manually set res.locals to equal some piece of data.
+                            res.locals = {data: 42}
+    And this res.locals can be accessed in the EJS file.
+    Whenever we call a variable directly (e.g. fruits, numbers, etc) in EJS, it's actually a shorthand for locals.<varName>
+This locals variable always exists and that means that we can always use it to check for the existence of variables that are meant to be passed over to EJS.
+    Then if the if statement coded above finds that variables within locals, then the code continues to run normally.
+Now looking at it the other way around, passing data from the client/ejs side back to the server.
+    Let's say we have a form on our website that we want users to fill in.
+    Then we want to be able to handle that data in our server.
+As seen in previous examples, the easiest way to do this is through a POST request.
+    The form would then exist in the ejs side.
+                    <form action="/submit" method="POST">
+    Then when the form gets submitted, then these pieces of data are labelled under their name attributes.
+    Then naturally body-parser would catch and process the body allowing the data to be worked with on the server side.
+Lesson exercise:
+    Looking at the solution example:
+        The home route loads a form asking for your name and surname.
+        When you click submit, the h1 reloads and tells you how many letters there are in your name.
+        The form is still present but it's now cleared out again.
+    Need to replicate this functionality using the index.js and index.ejs files.
+        Need to write the app.get and app.post routes as well as the ejs logic.
+Successfully completed the challenge.
+    Note that when using render to call the EJS file, it auto detects the filepath to the views folder (assuming views folder is in the same directory as the index.js file) 
+        We simply pass the name of the EJS file to be rendered.
+Remember to always use const instead of let if we know the variable value isn't going to change.
+
+
+## 211. EJS Partials and Layouts:
+
+
