@@ -166,3 +166,48 @@ Remember to always use const instead of let if we know the variable value isn't 
 ## 211. EJS Partials and Layouts:
 
 
+Something that hasn't been considered so far in our backend and server-side development is styling and all everything we've learned about the frontend that makes our website look beautiful.
+To add all this styling, we'd need to add quite a lot of code into the head section of our HTML files.
+    Adding in all the stylesheets, adding in a navbar etc.
+If we simply go ahead and add a bunch of stylesheets into the head section of our EJS files, you'll notice it doesn't actually work.
+    This is because these files are what's known as static files.
+    The CSS or images you want to use on your website don't change, unlike the HTML files being interpreted, and rendered from your backend, or the JS code that determines the functionality of the website.
+Normally, what happens with Node-based backends is we create a public folder where we add in all of our static files, such as our images, styles and whatever other files don't change.
+    Then to tell Express where our static files are located, we can use the middleware "express.static" and define the location of our public folder.
+                        "app.use(express.static("public"));"
+        This assumes public is in the highest level directory for the application.
+    Once we've told Express where our public folder is, it'll treat everything inside of it as a static file.
+That means, when we create our stylesheet links, the href will be relative to the location of the public folder.
+                For a CSS stylesheet relative to the public folder:
+                        "/styles/styles.css"
+The reason we need to tell express the location of our public folder and set these files as static, is because the way that file paths work in Node and Express for dynamic pages is different from static pages.
+    For example, on our website, if we have some nav links that go to different pages in the website and rendering different EJS files.
+    But the way we're getting to these locations is by sending GET requests to a particular route.
+    These dynamic parts of our website are routed and their locations are generated dynamically, whereas the static parts of our website, don't need to be generated dynamically and just specify the static folder they live in.
+        And that's why we get our static files by specifying the public folder location in the middleware and then linking the files relative to the public folder.
+Now that we know how to add back all of our styling and frontend code to style our websites, then you'll realize that in your EJS files, you end up with a lot of repeated code if you're going to have a multi-page website.
+    Such as the head, header, footer are all going to be exactly the same throughout all the pages.
+So to not have a ton of repeated code across all our EJS files, we can use some of the features of EJS.
+We already know that we can use EJS for templating where we replace parts of our code using EJS tags in order to insert bits of dynamic content into the body of our code.
+Now we can also use EJS to reduce a bunch of repeated code in our website
+    Which we'd briefly seen using the <%- include("<fileName>") %> tags.
+This can be done using Partials.
+    Done using <%- include("<fileName>") %>
+    So if we have a webpage with a main body of content and a constant header and footer, we can add:
+                <%- include("heaader.ejs") %>
+                content code
+                <%- include("footer.ejs") %>
+    This slots those files into the right positions.
+This allows us to focus on what's going to change in terms of the content for the page.
+Lesson Exercise:
+    Do the usual project setup.
+    Looking at the functionality of this program:
+        There's a home page with a header nav bar, an animated footer and a styled body.
+        But when we go to the about page and contact pages, we see they're completely unstyled.
+    We need to look in the index.js steps and fix the parts of the website listed there.
+Completed successfully with ease.
+
+
+## 212. Band Generator Project:
+
+
