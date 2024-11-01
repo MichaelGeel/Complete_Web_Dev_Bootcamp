@@ -211,3 +211,12 @@ Completed successfully with ease.
 ## 212. Band Generator Project:
 
 
+The lesson project is an up-styled version of the band name generator that we had previously built.
+Features a button that generates a random name when clicked that gets displayed into the h1 above it.
+    At first, the h1 has a greeting loaded up.
+    Only when clicking the button and generating a name does the h1 change to reflect it.
+Inside the index.js file are all the steps for this project lined out to be completed.
+Project successfully completed.
+
+
+## End of Section 25.
